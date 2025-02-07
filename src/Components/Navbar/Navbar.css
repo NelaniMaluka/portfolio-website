@@ -8,7 +8,7 @@
 
 .navbar .logo {
   display: inline-block;
-  margin-top: 5px;
+  margin-top: 10px;
 }
 
 .navbar .logo img {
@@ -21,7 +21,7 @@
   margin-left: auto; /* Ensures the list is pushed to the right */
   width: max-content;
   float: right;
-  margin-top: 21px;
+  margin-top: 25px;
 }
 
 .navbar .list ul {
