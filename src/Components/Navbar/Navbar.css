@@ -1,0 +1,233 @@
+.navbar {
+  height: max-content;
+  padding: 0 5px;
+  display: flex;
+  justify-content: space-between; /* Aligns logo to the left and list to the right */
+  align-items: center; /* Vertically centers the content in the navbar */
+}
+
+.navbar .logo {
+  display: inline-block;
+  margin-top: 5px;
+}
+
+.navbar .logo img {
+  height: 55px;
+}
+
+.navbar .list {
+  display: flex; /* Flex container to align items horizontally */
+  justify-content: flex-end; /* Moves the list to the right */
+  margin-left: auto; /* Ensures the list is pushed to the right */
+  width: max-content;
+  float: right;
+  margin-top: 21px;
+}
+
+.navbar .list ul {
+  list-style: none;
+  display: flex;
+  gap: 20px; /* Adds space between list items */
+  margin: 0; /* Removes default margin */
+}
+
+.navbar .list ul li a {
+  font-size: 20px;
+  color: aliceblue;
+  text-decoration: none;
+}
+.navbar .list ul li a:hover {
+  color: rgb(252, 183, 80);
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.navbar .list ul li button {
+  color: black;
+  font-size: 17px;
+  background-color: rgb(255, 175, 54);
+  height: 35px;
+  width: 120px;
+  border-radius: 8px;
+  margin-top: -5px;
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Add the shake effect on hover */
+.navbar .list ul li button:hover {
+  animation: shake 0.4s ease-in-out;
+}
+
+.navbar .list ul li .menu-container {
+  background-color: white;
+  border-radius: 50%;
+  padding: 5px 5px 0 5px;
+  display: none;
+}
+
+.navbar .list ul li img {
+  width: 30px;
+}
+
+.navbar .hamburger {
+  background-color: white;
+  width: 100%;
+  max-width: 400px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100%;
+  z-index: 2000;
+
+  /* Slide animation */
+  transform: translateX(100%);
+  transition: transform 0.4s ease-in-out;
+}
+
+.navbar .hamburger.open {
+  transform: translateX(0);
+}
+
+.navbar .close-menu-image img {
+  width: 35px;
+}
+.navbar .close-menu-image {
+  height: max-content;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: end;
+}
+* Close button animation */ .close-menu-image img {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  transition: transform 0.4s ease-in-out;
+}
+
+/* Apply spinning animation when menu is transitioning */
+.spinning {
+  animation: spin 0.4s linear;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.hamburger .list-2 {
+  margin-left: auto; /* Ensures the list is pushed to the right */
+  width: max-content;
+  padding: 10px;
+  width: 100%;
+}
+
+.hamburger .list-2 ul {
+  list-style: none;
+}
+
+.hamburger .list-2 ul li {
+  margin: 30px 10px;
+}
+
+.hamburger .list-2 ul li a {
+  font-size: 20px;
+  color: black;
+  text-decoration: none;
+  font-size: 30px;
+}
+
+.hamburger hr {
+  width: 90%;
+  margin-left: 8px;
+}
+
+.hamburger .socials {
+  width: max-content;
+  margin: auto;
+}
+.hamburger .socials img {
+  width: 35px;
+  margin: 10px 45px;
+}
+
+.hamburger .cv {
+  width: max-content;
+  margin: auto;
+}
+
+.hamburger .cv button {
+  color: black;
+  font-size: 16px;
+  background-color: rgb(255, 175, 54);
+  height: 40px;
+  width: 150px;
+  border-radius: 8px;
+  margin-top: 30px;
+}
+
+/**********************
+**** Desktop layout****
+**********************/
+@media only screen and (min-width: 960px) {
+  .navbar .hamburger {
+    display: none;
+  }
+}
+
+/**********************
+******* Tablet ********
+**********************/
+@media only screen and (min-width: 576px) and (max-width: 960px) {
+  .navbar .list ul li a {
+    display: none;
+  }
+  .navbar .list ul li button {
+    display: none;
+  }
+  .navbar .list ul li .menu-container {
+    display: block;
+    margin-top: -15px;
+  }
+  .navbar .logo img {
+    height: 45px;
+  }
+}
+
+/**********************
+******* Mobile ********
+**********************/
+@media only screen and (max-width: 576px) {
+  .navbar .list ul li a {
+    display: none;
+  }
+  .navbar .list ul li button {
+    display: none;
+  }
+  .navbar .list ul li .menu-container {
+    display: block;
+    margin-top: -15px;
+  }
+  .navbar .logo img {
+    height: 40px;
+  }
+}
