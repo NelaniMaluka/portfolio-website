@@ -4,6 +4,7 @@
   display: flex;
   justify-content: space-between; /* Aligns logo to the left and list to the right */
   align-items: center; /* Vertically centers the content in the navbar */
+  background-color: black;
 }
 
 .navbar .logo {

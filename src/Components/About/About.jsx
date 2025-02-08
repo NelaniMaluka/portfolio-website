@@ -1,0 +1,89 @@
+import { useState, useEffect } from "react";
+import "./About.css";
+
+export default function About() {
+  const texts = [
+    "Hi, I'm Nelani Maluka.",
+    "I'm a Software Developer.",
+    "I build scalable web applications.",
+  ];
+  const [text, setText] = useState("");
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [index, setIndex] = useState(0);
+  const [charIndex, setCharIndex] = useState(0);
+
+  useEffect(() => {
+    const currentText = texts[index];
+
+    const typingSpeed = 100;
+    const deletingSpeed = 50;
+    const pauseTime = 1500; // Pause before deleting
+
+    const timeout = setTimeout(
+      () => {
+        if (isDeleting) {
+          if (charIndex > 0) {
+            setCharIndex((prev) => prev - 1);
+          } else {
+            setIsDeleting(false);
+            setIndex((prevIndex) => (prevIndex + 1) % texts.length);
+          }
+        } else {
+          if (charIndex < currentText.length) {
+            setCharIndex((prev) => prev + 1);
+          } else {
+            setTimeout(() => setIsDeleting(true), pauseTime);
+          }
+        }
+      },
+      isDeleting ? deletingSpeed : typingSpeed
+    );
+
+    setText(currentText.substring(0, charIndex));
+
+    return () => clearTimeout(timeout);
+  }, [charIndex, isDeleting, index, texts]);
+
+  return (
+    <section id="About" className="About">
+      <div className="container About-container">
+        <div className="text">
+          <h3 className="animated-text">
+            {text}
+            <span className="cursor">|</span>
+          </h3>
+          <p>
+            Passionate about crafting efficient and scalable software solutions.
+            Experienced in full-stack development with Java, React, and Spring
+            Boot, I specialize in building robust APIs, optimizing performance,
+            and creating user-friendly applications.
+          </p>
+          <div>
+            <a href="https://www.linkedin.com/in/nelanimaluka/">
+              <div className="socials">
+                <div>
+                  <img src="/Images/Icons/linkedin.png" alt="Linkedin" />
+                </div>
+              </div>
+            </a>
+            <a href="https://github.com/NelaniMaluka">
+              <div className="socials">
+                <div>
+                  <img src="/Images/Icons/github.png" alt="Github" />
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div className="image">
+          <div className="setup-container">
+            <div className="blur-circle"></div>
+            <div className="setup-image">
+              <img src="/Images/setup-background.png" alt="desk-setup-image" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
