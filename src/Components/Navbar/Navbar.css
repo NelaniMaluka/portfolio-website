@@ -231,4 +231,7 @@
   .navbar .logo img {
     height: 40px;
   }
+  .hamburger .list-2 ul li a {
+    font-size: 25px;
+  }
 }
