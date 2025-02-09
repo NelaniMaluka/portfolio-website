@@ -87,8 +87,15 @@ export default function Navbar() {
             <hr />
           </div>
           <div className="socials">
-            <img src="/Images/Icons/linkedin.png" alt="Linkedin" />
-            <img src="/Images/Icons/github.png" alt="Github" />
+            <a href="https://www.linkedin.com/in/nelanimaluka/">
+              <img src="/Images/Icons/linkedin.png" alt="Linkedin" />
+            </a>
+            <a href="https://github.com/NelaniMaluka">
+              <img src="/Images/Icons/github.png" alt="Github" />
+            </a>
+            <a href="mailto:malukanelani@gmail.com">
+              <img src="/Images/Icons/email.png" alt="Email" />
+            </a>
           </div>
           <div className="cv">
             <button onClick={handleDownload}>Donwload CV</button>
