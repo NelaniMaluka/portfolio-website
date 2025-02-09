@@ -3,7 +3,6 @@ import "./About.css";
 
 export default function About() {
   const texts = [
-    "Hi, I'm Nelani Maluka.",
     "I'm a Software Developer.",
     "I build scalable web applications.",
   ];
@@ -11,6 +10,9 @@ export default function About() {
   const [isDeleting, setIsDeleting] = useState(false);
   const [index, setIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
+  const year = 2024;
+  const currentYear = new Date().getFullYear();
+  const difYear = currentYear - year;
 
   useEffect(() => {
     const currentText = texts[index];
@@ -48,6 +50,7 @@ export default function About() {
     <section id="About" className="About">
       <div className="container About-container">
         <div className="text">
+          <h2>Nelani Maluka</h2>
           <h3 className="animated-text">
             {text}
             <span className="cursor">|</span>
@@ -73,11 +76,22 @@ export default function About() {
                 </div>
               </div>
             </a>
+            <a href="mailto:malukanelani@gmail.com">
+              <div className="socials">
+                <div>
+                  <img src="/Images/Icons/email.png" alt="Email" />
+                </div>
+              </div>
+            </a>
           </div>
         </div>
         <div className="image">
           <div className="setup-container">
             <div className="blur-circle"></div>
+            <div className="img-text">
+              <h3>{difYear}+</h3>
+              <span>Years Building Personal Projects</span>
+            </div>
             <div className="setup-image">
               <img src="/Images/setup-background.png" alt="desk-setup-image" />
             </div>
