@@ -214,6 +214,11 @@
     margin-top: 50px;
   }
 
+  #About .image .setup-image {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
   #About .image .setup-image img {
     width: 500px;
   }
@@ -268,6 +273,12 @@
     height: max-content;
     margin: 0;
     margin-top: 50px;
+  }
+
+  #About .image .setup-image {
+    align-items: center;
+    justify-content: center;
+    display: flex;
   }
 
   #About .image .setup-image img {
