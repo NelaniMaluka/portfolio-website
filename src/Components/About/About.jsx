@@ -10,7 +10,7 @@ export default function About() {
   const [isDeleting, setIsDeleting] = useState(false);
   const [index, setIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
-  const year = 2024;
+  const year = 2023;
   const currentYear = new Date().getFullYear();
   const difYear = currentYear - year;
 
