@@ -1,0 +1,108 @@
+/* ===========================
+   Experience Section Styles
+   =========================== */
+.xp-container {
+  background-color: white;
+  height: max-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.heading {
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+/* ===========================
+     Experience & Skills Layout
+     =========================== */
+.xp-content {
+  display: flex; /* Side-by-side by default */
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+
+.experince,
+.skills {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.skills {
+  background-color: blue;
+  color: white;
+}
+
+/* ===========================
+     Timeline Wrapper
+     =========================== */
+.timeline-wrapper {
+  width: 90%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ===========================
+     Responsive Design
+     =========================== */
+
+/* Tablet View */
+@media only screen and (max-width: 1300px) {
+  h1 {
+    font-size: 30px;
+  }
+
+  .xp-content {
+    flex-direction: column; /* Stack elements */
+    height: max-content;
+    display: block;
+  }
+  .experince,
+  .skills {
+    width: 100%;
+    height: max-content;
+    display: block;
+  }
+  .xp-container {
+    display: block;
+    height: max-content;
+  }
+}
+
+/* Mobile View */
+@media only screen and (max-width: 576px) {
+  h1 {
+    font-size: 28px;
+  }
+  .xp-container {
+    height: max-content;
+    display: block;
+  }
+  .xp-content {
+    flex-direction: column;
+    display: block;
+  }
+  .experince,
+  .skills {
+    width: 100%;
+    padding: 10px;
+    height: max-content;
+    display: block;
+  }
+}
