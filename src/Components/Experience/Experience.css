@@ -43,8 +43,24 @@
 }
 
 .skills {
-  background-color: blue;
+  border: 2px solid rgb(255, 175, 54);
+  border-radius: 10px;
   color: white;
+  height: max-content;
+  display: block;
+  justify-content: space-between;
+}
+.skills span {
+  width: max-content;
+  color: black;
+  display: inline-block;
+  margin: 10px;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+.skills img {
+  width: 70px;
 }
 
 /* ===========================
@@ -62,6 +78,23 @@
      Responsive Design
      =========================== */
 
+/**********************
+* large desktop layout*
+**********************/
+@media only screen and (min-width: 1540px) {
+  .xp-container {
+    padding-bottom: 80px;
+  }
+  .heading h1 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .skills img {
+    width: 90px;
+  }
+}
+
 /* Tablet View */
 @media only screen and (max-width: 1300px) {
   h1 {
@@ -75,13 +108,20 @@
   }
   .experince,
   .skills {
-    width: 100%;
+    width: 90%;
     height: max-content;
     display: block;
+    margin: auto;
   }
   .xp-container {
     display: block;
     height: max-content;
+  }
+  .skills span {
+    font-size: 16px;
+  }
+  .skills img {
+    width: 50px;
   }
 }
 
@@ -100,9 +140,17 @@
   }
   .experince,
   .skills {
-    width: 100%;
+    width: 90%;
     padding: 10px;
     height: max-content;
     display: block;
+    margin: auto;
+  }
+
+  .skills span {
+    font-size: 14px;
+  }
+  .skills img {
+    width: 40px;
   }
 }
