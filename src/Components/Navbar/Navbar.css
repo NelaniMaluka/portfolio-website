@@ -68,6 +68,11 @@
   border-radius: 8px;
   margin-top: -5px;
   transition: transform 0.2s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  border: none;
 }
 
 /* Add the shake effect on hover */
@@ -184,6 +189,10 @@
   width: 150px;
   border-radius: 8px;
   margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
 }
 
 /**********************

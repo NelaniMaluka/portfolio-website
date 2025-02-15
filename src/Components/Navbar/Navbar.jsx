@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { Download } from "@mui/icons-material";
+
 import "./Navbar.css";
 
 export default function Navbar() {
@@ -43,7 +45,9 @@ export default function Navbar() {
               <a href="#Contact Me">Contact Me</a>
             </li>
             <li>
-              <button onClick={handleDownload}>Download CV</button>
+              <button onClick={handleDownload}>
+                <Download /> Resume
+              </button>
             </li>
             <li>
               {!isOpen && (
@@ -81,7 +85,7 @@ export default function Navbar() {
                 <a href="#Projects">Projects</a>
               </li>
               <li>
-                <a href="#Contact Me">Contact Me</a>
+                <a href="#ContactMe">Contact Me</a>
               </li>
             </ul>
             <hr />
@@ -98,7 +102,9 @@ export default function Navbar() {
             </a>
           </div>
           <div className="cv">
-            <button onClick={handleDownload}>Donwload CV</button>
+            <button onClick={handleDownload}>
+              <Download /> Resume
+            </button>
           </div>
         </div>
       </div>
