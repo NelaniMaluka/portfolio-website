@@ -9,7 +9,7 @@
   align-items: center;
   text-align: center;
   width: 100%;
-  padding: 20px 0;
+  padding: 40px 0;
 }
 
 .heading {
@@ -73,6 +73,9 @@
   justify-content: center;
   align-items: center;
 }
+.xp-content {
+  min-height: 520px;
+}
 
 /* ===========================
      Responsive Design
@@ -89,7 +92,9 @@
     padding-top: 50px;
     padding-bottom: 50px;
   }
-
+  .xp-content {
+    min-height: 520px;
+  }
   .skills img {
     width: 90px;
   }
@@ -106,6 +111,7 @@
     height: max-content;
     display: block;
   }
+
   .experince,
   .skills {
     width: 90%;
@@ -113,6 +119,7 @@
     display: block;
     margin: auto;
   }
+
   .xp-container {
     display: block;
     height: max-content;
