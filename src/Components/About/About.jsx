@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import { PersonAdd } from "@mui/icons-material";
+
 import "./About.css";
 
 export default function About() {
@@ -50,7 +52,19 @@ export default function About() {
     <section id="About" className="About">
       <div className="container About-container">
         <div className="text">
-          <h2>Nelani Maluka</h2>
+          <h6>Hello Welcome</h6>
+          <h2>I&rsquo;m Nelani Maluka</h2>
+          <div className="button-container">
+            <a href="#ContactMe">
+              <button className="btn1">
+                <PersonAdd />
+                Hire Me
+              </button>
+            </a>
+            <button className="btn2">
+              <a href="#Projects">See Projects</a>
+            </button>
+          </div>
           <h3 className="animated-text">
             {text}
             <span className="cursor">|</span>
@@ -61,6 +75,7 @@ export default function About() {
             Boot, I specialize in building robust APIs, optimizing performance,
             and creating user-friendly applications.
           </p>
+
           <div>
             <a href="https://www.linkedin.com/in/nelanimaluka/">
               <div className="socials">
