@@ -1,0 +1,19 @@
+#Projects {
+  height: max-content;
+  background-color: black;
+  padding: 40px 0;
+}
+
+.projects-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+#Projects h1 {
+  color: white;
+  width: max-content;
+  font-size: 45px;
+  margin: 20px;
+}
