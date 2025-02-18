@@ -303,14 +303,13 @@
   #About .text h3 {
     width: 100%;
     font-size: 22px;
-    height: 45px;
+    height: 65px;
   }
 
   #About .text p {
     width: 90%;
     margin: auto;
     font-size: 14px;
-    margin-top: 20px;
   }
 
   #About .image {
