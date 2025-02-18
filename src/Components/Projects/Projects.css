@@ -169,4 +169,7 @@ body.modal-open #Projects > *:not(.modal) {
     width: 100%;
     padding-bottom: 50px;
   }
+  #Projects .image-container {
+    margin-bottom: 20px;
+  }
 }
