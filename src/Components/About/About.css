@@ -303,6 +303,7 @@
   #About .text h3 {
     width: 100%;
     font-size: 22px;
+    height: 45px;
     max-height: 45px;
     text-align: left;
   }
