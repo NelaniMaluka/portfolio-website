@@ -303,7 +303,7 @@
   #About .text h3 {
     width: 100%;
     font-size: 22px;
-    max-width: 35px;
+    max-height: 35px;
   }
 
   #About .text p {
