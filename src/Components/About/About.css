@@ -301,11 +301,12 @@
   }
   .atc {
     height: 70px;
+    background-color: antiquewhite;
   }
   #About .text h3 {
     width: 100%;
     font-size: 22px;
-    max-height: 65px;
+    max-height: 70px;
     text-align: left;
     left: 10;
   }
