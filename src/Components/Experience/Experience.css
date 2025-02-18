@@ -14,12 +14,24 @@
 
 .heading {
   height: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: block;
   font-size: 22px;
   width: 100%;
   margin-bottom: 40px;
+  text-align: center;
+}
+
+.heading h1 {
+  display: block;
+  width: 100%;
+}
+.heading p {
+  padding-top: 15px;
+  font-size: 18px;
+  display: block;
+  width: 70%;
+  margin: auto;
+  color: rgb(114, 114, 114);
 }
 
 /* ===========================
@@ -60,7 +72,7 @@
   font-size: 20px;
 }
 .skills img {
-  width: 70px;
+  width: 60px;
 }
 
 /* ===========================
@@ -90,13 +102,15 @@
   }
   .heading h1 {
     padding-top: 50px;
+  }
+  .heading p {
     padding-bottom: 50px;
   }
   .xp-content {
     min-height: 520px;
   }
   .skills img {
-    width: 90px;
+    width: 70px;
   }
 }
 
@@ -130,6 +144,9 @@
   .skills img {
     width: 50px;
   }
+  .heading p {
+    font-size: 18px;
+  }
 }
 
 /* Mobile View */
@@ -159,5 +176,9 @@
   }
   .skills img {
     width: 40px;
+  }
+  .heading p {
+    font-size: 15px;
+    width: 100%;
   }
 }

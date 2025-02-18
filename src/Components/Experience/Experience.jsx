@@ -27,6 +27,10 @@ export default function Experience() {
       <div className="container">
         <div className="heading">
           <h1>Experience and Skills</h1>
+          <p>
+            Explore my skills and experience in software development. See how I
+            build secure, scalable applications.
+          </p>
         </div>
         <Stack direction="row" spacing={1}>
           <Chip
@@ -50,6 +54,10 @@ export default function Experience() {
             <span>
               <img src="/Images/Icons/react.png" alt="React icon" />
               React js
+            </span>
+            <span>
+              <img src="/Images/Icons/Redux.png" alt="React icon" />
+              Redux
             </span>
             <span>
               <img src="/Images/Icons/spring-boot.png" alt="Spring Boot icon" />
