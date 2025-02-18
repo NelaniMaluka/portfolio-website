@@ -76,16 +76,24 @@ export default function Navbar() {
           <div className="list-2">
             <ul>
               <li>
-                <a href="#About">About</a>
+                <a href="#About" onClick={() => setIsOpen(!isOpen)}>
+                  About
+                </a>
               </li>
               <li>
-                <a href="#Experience">Experience</a>
+                <a href="#Experience" onClick={() => setIsOpen(!isOpen)}>
+                  Experience
+                </a>
               </li>
               <li>
-                <a href="#Projects">Projects</a>
+                <a href="#Projects" onClick={() => setIsOpen(!isOpen)}>
+                  Projects
+                </a>
               </li>
               <li>
-                <a href="#ContactMe">Contact Me</a>
+                <a href="#ContactMe" onClick={() => setIsOpen(!isOpen)}>
+                  Contact Me
+                </a>
               </li>
             </ul>
             <hr />
