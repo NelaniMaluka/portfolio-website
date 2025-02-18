@@ -65,10 +65,12 @@ export default function About() {
               <a href="#Projects">See Projects</a>
             </button>
           </div>
-          <h3 className="animated-text">
-            {text}
-            <span className="cursor">|</span>
-          </h3>
+          <div className="atc">
+            <h3 className="animated-text">
+              {text}
+              <span className="cursor">|</span>
+            </h3>
+          </div>
           <p>
             Passionate about crafting efficient and scalable software solutions.
             Experienced in full-stack development with Java, React, and Spring

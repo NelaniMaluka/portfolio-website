@@ -299,13 +299,15 @@
   #About .text h2 {
     font-size: 27px;
   }
-
+  .atc {
+    height: 70px;
+  }
   #About .text h3 {
     width: 100%;
     font-size: 22px;
-    height: 45px;
-    max-height: 45px;
+    max-height: 65px;
     text-align: left;
+    left: 10;
   }
 
   #About .text p {
