@@ -17,8 +17,8 @@ export default function Education() {
     >
       <TimelineItem>
         <TimelineSeparator>
-          <TimelineDot />
-          <TimelineConnector />
+          <TimelineDot sx={{ bgcolor: "rgb(255, 175, 54)" }} />
+          <TimelineConnector sx={{ bgcolor: "rgb(255, 175, 54)" }} />
         </TimelineSeparator>
         <TimelineContent>
           <p>
@@ -32,7 +32,7 @@ export default function Education() {
       </TimelineItem>
       <TimelineItem>
         <TimelineSeparator>
-          <TimelineDot />
+          <TimelineDot sx={{ bgcolor: "rgb(255, 175, 54)" }} />
         </TimelineSeparator>
         <TimelineContent>
           <p>
