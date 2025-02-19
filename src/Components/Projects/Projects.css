@@ -39,6 +39,8 @@
   border-radius: 20px;
   transition: filter 0.3s ease-in-out;
   height: max-content;
+  min-height: 200px;
+  height: 220px;
 }
 
 .image-container:hover img {
@@ -164,6 +166,9 @@ body.modal-open #Projects > *:not(.modal) {
     font-size: 18px;
     padding-bottom: 50px;
   }
+  .image-container img {
+    height: auto !important;
+  }
 }
 
 /**********************
@@ -187,5 +192,8 @@ body.modal-open #Projects > *:not(.modal) {
   }
   #Projects .sub-text {
     font-size: 15px;
+  }
+  .image-container img {
+    height: auto !important;
   }
 }
