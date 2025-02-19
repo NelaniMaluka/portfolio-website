@@ -1,7 +1,8 @@
 #Projects {
-  height: 600px;
+  height: max-content;
   background-color: black;
   padding: 40px 0;
+  margin-bottom: 20px;
 }
 
 .projects-container {
@@ -28,6 +29,8 @@
   width: 32%;
   border-radius: 20px;
   margin: 0.6%;
+  margin-top: 40px;
+  margin-bottom: 30px;
 }
 
 .image-container img {
@@ -40,6 +43,7 @@
 
 .image-container:hover img {
   filter: blur(2px); /* Blur effect when hovering */
+  border: 1px solid rgb(255, 175, 54);
 }
 
 .learn-more {
@@ -47,7 +51,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: rgba(0, 0, 0, 0.767);
+  background-color: rgba(0, 0, 0, 0.884);
   color: white;
   border: none;
   padding: 10px 20px;
@@ -125,6 +129,8 @@ body.modal-open #Projects > *:not(.modal) {
   width: 70%;
   margin: auto;
   padding-bottom: 50px;
+  font-size: 18px;
+  font-size: 15px;
 }
 
 /**********************
@@ -133,6 +139,13 @@ body.modal-open #Projects > *:not(.modal) {
 @media only screen and (min-width: 1540px) {
   #Projects h1 {
     padding-top: 50px;
+  }
+  .image-container {
+    margin-top: 80px;
+    margin-bottom: 50px;
+  }
+  .image-container img {
+    height: 250px;
   }
 }
 
@@ -171,5 +184,8 @@ body.modal-open #Projects > *:not(.modal) {
   }
   #Projects .image-container {
     margin-bottom: 20px;
+  }
+  #Projects .sub-text {
+    font-size: 15px;
   }
 }
