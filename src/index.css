@@ -10,3 +10,52 @@
   height: max-content;
   margin: auto;
 }
+
+.sub-heading {
+  padding-top: 15px;
+  font-size: 18px;
+  display: block;
+  width: 70%;
+  margin: auto;
+  color: rgb(114, 114, 114);
+  text-align: center;
+}
+
+button:hover {
+  animation: shake 0.4s ease-in-out;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/**********************
+******* Tablet ********
+**********************/
+@media only screen and (min-width: 576px) and (max-width: 960px) {
+  .sub-heading {
+    width: 100%;
+  }
+}
+
+/* Mobile View */
+@media only screen and (max-width: 576px) {
+  .sub-heading {
+    font-size: 15px;
+    width: 100%;
+  }
+}
