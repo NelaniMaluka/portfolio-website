@@ -3,12 +3,14 @@
   background-color: white;
   text-align: center;
   width: 700px;
+  margin-bottom: 50px;
   margin: auto;
   border-radius: 20px;
   display: flex;
   justify-content: center; /* Center the badges */
   flex-wrap: wrap; /* Allow wrapping */
   border: 1.5px solid rgb(255, 175, 54);
+  margin-bottom: 80px;
 }
 
 .certificates .badge-container img {
@@ -27,31 +29,21 @@
   }
 }
 
-.badge-container img {
-  animation: rotateIn 1s ease-in-out;
-}
-
-@keyframes bounce {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-}
-
 .badge-container img:hover {
-  animation: bounce 0.5s ease-in-out;
+  animation: rotateIn 1s ease-in-out;
 }
 
 /**********************
 * large desktop layout*
 **********************/
 @media only screen and (min-width: 1540px) {
+  .cert-container {
+    margin-bottom: 100px;
+  }
   .certificates {
     width: 60%;
     max-width: 700px;
+
     margin: auto;
   }
   .certificates .badge-container img {
@@ -68,6 +60,7 @@
   .certificates {
     width: 60%;
     margin: auto;
+    margin-bottom: 55px;
   }
   .certificates .badge-container img {
     width: 10%;
@@ -82,6 +75,7 @@
   .certificates {
     width: 90%;
     margin: auto;
+    margin-bottom: 50px;
   }
 
   .certificates .badge-container img {
