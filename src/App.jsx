@@ -3,7 +3,7 @@ import About from "./Components/About/About";
 import Experience from "./Components/Experience/Experience";
 import Projects from "./Components/Projects/Projects";
 import Certificates from "./Components/Certificates/Certificates";
-import ContactMe from "./Components/ContactMe/Contactme";
+import ContactMe from "./Components/ContactMe/ContactMe";
 
 import "./App.css";
 
