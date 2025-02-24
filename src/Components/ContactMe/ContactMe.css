@@ -1,0 +1,215 @@
+#ContactMe {
+  background-color: white;
+  height: 600px;
+  padding: 20px 0;
+}
+#ContactMe h1 {
+  width: max-content;
+  font-size: 45px;
+  margin-top: 20px;
+  text-align: center;
+  width: 100%;
+}
+#ContactMe .form-container {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+#ContactMe .socials-1 {
+  margin-right: 20px;
+  margin-top: 20px;
+}
+#ContactMe .socials img {
+  width: 30px;
+  margin: 25px 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 50%;
+}
+
+.socials img:hover {
+  transform: scale(1.2);
+  box-shadow: 0px 0px 20px rgb(255, 175, 54);
+  border-radius: 50%;
+}
+
+#ContactMe form button {
+  margin: 10px;
+  width: 140px;
+  height: 40px;
+  background-color: rgb(255, 175, 54);
+  border-radius: 10px;
+
+  border: 1px solid black;
+  font-size: 18px;
+}
+#ContactMe .socials {
+  padding: 10px;
+}
+.form input {
+  margin: 10px;
+  width: 350px;
+  height: 40px;
+  padding: 0 10px;
+  border-radius: 15px;
+  margin-top: 40px;
+  font-size: 18px;
+}
+.form textarea {
+  display: block;
+  margin: 10px;
+  width: 745px;
+  height: 250px;
+  border-radius: 15px;
+  padding: 10px;
+  font-size: 18px;
+}
+
+/**********************
+* large desktop layout*
+**********************/
+@media only screen and (min-width: 1540px) {
+  #ContactMe h1 {
+    padding-top: 50px;
+  }
+  .form input {
+    margin: 15px;
+    width: 380px;
+  }
+  .form textarea {
+    width: 816px;
+    margin: 15px;
+  }
+  .form {
+    margin-top: 40px;
+  }
+  #ContactMe .socials img {
+    width: 39px;
+  }
+  #ContactMe {
+    margin-bottom: 140px;
+  }
+}
+
+/**********************
+******* Tablet ********
+**********************/
+@media only screen and (min-width: 576px) and (max-width: 960px) {
+  #ContactMe h1 {
+    font-size: 30px;
+  }
+  #ContactMe .form-container {
+    display: block;
+  }
+  #ContactMe {
+    width: 100%;
+    height: max-content;
+  }
+  .form {
+    width: 100%;
+  }
+  #ContactMe .socials-1 {
+    margin-right: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: max-content;
+  }
+  #ContactMe .socials {
+    width: 30px;
+    margin: 0 20px;
+    height: max-content;
+    padding: 0;
+  }
+  #ContactMe .socials a {
+    width: max-content;
+    height: max-content;
+  }
+  #ContactMe .socials img {
+    width: 30px;
+  }
+  .form {
+    width: 70%;
+    min-width: 500px;
+    margin: auto;
+  }
+  .form input {
+    margin: auto;
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    height: 20px;
+    font-size: 16px;
+  }
+  .form textarea {
+    width: 90%;
+    height: 150px;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 16px;
+  }
+  #ContactMe form button {
+    width: 120px;
+    height: 35px;
+    font-size: 14px;
+  }
+}
+
+/**********************
+******* Mobile ********
+**********************/
+@media only screen and (max-width: 576px) {
+  #ContactMe {
+    width: 100%;
+    height: max-content;
+  }
+  #ContactMe h1 {
+    font-size: 28px;
+  }
+  #ContactMe .form-container {
+    display: block;
+  }
+  .form {
+    width: 100%;
+  }
+  #ContactMe .socials-1 {
+    margin-right: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: max-content;
+  }
+  #ContactMe .socials {
+    width: 30px;
+    margin: 0 20px;
+    height: max-content;
+    padding: 0;
+  }
+  #ContactMe .socials a {
+    width: max-content;
+    height: max-content;
+  }
+  #ContactMe .socials img {
+    width: 28px;
+  }
+
+  .form input {
+    margin: auto;
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    height: 20px;
+    font-size: 14px;
+  }
+  .form textarea {
+    width: 90%;
+    height: 150px;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 14px;
+  }
+  #ContactMe form button {
+    width: 120px;
+    height: 35px;
+    font-size: 14px;
+  }
+}
