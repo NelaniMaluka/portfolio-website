@@ -162,8 +162,12 @@
     display: block;
     height: max-content;
   }
+  .skills {
+    max-width: 650px;
+  }
   .skills span {
     font-size: 16px;
+    padding: 4px;
   }
   .skills img {
     width: 50px;
@@ -197,6 +201,7 @@
 
   .skills span {
     font-size: 14px;
+    padding: 2px;
   }
   .skills img {
     width: 40px;
