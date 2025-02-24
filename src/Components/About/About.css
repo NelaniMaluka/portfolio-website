@@ -63,6 +63,18 @@
 #About .socials {
   display: inline-block;
   margin-top: 30px;
+  margin-left: 20px;
+}
+
+#About .socials div {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 50%;
+}
+
+#About .socials div:hover {
+  transform: scale(1.2);
+  box-shadow: 0px 0px 20px rgb(255, 175, 54);
+  border-radius: 50%;
 }
 
 #About .socials div {
@@ -270,6 +282,9 @@
     align-items: center;
     justify-content: center;
   }
+  #About .socials {
+    margin-left: 0;
+  }
 }
 
 /**********************
@@ -338,6 +353,9 @@
   #About .blur-circle {
     width: 170px;
     height: 170px;
+  }
+  #About .socials {
+    margin-left: 0;
   }
   #About .socials div {
     margin: 10px 25px;
