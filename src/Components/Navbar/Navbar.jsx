@@ -42,7 +42,7 @@ export default function Navbar() {
               <a href="#Projects">Projects</a>
             </li>
             <li>
-              <a href="#Contact Me">Contact Me</a>
+              <a href="#ContactMe">Contact Me</a>
             </li>
             <li>
               <button onClick={handleDownload}>
