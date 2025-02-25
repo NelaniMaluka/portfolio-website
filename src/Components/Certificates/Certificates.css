@@ -16,6 +16,11 @@
 .certificates .badge-container img {
   width: 7%;
   margin: 4px 30px;
+  animation: none; /* Default state, no animation */
+}
+
+.certificates .badge-container img.animate {
+  animation: rotateIn 1s ease-in-out;
 }
 
 @keyframes rotateIn {
@@ -27,10 +32,6 @@
     opacity: 1;
     transform: rotate(0deg);
   }
-}
-
-.badge-container img:hover {
-  animation: rotateIn 1s ease-in-out;
 }
 
 /**********************
