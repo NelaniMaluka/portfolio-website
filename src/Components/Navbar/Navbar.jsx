@@ -22,6 +22,31 @@ export default function Navbar() {
     document.body.removeChild(link);
   };
 
+  const navLinks = [
+    { label: "About", href: "#About" },
+    { label: "Experience", href: "#Experience" },
+    { label: "Projects", href: "#Projects" },
+    { label: "Contact Me", href: "#ContactMe" },
+  ];
+
+  const socialLinks = [
+    {
+      href: "https://www.linkedin.com/in/nelanimaluka/",
+      src: "/Images/Icons/linkedin.png",
+      alt: "Linkedin",
+    },
+    {
+      href: "https://github.com/NelaniMaluka",
+      src: "/Images/Icons/github.png",
+      alt: "Github",
+    },
+    {
+      href: "mailto:malukanelani@gmail.com",
+      src: "/Images/Icons/email.png",
+      alt: "Email",
+    },
+  ];
+
   return (
     <div className="navbar">
       <div className="container">
@@ -32,20 +57,13 @@ export default function Navbar() {
         </div>
         <div className="list">
           <ul>
+            {navLinks.map((link, index) => (
+              <li key={index}>
+                <a href={link.href}>{link.label}</a>
+              </li>
+            ))}
             <li>
-              <a href="#About">About</a>
-            </li>
-            <li>
-              <a href="#Experience">Experience</a>
-            </li>
-            <li>
-              <a href="#Projects">Projects</a>
-            </li>
-            <li>
-              <a href="#ContactMe">Contact Me</a>
-            </li>
-            <li>
-              <button onClick={handleDownload}>
+              <button className="shake" onClick={handleDownload}>
                 <Download /> Resume
               </button>
             </li>
@@ -75,39 +93,22 @@ export default function Navbar() {
           </div>
           <div className="list-2">
             <ul>
-              <li>
-                <a href="#About" onClick={() => setIsOpen(!isOpen)}>
-                  About
-                </a>
-              </li>
-              <li>
-                <a href="#Experience" onClick={() => setIsOpen(!isOpen)}>
-                  Experience
-                </a>
-              </li>
-              <li>
-                <a href="#Projects" onClick={() => setIsOpen(!isOpen)}>
-                  Projects
-                </a>
-              </li>
-              <li>
-                <a href="#ContactMe" onClick={() => setIsOpen(!isOpen)}>
-                  Contact Me
-                </a>
-              </li>
+              {navLinks.map((link, index) => (
+                <li key={index}>
+                  <a href={link.href} onClick={() => setIsOpen(!isOpen)}>
+                    {link.label}
+                  </a>
+                </li>
+              ))}
             </ul>
             <hr />
           </div>
           <div className="socials">
-            <a href="https://www.linkedin.com/in/nelanimaluka/">
-              <img src="/Images/Icons/linkedin.png" alt="Linkedin" />
-            </a>
-            <a href="https://github.com/NelaniMaluka">
-              <img src="/Images/Icons/github.png" alt="Github" />
-            </a>
-            <a href="mailto:malukanelani@gmail.com">
-              <img src="/Images/Icons/email.png" alt="Email" />
-            </a>
+            {socialLinks.map((social, index) => (
+              <a href={social.href} key={index}>
+                <img src={social.src} alt={social.alt} />
+              </a>
+            ))}
           </div>
           <div className="cv">
             <button onClick={handleDownload}>

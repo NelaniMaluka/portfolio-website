@@ -4,6 +4,24 @@ import { useForm } from "@formspree/react";
 export default function ContactMe() {
   const [state, handleSubmit] = useForm("xkggwrpe");
 
+  const socialLinks = [
+    {
+      href: "https://www.linkedin.com/in/nelanimaluka/",
+      imgSrc: "/Images/Icons/linkedin.png",
+      altText: "Linkedin",
+    },
+    {
+      href: "https://github.com/NelaniMaluka",
+      imgSrc: "/Images/Icons/github.png",
+      altText: "Github",
+    },
+    {
+      href: "mailto:malukanelani@gmail.com",
+      imgSrc: "/Images/Icons/email.png",
+      altText: "Email",
+    },
+  ];
+
   return (
     <div id="ContactMe">
       <div className="container">
@@ -14,21 +32,13 @@ export default function ContactMe() {
         </span>
         <div className="form-container">
           <div className="socials-1">
-            <a href="https://www.linkedin.com/in/nelanimaluka/">
-              <div className="socials">
-                <img src="/Images/Icons/linkedin.png" alt="Linkedin" />
-              </div>
-            </a>
-            <a href="https://github.com/NelaniMaluka">
-              <div className="socials">
-                <img src="/Images/Icons/github.png" alt="Github" />
-              </div>
-            </a>
-            <a href="mailto:malukanelani@gmail.com">
-              <div className="socials">
-                <img src="/Images/Icons/email.png" alt="Email" />
-              </div>
-            </a>
+            {socialLinks.map((link, index) => (
+              <a href={link.href} key={index}>
+                <div className="socials">
+                  <img src={link.imgSrc} alt={link.altText} />
+                </div>
+              </a>
+            ))}
           </div>
           <div className="form">
             <form onSubmit={handleSubmit}>
@@ -39,7 +49,11 @@ export default function ContactMe() {
                 placeholder="Message"
                 required
               ></textarea>
-              <button type="submit" disabled={state.submitting}>
+              <button
+                type="submit"
+                disabled={state.submitting}
+                className="shake"
+              >
                 {state.submitting ? "Submitting..." : "Submit"}
               </button>
             </form>
