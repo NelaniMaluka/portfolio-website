@@ -56,12 +56,12 @@ export default function About() {
           <h2>I&rsquo;m Nelani Maluka</h2>
           <div className="button-container">
             <a href="#ContactMe">
-              <button className="btn1">
+              <button className="btn1 shake">
                 <PersonAdd />
                 Hire Me
               </button>
             </a>
-            <button className="btn2">
+            <button className="btn2 shake">
               <a href="#Projects">See Projects</a>
             </button>
           </div>
