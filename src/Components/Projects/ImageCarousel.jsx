@@ -13,7 +13,7 @@ export default function ImageCarousel({ project }) {
   const ImageTemplate = (projectImage) => (
     <div>
       <img
-        style={{ width: "100%", height: "auto" }}
+        style={{ width: "100%", height: "auto", minHeight: "200px" }}
         src={projectImage.image}
         alt="Project Image"
       />
