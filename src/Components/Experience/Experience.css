@@ -74,7 +74,7 @@
   padding: 5px;
 }
 .skills img {
-  width: 60px;
+  width: 50px;
 }
 .skills .text {
   display: block;
@@ -134,7 +134,7 @@
     min-height: 520px;
   }
   .skills img {
-    width: 70px;
+    width: 60px;
   }
 }
 
@@ -167,10 +167,10 @@
   }
   .skills span {
     font-size: 16px;
-    padding: 4px;
+    padding: 2px;
   }
   .skills img {
-    width: 50px;
+    width: 40px;
   }
   .heading p {
     font-size: 18px;
@@ -201,10 +201,10 @@
 
   .skills span {
     font-size: 14px;
-    padding: 2px;
+    padding: 1px;
   }
   .skills img {
-    width: 40px;
+    width: 30px;
   }
   .heading p {
     font-size: 15px;
