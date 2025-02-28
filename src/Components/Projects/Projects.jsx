@@ -6,6 +6,7 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Chip from "@mui/material/Chip";
+import ImageCarousel from "./ImageCarousel";
 
 import "./Projects.css";
 
@@ -15,7 +16,16 @@ export default function Projects() {
   const projects = [
     {
       name: "Kick Land",
-      imgUrl: "/Images/project-images/Kick-Land-img.png",
+      imgUrls: [
+        "/Images/project-images/Kick-Land/Kick-Land-img.png",
+        "/Images/project-images/Kick-Land/Kick-Land-img1.png",
+        "/Images/project-images/Kick-Land/Kick-Land-img2.png",
+        "/Images/project-images/Kick-Land/Kick-Land-img3.png",
+        "/Images/project-images/Kick-Land/Kick-Land-img4.png",
+        "/Images/project-images/Kick-Land/Kick-Land-img5.png",
+        "/Images/project-images/Kick-Land/Kick-Land-img6.png",
+        "/Images/project-images/Kick-Land/Kick-Land-img7.png",
+      ],
       tools: [
         "ReactJS",
         "Redux",
@@ -33,7 +43,13 @@ export default function Projects() {
     },
     {
       name: "Learnhall",
-      imgUrl: "/Images/project-images/Learhall-img.png",
+      imgUrls: [
+        "/Images/project-images/Learnhall/Learnhall-img.png",
+        "/Images/project-images/Learnhall/Learnhall-img1.png",
+        "/Images/project-images/Learnhall/Learnhall-img2.png",
+        "/Images/project-images/Learnhall/Learnhall-img3.png",
+        "/Images/project-images/Learnhall/Learnhall-img4.png",
+      ],
       tools: ["HTML", "CSS", "JavaScript", "Vue.js"],
       about:
         "Learnhall is an online platform that connects students with tutors. It collects user data, such as course preferences and tutor information, and sends it directly to the company’s email for processing. The platform aims to streamline the connection process between students and tutors, ensuring a smooth and efficient experience.",
@@ -77,7 +93,10 @@ export default function Projects() {
             {/* Image Container */}
             {projects.map((project, index) => (
               <div key={index} className="image-container">
-                <img src={project.imgUrl} alt="Project Image" />
+                {Array.isArray(project.imgUrls) &&
+                project.imgUrls.length > 0 ? (
+                  <img src={project.imgUrls[0]} alt="Project Image" />
+                ) : null}
                 <button
                   className="learn-more"
                   onClick={() => setShowCard(index)}
@@ -92,11 +111,11 @@ export default function Projects() {
               <div className="modal" onClick={handleOutsideClick}>
                 <div className="modal-content">
                   <Card sx={{ maxWidth: 600 }}>
-                    <CardMedia
-                      sx={{ height: 270 }}
-                      image={projects[showCard].imgUrl}
-                      title="Project Image"
-                    />
+                    <CardMedia sx={{ height: 270 }} title="Project Image">
+                      {projects[showCard] && (
+                        <ImageCarousel project={projects[showCard]} />
+                      )}
+                    </CardMedia>
                     <CardContent>
                       <Typography
                         gutterBottom
