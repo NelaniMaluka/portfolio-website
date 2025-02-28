@@ -6,12 +6,15 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Chip from "@mui/material/Chip";
+import { useTheme } from "@mui/material/styles";
 import ImageCarousel from "./ImageCarousel";
+import Certificates from "../Certificates/Certificates";
 
 import "./Projects.css";
 
 export default function Projects() {
   const [showCard, setShowCard] = useState(null); // Updated to track the index of the project being displayed
+  const theme = useTheme();
 
   const projects = [
     {
@@ -110,8 +113,16 @@ export default function Projects() {
             {showCard !== null && (
               <div className="modal" onClick={handleOutsideClick}>
                 <div className="modal-content">
-                  <Card sx={{ maxWidth: 600 }}>
-                    <CardMedia sx={{ height: 270 }} title="Project Image">
+                  <Card sx={{ maxWidth: 800 }}>
+                    <CardMedia
+                      sx={{
+                        height: 370,
+                        [theme.breakpoints.down("sm")]: {
+                          height: 200, // Set specific width for mobile view
+                        },
+                      }}
+                      title="Project Image"
+                    >
                       {projects[showCard] && (
                         <ImageCarousel project={projects[showCard]} />
                       )}
@@ -173,6 +184,7 @@ export default function Projects() {
           </div>
         </div>
       </div>
+      <Certificates />
     </div>
   );
 }
