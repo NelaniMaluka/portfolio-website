@@ -39,8 +39,6 @@ export default function Experience() {
     { name: "Junit", src: "/Images/Icons/Junit.png" },
     { name: "Mysql", src: "/Images/Icons/mysql.png" },
     { name: "MS Sql", src: "/Images/Icons/sql-server.png" },
-    { name: "Oracle DB", src: "/Images/Icons/oracle.png" },
-    { name: "Azure", src: "/Images/Icons/azure.png" },
     { name: "Firebase", src: "/Images/Icons/firebase.png" },
   ];
 
@@ -74,17 +72,19 @@ export default function Experience() {
           </div>
           <div className="skills">
             {icons.map((icon, index) => (
-              <span key={index}>
-                <img
-                  src={icon.src}
-                  alt={`${icon.name} icon`}
-                  className={`rotate ${
-                    hoveredIcon === icon.name ? "rotating" : ""
-                  }`}
-                  onMouseEnter={() => handleMouseEnter(icon.name)}
-                />
-                <span className="text">{icon.name}</span>
-              </span>
+              <div key={index} className="skill">
+                <span>
+                  <img
+                    src={icon.src}
+                    alt={`${icon.name} icon`}
+                    className={`rotate ${
+                      hoveredIcon === icon.name ? "rotating" : ""
+                    }`}
+                    onMouseEnter={() => handleMouseEnter(icon.name)}
+                  />
+                  <span className="text">{icon.name}</span>
+                </span>
+              </div>
             ))}
           </div>
         </div>

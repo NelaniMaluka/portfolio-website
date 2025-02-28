@@ -1,5 +1,5 @@
-/* ===========================
-   Experience Section Styles
+/* =========================== 
+   Experience Section Styles 
    =========================== */
 .xp-container {
   background-color: white;
@@ -35,10 +35,10 @@
 }
 
 /* ===========================
-     Experience & Skills Layout
+     Experience & Skills Layout 
      =========================== */
 .xp-content {
-  display: flex; /* Side-by-side by default */
+  display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
@@ -54,14 +54,78 @@
   padding: 20px;
 }
 
+.skill {
+  border: 1px solid rgb(255, 175, 54);
+  border-radius: 10px;
+  height: max-content;
+  display: inline-block;
+  margin: 11px;
+  width: 95px;
+  background-color: rgba(243, 253, 255, 0.664);
+  animation: snakeMove 2s infinite ease-in-out; /* Increased duration */
+  position: relative;
+}
+
+/* Automate animation-delay using nth-child and calc function */
+.skill:nth-child(1) {
+  animation-delay: 0s;
+}
+.skill:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.skill:nth-child(3) {
+  animation-delay: 0.4s;
+}
+.skill:nth-child(4) {
+  animation-delay: 0.6s;
+}
+.skill:nth-child(5) {
+  animation-delay: 0.8s;
+}
+.skill:nth-child(6) {
+  animation-delay: 1s;
+}
+.skill:nth-child(7) {
+  animation-delay: 1.2s;
+}
+.skill:nth-child(8) {
+  animation-delay: 1.4s;
+}
+.skill:nth-child(9) {
+  animation-delay: 1.6s;
+}
+.skill:nth-child(10) {
+  animation-delay: 1.8s;
+}
+.skill:nth-child(11) {
+  animation-delay: 2s;
+}
+.skill:nth-child(12) {
+  animation-delay: 2.2s;
+}
+
+@keyframes snakeMove {
+  0%,
+  100% {
+    transform: translateY(0); /* Stay at original position */
+  }
+  25% {
+    transform: translateY(-5px); /* Move slightly up */
+  }
+  50% {
+    transform: translateY(0); /* Back to original */
+  }
+  75% {
+    transform: translateY(5px); /* Move slightly down */
+  }
+}
+
 .skills {
-  border: 2px solid rgb(255, 175, 54);
   border-radius: 10px;
   color: white;
   height: max-content;
   display: block;
   justify-content: space-between;
-  background-color: rgba(243, 253, 255, 0.664);
 }
 .skills span {
   width: max-content;
@@ -70,18 +134,24 @@
   margin: 10px;
   justify-content: center;
   align-items: center;
-  font-size: 20px;
-  padding: 5px;
+  font-size: 16px;
+  position: relative;
+  width: 80%;
+}
+.skills span .text {
+  width: max-content;
+  position: relative;
+  margin: auto;
 }
 .skills img {
-  width: 50px;
+  width: 40px;
 }
 .skills .text {
   display: block;
 }
 
 /* ===========================
-     Timeline Wrapper
+     Timeline Wrapper 
      =========================== */
 .timeline-wrapper {
   width: 90%;
@@ -96,7 +166,7 @@
 .skills img {
   transition: transform 0.5s ease-in-out;
   display: inline-block;
-  opacity: 0.8; /* Slightly faded to show rotation */
+  opacity: 0.8;
 }
 
 /* Add the rotating class to start the rotation */
@@ -114,12 +184,8 @@
 }
 
 /* ===========================
-     Responsive Design
+     Responsive Design 
      =========================== */
-
-/**********************
-* large desktop layout*
-**********************/
 @media only screen and (min-width: 1540px) {
   .xp-container {
     padding-bottom: 80px;
@@ -134,22 +200,23 @@
     min-height: 520px;
   }
   .skills img {
-    width: 60px;
+    width: 50px;
+  }
+  .skill {
+    margin: 11px;
+    width: 100px;
   }
 }
 
-/* Tablet View */
 @media only screen and (max-width: 1300px) {
   h1 {
     font-size: 30px;
   }
-
   .xp-content {
-    flex-direction: column; /* Stack elements */
+    flex-direction: column;
     height: max-content;
     display: block;
   }
-
   .experince,
   .skills {
     width: 90%;
@@ -157,7 +224,6 @@
     display: block;
     margin: auto;
   }
-
   .xp-container {
     display: block;
     height: max-content;
@@ -167,17 +233,19 @@
   }
   .skills span {
     font-size: 16px;
-    padding: 2px;
   }
   .skills img {
-    width: 40px;
+    width: 30px;
   }
   .heading p {
     font-size: 18px;
   }
+  .skill {
+    margin: 11px;
+    width: 90px;
+  }
 }
 
-/* Mobile View */
 @media only screen and (max-width: 576px) {
   h1 {
     font-size: 28px;
@@ -198,16 +266,24 @@
     display: block;
     margin: auto;
   }
-
   .skills span {
     font-size: 14px;
-    padding: 1px;
+    width: 50%;
+  }
+  .skills span .text {
+    width: max-content;
+    font-size: 12px;
+    margin: auto;
   }
   .skills img {
-    width: 30px;
+    width: 25px;
   }
   .heading p {
     font-size: 15px;
     width: 100%;
+  }
+  .skill {
+    margin: 10px;
+    width: 70px;
   }
 }

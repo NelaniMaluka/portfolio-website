@@ -72,10 +72,11 @@ export default function About() {
             </h3>
           </div>
           <p>
-            Passionate about crafting efficient and scalable software solutions.
-            Experienced in full-stack development with Java, React, and Spring
-            Boot, I specialize in building robust APIs, optimizing performance,
-            and creating user-friendly applications.
+            Graduate software developer passionate about crafting efficient and
+            scalable software solutions. With experience in full-stack
+            development using Java, React, and Spring Boot, I specialize in
+            building robust APIs, optimizing performance, and creating
+            user-friendly applications.
           </p>
 
           <div>
