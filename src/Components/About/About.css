@@ -4,7 +4,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: black;
+  background-image: url("/public/Images/background-img.jpg");
+  background-size: cover; /* Ensures the image covers the entire element */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents repetition */
+  padding-top: 68px;
 }
 
 #About .About-container {
@@ -146,8 +150,8 @@
 #About .blur-circle {
   margin-top: 80px;
   position: absolute;
-  width: 380px;
-  height: 320px;
+  width: 200px;
+  height: 200px;
   background-color: rgb(255, 175, 54);
   border-radius: 50%;
   filter: blur(100px);
@@ -213,6 +217,7 @@
 @media only screen and (min-width: 1540px) {
   #About {
     height: 800px;
+    padding-top: 65px;
   }
 }
 
@@ -222,6 +227,7 @@
 @media only screen and (min-width: 576px) and (max-width: 960px) {
   #About {
     height: max-content;
+    padding-top: 58px;
   }
   #About .About-container {
     flex-direction: column; /* Stack items vertically */
@@ -272,8 +278,8 @@
     width: 500px;
   }
   #About .blur-circle {
-    width: 250px;
-    height: 250px;
+    width: 160px;
+    height: 160px;
   }
   #About .socials div {
     margin: 10px 35px;
@@ -293,6 +299,7 @@
 @media only screen and (max-width: 576px) {
   #About {
     height: max-content;
+    padding-top: 50px;
   }
   #About .About-container {
     flex-direction: column; /* Stack items vertically */
@@ -351,8 +358,8 @@
     margin-top: 35px;
   }
   #About .blur-circle {
-    width: 170px;
-    height: 170px;
+    width: 120px;
+    height: 120px;
   }
   #About .socials {
     margin-left: 0;
