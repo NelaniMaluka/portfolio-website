@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Download } from "@mui/icons-material";
 
 import "./Navbar.css";
@@ -6,10 +6,26 @@ import "./Navbar.css";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isSpinning, setIsSpinning] = useState(false);
+  const [showNavbar, setShowNavbar] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY < lastScrollY) {
+        setShowNavbar(true); // Show when scrolling up
+      } else {
+        setShowNavbar(false); // Hide when scrolling down
+      }
+      setLastScrollY(window.scrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
 
   const handleMenuClick = () => {
     setIsSpinning(true);
-    setTimeout(() => setIsSpinning(false), 400); // Stops spinning after 0.4s (same as animation duration)
+    setTimeout(() => setIsSpinning(false), 400);
     setIsOpen(!isOpen);
   };
 
@@ -48,7 +64,7 @@ export default function Navbar() {
   ];
 
   return (
-    <div className="navbar">
+    <div className={`navbar ${showNavbar ? "visible" : "hidden"}`}>
       <div className="container">
         <div className="logo">
           <a href="/">

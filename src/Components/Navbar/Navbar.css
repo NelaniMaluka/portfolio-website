@@ -1,10 +1,26 @@
 .navbar {
+  position: fixed; /* Keep the navbar at the top */
+  top: 0;
+  left: 0;
+  width: 100%;
   height: max-content;
   padding: 0 5px;
   display: flex;
   justify-content: space-between; /* Aligns logo to the left and list to the right */
   align-items: center; /* Vertically centers the content in the navbar */
   background-color: black;
+  transition: transform 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+/* Hide navbar when scrolling down */
+.navbar.hidden {
+  transform: translateY(-100%);
+}
+
+/* Show navbar when scrolling up */
+.navbar.visible {
+  transform: translateY(0);
 }
 
 .navbar .logo {
