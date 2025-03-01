@@ -32,54 +32,73 @@ export default function Experience() {
   };
 
   const icons = [
-    { name: "React js", src: "/Images/Icons/react.png" },
-    { name: "Redux", src: "/Images/Icons/Redux.png" },
-    { name: "Spring Boot", src: "/Images/Icons/spring-boot.png" },
-    { name: "Java", src: "/Images/Icons/java.png" },
-    { name: "Jquery", src: "/Images/Icons/jquery.png" },
-    { name: "JavaScript", src: "/Images/Icons/js.png" },
-    { name: "CSS", src: "/Images/Icons/css-3.png" },
-    { name: "Git", src: "/Images/Icons/Git.png" },
-    { name: "Junit", src: "/Images/Icons/Junit.png" },
-    { name: "Mysql", src: "/Images/Icons/mysql.png" },
-    { name: "MS Sql", src: "/Images/Icons/sql-server.png" },
-    { name: "Firebase", src: "/Images/Icons/firebase.png" },
+    {
+      name: "React js",
+      src: "/Images/Icons/react.png",
+      desc: "JavaScript library",
+    },
+    { name: "Redux", src: "/Images/Icons/Redux.png", desc: "State manager" },
+    {
+      name: "Spring Boot",
+      src: "/Images/Icons/spring-boot.png",
+      desc: "Java framework",
+    },
+    { name: "Git", src: "/Images/Icons/Git.png", desc: "Version control" },
+    { name: "Mysql", src: "/Images/Icons/mysql.png", desc: "Relational DB" },
+    {
+      name: "MS Sql",
+      src: "/Images/Icons/sql-server.png",
+      desc: "Database system",
+    },
+    {
+      name: "Firebase",
+      src: "/Images/Icons/firebase.png",
+      desc: "Backend platform",
+    },
   ];
 
   return (
     <div id="Experience" className="xp-container">
       <div className="container">
         <div className="heading">
-          <h1>Experience and Skills</h1>
+          <h1>Professional Experience</h1>
           <p className="sub-heading">
-            Explore my skills and experience in software development. See how I
-            build secure, scalable applications.
+            Gain insight into my journey in software development, from building
+            secure applications to implementing scalable solutions.
           </p>
         </div>
-        <Stack direction="row" spacing={1}>
-          <Chip
-            icon={<WorkIcon />}
-            label="Experience"
-            variant={isSelected === "experience" ? "filled" : "outlined"}
-            onClick={() => handleSwitchView("experience")}
-          />
-          <Chip
-            icon={<SchoolIcon />}
-            label="More About Me"
-            variant={isSelected === "education" ? "filled" : "outlined"}
-            onClick={() => handleSwitchView("education")}
-          />
-        </Stack>
         <div className="xp-content">
-          <div
-            className={`timeline-wrapper ${slide ? "slide-out" : "slide-in"}`}
-          >
-            {isView}
+          <div className="timeline-wrapper">
+            <Stack direction="row" spacing={1}>
+              <Chip
+                icon={<WorkIcon />}
+                label="Experience"
+                variant={isSelected === "experience" ? "filled" : "outlined"}
+                onClick={() => handleSwitchView("experience")}
+              />
+              <Chip
+                icon={<SchoolIcon />}
+                label="More About Me"
+                variant={isSelected === "education" ? "filled" : "outlined"}
+                onClick={() => handleSwitchView("education")}
+              />
+            </Stack>
+            <div className={`view ${slide ? "slide-out" : "slide-in"}`}>
+              {isView}
+            </div>
           </div>
           <div className="skills">
+            <div className="heading">
+              <h1>Current Technologies</h1>
+              <p className="sub-heading">
+                Discover my expertise in software development, leveraging modern
+                frameworks and best practices to build secure, scalable
+                applications.
+              </p>
+            </div>
             {icons.map((icon, index) => (
               <div key={index} className="skill">
-                <span>
+                <span className="img">
                   <img
                     src={icon.src}
                     alt={`${icon.name} icon`}
@@ -88,8 +107,12 @@ export default function Experience() {
                     }`}
                     onMouseEnter={() => handleMouseEnter(icon.name)}
                   />
-                  <span className="text">{icon.name}</span>
                 </span>
+                <div className="skill-text">
+                  <span className="text">{icon.name}</span>
+
+                  <span className="text">{icon.desc}</span>
+                </div>
               </div>
             ))}
           </div>

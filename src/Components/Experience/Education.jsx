@@ -21,13 +21,13 @@ export default function Education() {
           <TimelineConnector sx={{ bgcolor: "rgb(255, 175, 54)" }} />
         </TimelineSeparator>
         <TimelineContent>
-          <p>
+          <span>
             I’m a passionate software developer with a strong foundation in
             full-stack development, database management, and cloud technologies.
             I completed NQF Level 6 in IT: Database Development (2024–2025) at
             CTU Training Solutions, where I specialized in SQL, Azure, Java, C#,
             .NET, and web technologies.
-          </p>
+          </span>
         </TimelineContent>
       </TimelineItem>
       <TimelineItem>
@@ -35,12 +35,12 @@ export default function Education() {
           <TimelineDot sx={{ bgcolor: "rgb(255, 175, 54)" }} />
         </TimelineSeparator>
         <TimelineContent>
-          <p>
+          <span>
             I enjoy building projects, solving real-world problems, and
             continuously learning to stay ahead in the tech industry. In my free
             time, I explore new technologies, coding challenges, and cloud
             solutions to expand my expertise.
-          </p>
+          </span>
         </TimelineContent>
       </TimelineItem>
     </Timeline>

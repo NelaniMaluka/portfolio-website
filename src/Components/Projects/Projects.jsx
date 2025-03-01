@@ -53,7 +53,7 @@ export default function Projects() {
         "/Images/project-images/Learnhall/Learnhall-img3.png",
         "/Images/project-images/Learnhall/Learnhall-img4.png",
       ],
-      tools: ["HTML", "CSS", "JavaScript", "Vue.js"],
+      tools: ["HTML", "CSS", "JavaScript", "JQuery", "Vue.js"],
       about:
         "Learnhall is an online platform that connects students with tutors. It collects user data, such as course preferences and tutor information, and sends it directly to the company’s email for processing. The platform aims to streamline the connection process between students and tutors, ensuring a smooth and efficient experience.",
       liveUrl: "https://learnhall.com/",
