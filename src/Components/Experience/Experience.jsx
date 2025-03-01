@@ -11,20 +11,24 @@ import "./Experience.css";
 export default function Experience() {
   const [isView, setView] = useState(<CustomizedTimeline />);
   const [isSelected, setSelected] = useState("experience");
+  const [slide, setSlide] = useState(false);
   const [hoveredIcon, setHoveredIcon] = useState(null);
+
+  const handleSwitchView = (viewType) => {
+    if (viewType === isSelected) return;
+
+    setSlide(true); // Start slide-out animation
+    setTimeout(() => {
+      setSelected(viewType);
+      setView(
+        viewType === "experience" ? <CustomizedTimeline /> : <Education />
+      );
+      setSlide(false); // Start slide-in animation
+    }, 300); // Matches animation duration
+  };
 
   const handleMouseEnter = (icon) => {
     setHoveredIcon(icon);
-  };
-
-  const handleExperienceClick = () => {
-    setSelected("experience");
-    setView(<CustomizedTimeline />);
-  };
-
-  const handleEducationClick = () => {
-    setSelected("education");
-    setView(<Education />);
   };
 
   const icons = [
@@ -57,18 +61,20 @@ export default function Experience() {
             icon={<WorkIcon />}
             label="Experience"
             variant={isSelected === "experience" ? "filled" : "outlined"}
-            onClick={handleExperienceClick}
+            onClick={() => handleSwitchView("experience")}
           />
           <Chip
             icon={<SchoolIcon />}
             label="More About Me"
             variant={isSelected === "education" ? "filled" : "outlined"}
-            onClick={handleEducationClick}
+            onClick={() => handleSwitchView("education")}
           />
         </Stack>
         <div className="xp-content">
-          <div className="experince">
-            <div className="timeline-wrapper">{isView}</div>
+          <div
+            className={`timeline-wrapper ${slide ? "slide-out" : "slide-in"}`}
+          >
+            {isView}
           </div>
           <div className="skills">
             {icons.map((icon, index) => (

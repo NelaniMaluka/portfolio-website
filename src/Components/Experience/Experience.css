@@ -183,6 +183,23 @@
   }
 }
 
+.timeline-wrapper {
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  min-height: 200px;
+  width: 50%;
+  margin: auto;
+}
+
+.slide-in {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.slide-out {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
 /* ===========================
      Responsive Design 
      =========================== */
@@ -244,6 +261,11 @@
     margin: 11px;
     width: 90px;
   }
+  .timeline-wrapper {
+    min-height: 400px;
+    width: 80%;
+    padding: 25px 0;
+  }
 }
 
 @media only screen and (max-width: 576px) {
@@ -285,5 +307,10 @@
   .skill {
     margin: 10px;
     width: 70px;
+  }
+  .timeline-wrapper {
+    min-height: 200px;
+    margin: 25px 0;
+    width: 100%;
   }
 }
