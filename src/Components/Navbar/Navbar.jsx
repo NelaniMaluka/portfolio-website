@@ -8,15 +8,25 @@ export default function Navbar() {
   const [isSpinning, setIsSpinning] = useState(false);
   const [showNavbar, setShowNavbar] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [activeSection, setActiveSection] = useState(""); // Track active section
 
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY < lastScrollY) {
-        setShowNavbar(true); // Show when scrolling up
+        setShowNavbar(true);
       } else {
-        setShowNavbar(false); // Hide when scrolling down
+        setShowNavbar(false);
       }
       setLastScrollY(window.scrollY);
+
+      // Highlight active section
+      const sections = document.querySelectorAll("section");
+      sections.forEach((section) => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top <= 100 && rect.bottom >= 100) {
+          setActiveSection(section.id);
+        }
+      });
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -38,11 +48,20 @@ export default function Navbar() {
     document.body.removeChild(link);
   };
 
+  const handleSmoothScroll = (event, href) => {
+    event.preventDefault();
+    const targetSection = document.querySelector(href);
+    if (targetSection) {
+      targetSection.scrollIntoView({ behavior: "smooth" });
+      setIsOpen(false); // Close menu on mobile
+    }
+  };
+
   const navLinks = [
-    { label: "About", href: "#About" },
-    { label: "Experience", href: "#Experience" },
-    { label: "Projects", href: "#Projects" },
-    { label: "Contact Me", href: "#ContactMe" },
+    { label: "About", href: "#About1" },
+    { label: "Experience", href: "#Experience1" },
+    { label: "Projects", href: "#Projects1" },
+    { label: "Contact Me", href: "#ContactMe1" },
   ];
 
   const socialLinks = [
@@ -75,7 +94,15 @@ export default function Navbar() {
           <ul>
             {navLinks.map((link, index) => (
               <li key={index}>
-                <a href={link.href}>{link.label}</a>
+                <a
+                  href={link.href}
+                  className={
+                    activeSection === link.href.substring(1) ? "active" : ""
+                  }
+                  onClick={(e) => handleSmoothScroll(e, link.href)}
+                >
+                  {link.label}
+                </a>
               </li>
             ))}
             <li>
@@ -111,7 +138,13 @@ export default function Navbar() {
             <ul>
               {navLinks.map((link, index) => (
                 <li key={index}>
-                  <a href={link.href} onClick={() => setIsOpen(!isOpen)}>
+                  <a
+                    href={link.href}
+                    className={
+                      activeSection === link.href.substring(1) ? "active" : ""
+                    }
+                    onClick={(e) => handleSmoothScroll(e, link.href)}
+                  >
                     {link.label}
                   </a>
                 </li>
