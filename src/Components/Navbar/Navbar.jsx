@@ -5,10 +5,10 @@ import "./Navbar.css";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isSpinning, setIsSpinning] = useState(false);
   const [showNavbar, setShowNavbar] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
-  const [activeSection, setActiveSection] = useState(""); // Track active section
+  const [activeSection, setActiveSection] = useState(""); // Track scrolling
+  const [selectedLink, setSelectedLink] = useState(""); // Track clicked link
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,7 +19,7 @@ export default function Navbar() {
       }
       setLastScrollY(window.scrollY);
 
-      // Highlight active section
+      // Detect active section on scroll
       const sections = document.querySelectorAll("section");
       sections.forEach((section) => {
         const rect = section.getBoundingClientRect();
@@ -34,8 +34,6 @@ export default function Navbar() {
   }, [lastScrollY]);
 
   const handleMenuClick = () => {
-    setIsSpinning(true);
-    setTimeout(() => setIsSpinning(false), 400);
     setIsOpen(!isOpen);
   };
 
@@ -54,6 +52,7 @@ export default function Navbar() {
     if (targetSection) {
       targetSection.scrollIntoView({ behavior: "smooth" });
       setIsOpen(false); // Close menu on mobile
+      setSelectedLink(href.substring(1)); // Set clicked link as selected
     }
   };
 
@@ -93,17 +92,26 @@ export default function Navbar() {
         <div className="list">
           <ul>
             {navLinks.map((link, index) => (
-              <li key={index}>
-                <a
-                  href={link.href}
-                  className={
-                    activeSection === link.href.substring(1) ? "active" : ""
-                  }
-                  onClick={(e) => handleSmoothScroll(e, link.href)}
-                >
-                  {link.label}
-                </a>
-              </li>
+              <div
+                key={index}
+                className={
+                  selectedLink === link.href.substring(1)
+                    ? "link-container active"
+                    : "link-container"
+                }
+              >
+                <li>
+                  <a
+                    href={link.href}
+                    className={
+                      selectedLink === link.href.substring(1) ? "active" : ""
+                    }
+                    onClick={(e) => handleSmoothScroll(e, link.href)}
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              </div>
             ))}
             <li>
               <button className="shake" onClick={handleDownload}>
@@ -113,11 +121,7 @@ export default function Navbar() {
             <li>
               {!isOpen && (
                 <div className="menu-container" onClick={handleMenuClick}>
-                  <img
-                    src="/Images/Icons/menu.png"
-                    alt="menu"
-                    className={isSpinning ? "spinning" : ""}
-                  />
+                  <img src="/Images/Icons/menu.png" alt="menu" />
                 </div>
               )}
             </li>
@@ -130,7 +134,6 @@ export default function Navbar() {
             <img
               src="/Images/Icons/close.png"
               alt="close"
-              className={isSpinning ? "spinning" : ""}
               onClick={handleMenuClick}
             />
           </div>
@@ -141,7 +144,7 @@ export default function Navbar() {
                   <a
                     href={link.href}
                     className={
-                      activeSection === link.href.substring(1) ? "active" : ""
+                      selectedLink === link.href.substring(1) ? "active" : ""
                     }
                     onClick={(e) => handleSmoothScroll(e, link.href)}
                   >

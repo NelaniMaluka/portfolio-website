@@ -3,11 +3,10 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: max-content;
+  height: 80px;
   padding: 0 5px;
   display: flex;
-  justify-content: space-between; /* Aligns logo to the left and list to the right */
-  align-items: center; /* Vertically centers the content in the navbar */
+  justify-content: center;
   background-color: black;
   transition: transform 0.3s ease-in-out;
   z-index: 1000;
@@ -25,20 +24,23 @@
 
 .navbar .logo {
   display: inline-block;
-  margin-top: 10px;
+  height: 65px;
 }
 
 .navbar .logo img {
-  height: 55px;
+  height: 65px;
+}
+.navbar .logo img:hover {
+  height: 60px;
 }
 
 .navbar .list {
   display: flex; /* Flex container to align items horizontally */
   justify-content: flex-end; /* Moves the list to the right */
-  margin-left: auto; /* Ensures the list is pushed to the right */
+  margin-left: 0; /* Ensures the list is pushed to the right */
   width: max-content;
   float: right;
-  margin-top: 25px;
+  margin-top: 12px;
 }
 
 .navbar .list ul {
@@ -46,15 +48,13 @@
   display: flex;
   gap: 20px; /* Adds space between list items */
   margin: 0; /* Removes default margin */
+  align-items: center;
 }
 
 .navbar .list ul li a {
   font-size: 20px;
-  color: aliceblue;
+  color: black;
   text-decoration: none;
-}
-.navbar .list ul li a:hover {
-  color: rgb(252, 183, 80);
 }
 
 @keyframes shake {
@@ -82,13 +82,13 @@
   height: 35px;
   width: 120px;
   border-radius: 8px;
-  margin-top: -5px;
   transition: transform 0.2s ease-in-out;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 4px;
   border: none;
+  box-shadow: 0px 2px 8px 0.5px rgb(121, 121, 121);
 }
 
 /* Add the shake effect on hover */
@@ -172,7 +172,6 @@
 }
 
 .hamburger .list-2 ul li a {
-  font-size: 20px;
   color: black;
   text-decoration: none;
   font-size: 30px;
@@ -208,7 +207,22 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 4px;
+}
+.link-container {
+  padding: 5px;
+  min-width: 110px;
+  text-align: center;
+  border-radius: 40px;
+  background-color: aliceblue;
+  box-shadow: 0px 2px 8px 0.5px rgb(121, 121, 121);
+}
+
+.link-container:hover {
+  background-color: rgb(255, 175, 54);
+}
+
+.link-container:has(.active) {
+  background-color: rgb(255, 175, 54);
 }
 
 /**********************
@@ -224,7 +238,10 @@
 ******* Tablet ********
 **********************/
 @media only screen and (min-width: 576px) and (max-width: 960px) {
-  .navbar .list ul li a {
+  .navbar .list ul a {
+    display: none;
+  }
+  .link-container {
     display: none;
   }
   .navbar .list ul li button {
@@ -237,6 +254,9 @@
   .navbar .logo img {
     height: 45px;
   }
+  .navbar .logo img:hover {
+    height: 40px;
+  }
 }
 
 /**********************
@@ -244,6 +264,9 @@
 **********************/
 @media only screen and (max-width: 576px) {
   .navbar .list ul li a {
+    display: none;
+  }
+  .link-container {
     display: none;
   }
   .navbar .list ul li button {
@@ -255,6 +278,9 @@
   }
   .navbar .logo img {
     height: 40px;
+  }
+  .navbar .logo img:hover {
+    height: 35px;
   }
   .hamburger .list-2 ul li a {
     font-size: 25px;
