@@ -13,7 +13,8 @@
   display: block;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 75%;
+  margin: auto;
 }
 
 #Projects h1 {
@@ -30,10 +31,10 @@
   display: inline-block; /* Ensures the container fits the image size */
   width: max-content;
   height: max-content;
-  width: 32%;
+  width: 45%;
   border-radius: 20px;
-  margin: 0.6%;
-  margin-top: 40px;
+  margin: 2.5%;
+  margin-top: 10px;
   margin-bottom: 30px;
 }
 
@@ -44,7 +45,6 @@
   transition: filter 0.3s ease-in-out;
   height: max-content;
   min-height: 200px;
-  height: 220px;
 }
 
 .image-container:hover img {
@@ -136,7 +136,6 @@ body.modal-open #Projects > *:not(.modal) {
   margin: auto;
   padding-bottom: 50px;
   font-size: 18px;
-  font-size: 15px;
 }
 
 /**********************
@@ -162,9 +161,17 @@ body.modal-open #Projects > *:not(.modal) {
   #Projects h1 {
     font-size: 30px;
   }
+  .project {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
   .image-container {
-    width: 48%;
-    margin: 1%;
+    width: 68%;
+    margin: 2% 0;
+    min-width: 400px;
   }
   #Projects .sub-text {
     font-size: 18px;

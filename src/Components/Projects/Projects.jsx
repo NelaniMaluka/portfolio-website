@@ -113,12 +113,16 @@ export default function Projects() {
             {showCard !== null && (
               <div className="modal" onClick={handleOutsideClick}>
                 <div className="modal-content">
-                  <Card sx={{ maxWidth: 800 }}>
+                  <Card
+                    sx={{ maxWidth: 800, boxShadow: "none", border: "none" }}
+                  >
                     <CardMedia
                       sx={{
                         height: 370,
+                        border: "none",
+                        boxShadow: "none",
                         [theme.breakpoints.down("sm")]: {
-                          height: 200, // Set specific width for mobile view
+                          height: 200,
                         },
                       }}
                       title="Project Image"
