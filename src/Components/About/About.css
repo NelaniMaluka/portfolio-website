@@ -358,7 +358,7 @@
 @media only screen and (max-width: 576px) {
   #About {
     height: max-content;
-    padding-top: 50px;
+    padding: 50px 0;
   }
   #About .About-container {
     flex-direction: column; /* Stack items vertically */
@@ -411,9 +411,6 @@
   #About .blur-circle {
     width: 120px;
     height: 120px;
-  }
-  #About .socials {
-    margin-left: 0;
   }
   #About .socials div {
     margin: 10px 25px;
