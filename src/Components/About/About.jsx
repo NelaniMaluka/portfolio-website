@@ -20,7 +20,7 @@ export default function About() {
               <span className="q">
                 <LocationOnIcon
                   sx={{
-                    height: { xs: "15px", sm: "16px", md: "18px", lg: "20px" },
+                    height: { xs: "13px", sm: "16px", md: "18px", lg: "20px" },
                   }}
                 />
                 Randfontein, Johannesburg

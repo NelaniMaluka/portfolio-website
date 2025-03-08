@@ -439,19 +439,19 @@
   .bar {
     width: max-content;
     margin-top: 90px;
-    padding: 10px;
+    padding: 8px;
   }
   .bar img {
-    width: 50px;
-    padding-right: 15px;
+    width: 45px;
+    padding-right: 10px;
   }
   .bar h2 {
-    font-size: 25px;
+    font-size: 22px;
   }
   .bar h6 {
-    font-size: 15px;
+    font-size: 13px;
   }
   .q {
-    font-size: 13px;
+    font-size: 11px;
   }
 }
