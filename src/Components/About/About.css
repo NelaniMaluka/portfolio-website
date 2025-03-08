@@ -4,15 +4,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url("/public/Images/background-img.jpg");
   background-size: cover; /* Ensures the image covers the entire element */
   background-position: center; /* Centers the image */
   background-repeat: no-repeat; /* Prevents repetition */
   padding-top: 68px;
 }
-
+#About .o {
+  color: rgb(255, 175, 54);
+}
 #About .About-container {
-  display: flex;
+  display: block;
   flex-wrap: wrap;
   margin: auto;
   width: 95%;
@@ -29,6 +30,8 @@
   font-size: 2rem;
   font-weight: bold;
   color: white;
+  margin: auto;
+  text-align: center;
 }
 
 #About .text h3 {
@@ -178,6 +181,13 @@
 }
 #About .button-container {
   display: flex;
+  width: 100%;
+  justify-content: center;
+}
+#About .p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #About button {
@@ -211,6 +221,38 @@
   text-decoration: underline;
 }
 
+.bar {
+  display: flex;
+  border: 2px solid white;
+  padding: 10px;
+  border-radius: 75px;
+  width: max-content;
+  margin: auto;
+  text-align: left;
+  align-items: center;
+  animation: floating 2s infinite ease-in-out;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+.q {
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  color: rgb(221, 221, 221);
+}
+
+.bar img {
+  width: 80px;
+  border-radius: 49%;
+  padding-right: 20px;
+}
+.bar h2 {
+  font-size: 35px;
+}
+.bar h6 {
+  font-size: 18px;
+}
+
 /**********************
 * large desktop layout*
 **********************/
@@ -218,6 +260,18 @@
   #About {
     height: 800px;
     padding-top: 65px;
+  }
+  #About .socials div:hover {
+    transform: scale(2);
+  }
+  .bar img {
+    width: 85px;
+  }
+  .bar h2 {
+    font-size: 40px;
+  }
+  .bar h6 {
+    font-size: 20px;
   }
 }
 
@@ -240,14 +294,6 @@
     margin: 0;
     height: max-content;
     text-align: center;
-  }
-  #About .text h6 {
-    margin-top: 90px;
-    font-size: 22px;
-    margin-bottom: 10px;
-  }
-  #About .text h2 {
-    font-size: 42px;
   }
 
   #About .text h3 {
@@ -291,6 +337,19 @@
   #About .socials {
     margin-left: 0;
   }
+  .bar {
+    margin-top: 60px;
+    padding: 10px;
+  }
+  .bar img {
+    width: 70px;
+  }
+  .bar h2 {
+    font-size: 35px;
+  }
+  .bar h6 {
+    font-size: 18px;
+  }
 }
 
 /**********************
@@ -312,14 +371,6 @@
     margin: 0;
     height: max-content;
     text-align: center;
-  }
-  #About .text h6 {
-    margin-top: 90px;
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
-  #About .text h2 {
-    font-size: 27px;
   }
   .atc {
     height: 70px;
@@ -384,5 +435,23 @@
   #About .button-container {
     align-items: center;
     justify-content: center;
+  }
+  .bar {
+    width: max-content;
+    margin-top: 90px;
+    padding: 10px;
+  }
+  .bar img {
+    width: 50px;
+    padding-right: 15px;
+  }
+  .bar h2 {
+    font-size: 25px;
+  }
+  .bar h6 {
+    font-size: 15px;
+  }
+  .q {
+    font-size: 13px;
   }
 }

@@ -1,59 +1,32 @@
-import { useState, useEffect } from "react";
 import { PersonAdd } from "@mui/icons-material";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
 
 import "./About.css";
 
 export default function About() {
-  const texts = [
-    "I'm a Software Developer.",
-    "I build scalable web applications.",
-  ];
-  const [text, setText] = useState("");
-  const [isDeleting, setIsDeleting] = useState(false);
-  const [index, setIndex] = useState(0);
-  const [charIndex, setCharIndex] = useState(0);
-  const year = 2023;
-  const currentYear = new Date().getFullYear();
-  const difYear = currentYear - year;
-
-  useEffect(() => {
-    const currentText = texts[index];
-
-    const typingSpeed = 100;
-    const deletingSpeed = 50;
-    const pauseTime = 1500; // Pause before deleting
-
-    const timeout = setTimeout(
-      () => {
-        if (isDeleting) {
-          if (charIndex > 0) {
-            setCharIndex((prev) => prev - 1);
-          } else {
-            setIsDeleting(false);
-            setIndex((prevIndex) => (prevIndex + 1) % texts.length);
-          }
-        } else {
-          if (charIndex < currentText.length) {
-            setCharIndex((prev) => prev + 1);
-          } else {
-            setTimeout(() => setIsDeleting(true), pauseTime);
-          }
-        }
-      },
-      isDeleting ? deletingSpeed : typingSpeed
-    );
-
-    setText(currentText.substring(0, charIndex));
-
-    return () => clearTimeout(timeout);
-  }, [charIndex, isDeleting, index, texts]);
-
   return (
     <section id="About" className="About">
       <div className="container About-container">
         <div className="text">
-          <h6>Hello Welcome</h6>
-          <h2>I&rsquo;m Nelani Maluka</h2>
+          <div className="bar">
+            <div>
+              <img src="Images/Nelani.jpg" alt="" />
+            </div>
+            <div>
+              <h6>Hello Welcome</h6>
+              <h2>
+                I&rsquo;m <span className="o">Nelani Maluka</span>
+              </h2>
+              <span className="q">
+                <LocationOnIcon
+                  sx={{
+                    height: { xs: "15px", sm: "16px", md: "18px", lg: "20px" },
+                  }}
+                />
+                Randfontein, Johannesburg
+              </span>
+            </div>
+          </div>
           <div className="button-container">
             <a href="#ContactMe">
               <button className="btn1 shake">
@@ -66,17 +39,16 @@ export default function About() {
             </button>
           </div>
           <div className="atc">
-            <h3 className="animated-text">
-              {text}
-              <span className="cursor">|</span>
-            </h3>
+            <h3 className="animated-text">I&rsquo;m a Software Developer.</h3>
           </div>
-          <p>
-            Graduate software developer with experience in full-stack
-            development using Java, React, and Spring Boot. Skilled in building
-            reliable APIs, improving performance, and creating easy-to-use
-            applications.
-          </p>
+          <div className="p">
+            <p>
+              Graduate software developer with experience in full-stack
+              development using Java, React, and Spring Boot. Skilled in
+              building reliable APIs, improving performance, and creating
+              easy-to-use applications.
+            </p>
+          </div>
 
           <div>
             <a href="https://www.linkedin.com/in/nelanimaluka/">
@@ -100,18 +72,6 @@ export default function About() {
                 </div>
               </div>
             </a>
-          </div>
-        </div>
-        <div className="image">
-          <div className="setup-container">
-            <div className="blur-circle"></div>
-            <div className="img-text">
-              <h3>{difYear}+</h3>
-              <span>Years Building Personal Projects</span>
-            </div>
-            <div className="setup-image">
-              <img src="/Images/setup-background.png" alt="desk-setup-image" />
-            </div>
           </div>
         </div>
       </div>
