@@ -12,6 +12,9 @@
   border: 1.5px solid rgb(255, 175, 54);
   margin-bottom: 80px;
 }
+.w {
+  margin-top: 70px;
+}
 
 .certificates .badge-container img {
   width: 7%;

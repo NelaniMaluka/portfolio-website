@@ -43,27 +43,36 @@ export default function Certificates() {
   ];
 
   return (
-    <div className="cert-container">
-      <div className="certificates">
-        <div className="container">
-          <div className="badge-container">
-            {badgeData.map((badge, index) => (
-              <a
-                href={badge.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                key={index}
-              >
-                <img
-                  src={badge.src}
-                  alt={badge.alt}
-                  className={`rotating-badge ${
-                    hovered[index] ? "animate" : ""
-                  }`}
-                  onMouseEnter={() => handleHover(index)}
-                />
-              </a>
-            ))}
+    <div className="w">
+      <div className="heading">
+        <h1>Certificates</h1>
+        <p className="sub-heading" style={{ color: "rgb(226, 226, 226)" }}>
+          A look at the certifications I&rsquo;ve earned throughout my software
+          development journey.
+        </p>
+      </div>
+      <div className="cert-container">
+        <div className="certificates">
+          <div className="container">
+            <div className="badge-container">
+              {badgeData.map((badge, index) => (
+                <a
+                  href={badge.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  key={index}
+                >
+                  <img
+                    src={badge.src}
+                    alt={badge.alt}
+                    className={`rotating-badge ${
+                      hovered[index] ? "animate" : ""
+                    }`}
+                    onMouseEnter={() => handleHover(index)}
+                  />
+                </a>
+              ))}
+            </div>
           </div>
         </div>
       </div>
