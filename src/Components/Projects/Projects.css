@@ -207,4 +207,7 @@ body.modal-open #Projects > *:not(.modal) {
   .image-container img {
     height: auto !important;
   }
+  .projects-container {
+    width: 100%;
+  }
 }
