@@ -1,89 +1,65 @@
 import Timeline from "@mui/lab/Timeline";
-import TimelineItem from "@mui/lab/TimelineItem";
+import TimelineItem, { timelineItemClasses } from "@mui/lab/TimelineItem";
 import TimelineSeparator from "@mui/lab/TimelineSeparator";
-import TimelineConnector from "@mui/lab/TimelineConnector";
 import TimelineContent from "@mui/lab/TimelineContent";
-import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
 import TimelineDot from "@mui/lab/TimelineDot";
-import LaptopMacIcon from "@mui/icons-material/LaptopMac";
-import Typography from "@mui/material/Typography";
-import WorkIcon from "@mui/icons-material/Work";
+import { Typography } from "@mui/material";
+import "./Experience.css";
 
 export default function CustomizedTimeline() {
   return (
     <Timeline
-      position="alternate"
       sx={{
-        display: "inline-block",
-        margin: "0",
-        padding: "0",
-        maxWidth: "100%",
-        height: "100%",
+        [`& .${timelineItemClasses.root}:before`]: {
+          flex: 0,
+          padding: 0,
+        },
       }}
     >
+      {/* Education Experience */}
       <TimelineItem>
-        <TimelineOppositeContent
-          sx={{ m: "auto 0" }}
-          variant="body2"
-          color="text.secondary"
-        >
-          Nov 2024 - April 2025
-          <span style={{ display: "block" }}>Learnhall</span>
-        </TimelineOppositeContent>
         <TimelineSeparator>
-          <TimelineConnector sx={{ bgcolor: " rgb(255, 175, 54)" }} />
           <TimelineDot
-            sx={{ backgroundColor: "white", borderColor: "rgb(255, 175, 54)" }}
-            variant="outlined"
+            sx={{
+              bgcolor: "transparent",
+              border: "none",
+              boxShadow: "none",
+              padding: 0,
+            }}
           >
-            <WorkIcon style={{ color: "black" }} />
+            <img
+              src="/Images/Icons/Logo.png" // Change this to your image path
+              alt="Learnhall Icon"
+              className="work-icon"
+            />
           </TimelineDot>
-          <TimelineConnector sx={{ bgcolor: " rgb(255, 175, 54)" }} />
         </TimelineSeparator>
-        <TimelineContent sx={{ py: "12px", px: 2 }}>
-          <Typography variant="h6" component="span">
-            Web Developer
+        <TimelineContent>
+          <Typography variant="h6" sx={{ fontWeight: "bold" }}>
+            Web Developer (Internship)
           </Typography>
-          <Typography>
-            <p>
-              Led a website redesign to improve user experience and aesthetics.
-              Built a landing page for data collection and email communication.
-              Developed an interactive Q&A section to boost engagement.
-            </p>
-          </Typography>
-        </TimelineContent>
-      </TimelineItem>
-      <TimelineItem>
-        <TimelineOppositeContent
-          sx={{ m: "auto 0" }}
-          variant="body2"
-          color="text.secondary"
-        >
-          Jan 2023 - Feb 2023
-          <span style={{ display: "block" }}>Brainnest</span>
-        </TimelineOppositeContent>
-        <TimelineSeparator>
-          <TimelineConnector sx={{ bgcolor: " rgb(255, 175, 54)" }} />
-          <TimelineDot
-            sx={{ backgroundColor: "white", borderColor: "rgb(255, 175, 54)" }}
-            variant="outlined"
+          <Typography
+            variant="subtitle1"
+            color="text.secondary"
+            sx={{
+              fontSize: { xs: "14px", sm: "15px", md: "17px", lg: "17px" },
+            }}
           >
-            <LaptopMacIcon style={{ color: "black" }} />
-          </TimelineDot>
-          <TimelineConnector sx={{ bgcolor: " rgb(255, 175, 54)" }} />
-        </TimelineSeparator>
-        <TimelineContent sx={{ py: "12px", px: 2 }}>
-          <Typography variant="h6" component="span">
-            Training Program
+            Learnhall (Nov 2024 - April 2025)
           </Typography>
-          <Typography>
-            <p>
-              Gained hands-on experience building automation tools for file
-              transfer and email sending. Learned to develop applications for
-              real-time data display, including weather information. Enhanced
-              problem-solving skills through building interactive games and
-              encryption algorithms.
-            </p>
+          <Typography
+            variant="body2"
+            sx={{
+              fontSize: { xs: "13px", sm: "14px", md: "16px", lg: "16px" },
+            }}
+          >
+            • Worked with Git, GitHub, project management tools, and Namecheap
+            for a developer portfolio website.
+            <br />
+            • Led a website redesign to improve user experience and aesthetics.
+            <br />
+            • Built a landing page for data collection and email communication.
+            <br />• Developed an interactive Q&A section to boost engagement.
           </Typography>
         </TimelineContent>
       </TimelineItem>

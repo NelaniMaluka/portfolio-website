@@ -50,11 +50,6 @@ export default function Experience() {
       src: "/Images/Icons/sql-server.png",
       desc: "Database system",
     },
-    {
-      name: "Firebase",
-      src: "/Images/Icons/firebase.png",
-      desc: "Backend platform",
-    },
   ];
 
   return (
@@ -71,14 +66,16 @@ export default function Experience() {
           <div className="timeline-wrapper">
             <Stack direction="row" spacing={1}>
               <Chip
+                className="rotate-animation"
                 icon={<WorkIcon />}
                 label="Experience"
                 variant={isSelected === "experience" ? "filled" : "outlined"}
                 onClick={() => handleSwitchView("experience")}
               />
               <Chip
+                className="rotate-animation"
                 icon={<SchoolIcon />}
-                label="More About Me"
+                label="Education"
                 variant={isSelected === "education" ? "filled" : "outlined"}
                 onClick={() => handleSwitchView("education")}
               />
@@ -97,7 +94,11 @@ export default function Experience() {
               </p>
             </div>
             {icons.map((icon, index) => (
-              <div key={index} className="skill">
+              <div
+                key={index}
+                className="skill"
+                onMouseEnter={() => handleMouseEnter(icon.name)}
+              >
                 <span className="img">
                   <img
                     src={icon.src}
@@ -105,7 +106,6 @@ export default function Experience() {
                     className={`rotate ${
                       hoveredIcon === icon.name ? "rotating" : ""
                     }`}
-                    onMouseEnter={() => handleMouseEnter(icon.name)}
                   />
                 </span>
                 <div className="skill-text">

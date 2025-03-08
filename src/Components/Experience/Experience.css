@@ -168,6 +168,39 @@
   transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
+.work-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.work-icon-2 {
+  width: 50px;
+  height: 50px;
+}
+
+/* styles.css */
+@keyframes rotateBackAndForth {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(-10deg);
+  }
+  75% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.rotate-animation:hover {
+  animation: rotateBackAndForth 2s ease-in-out infinite;
+}
+
 /* ===========================
      Responsive Design 
      =========================== */
@@ -176,20 +209,28 @@
     padding-bottom: 80px;
   }
   .heading h1 {
-    padding-top: 50px;
-  }
-  .heading p {
-    padding-bottom: 50px;
+    padding-top: 40px;
   }
   .xp-content {
-    min-height: 520px;
+    min-height: 420px;
   }
   .skills img {
-    width: 50px;
+    width: 35px;
   }
   .skill {
     margin: 11px;
-    width: 320px;
+    width: 300px;
+  }
+  .skills .skill-text {
+    margin-top: 5px;
+  }
+  .work-icon {
+    width: 44px;
+    height: 44px;
+  }
+  .work-icon-2 {
+    width: 54px;
+    height: 54px;
   }
 }
 
@@ -236,6 +277,14 @@
     min-height: 400px;
     width: 80%;
     padding: 25px 0;
+  }
+  .work-icon {
+    width: 35px;
+    height: 35px;
+  }
+  .work-icon-2 {
+    width: 40px;
+    height: 40px;
   }
 }
 
@@ -291,5 +340,13 @@
     min-height: 200px;
     margin: 25px 0;
     width: 100%;
+  }
+  .work-icon {
+    width: 30px;
+    height: 30px;
+  }
+  .work-icon-2 {
+    width: 35px;
+    height: 35px;
   }
 }
