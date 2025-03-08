@@ -9,7 +9,6 @@ function App() {
   return (
     <div className="app">
       <Navbar />
-
       <div id="About1">
         <About />
       </div>
