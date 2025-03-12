@@ -3,13 +3,20 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 80px;
+  height: 75px;
   padding: 0 5px;
-  display: flex;
-  justify-content: center;
   background-color: black;
   transition: transform 0.3s ease-in-out;
   z-index: 1000;
+  padding-top: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /* Hide navbar when scrolling down */
@@ -23,8 +30,8 @@
 }
 
 .navbar .logo {
-  display: inline-block;
-  height: 65px;
+  height: max-content;
+  width: 200px;
 }
 
 .navbar .logo img {
@@ -36,11 +43,12 @@
 
 .navbar .list {
   display: flex; /* Flex container to align items horizontally */
-  justify-content: flex-end; /* Moves the list to the right */
-  margin-left: 0; /* Ensures the list is pushed to the right */
+  justify-content: center; /* Moves the list to the right */
   width: max-content;
-  float: right;
-  margin-top: 12px;
+}
+.navbar .list-3 {
+  display: flex;
+  width: 200px;
 }
 
 .navbar .list ul {
@@ -50,9 +58,19 @@
   margin: 0; /* Removes default margin */
   align-items: center;
 }
-
+.navbar .list-3 ul {
+  list-style: none;
+  display: flex;
+  gap: 20px; /* Adds space between list items */
+  margin: 0; /* Removes default margin */
+  align-items: center;
+}
 .navbar .list ul li a {
-  font-size: 20px;
+  font-size: 17px;
+  color: black;
+  text-decoration: none;
+}
+.navbar .list-3 ul li a {
   color: black;
   text-decoration: none;
 }
@@ -75,11 +93,11 @@
   }
 }
 
-.navbar .list ul li button {
+.navbar .list-3 ul li button {
   color: black;
   font-size: 17px;
   background-color: rgb(255, 175, 54);
-  height: 35px;
+  padding: 3px;
   width: 120px;
   border-radius: 8px;
   transition: transform 0.2s ease-in-out;
@@ -96,14 +114,14 @@
   animation: shake 0.4s ease-in-out;
 }
 
-.navbar .list ul li .menu-container {
+.navbar .list-3 ul li .menu-container {
   background-color: white;
   border-radius: 50%;
   padding: 5px 5px 0 5px;
   display: none;
 }
 
-.navbar .list ul li img {
+.navbar .list-3 ul li img {
   width: 30px;
 }
 
@@ -209,8 +227,8 @@
   align-items: center;
 }
 .link-container {
-  padding: 5px;
-  min-width: 110px;
+  padding: 4px;
+  min-width: 100px;
   text-align: center;
   border-radius: 40px;
   background-color: aliceblue;
@@ -218,7 +236,7 @@
 }
 
 .link-container:hover {
-  background-color: rgb(255, 175, 54);
+  background-color: rgb(224, 224, 224);
 }
 
 .link-container:has(.active) {
@@ -238,18 +256,26 @@
 ******* Tablet ********
 **********************/
 @media only screen and (min-width: 576px) and (max-width: 960px) {
-  .navbar .list ul a {
+  .navbar {
+    height: 60px;
+  }
+  .navbar .list {
     display: none;
   }
   .link-container {
     display: none;
   }
-  .navbar .list ul li button {
-    display: none;
+  .navbar .list-3 {
+    width: max-content;
   }
-  .navbar .list ul li .menu-container {
+  .navbar .list-3 ul li .menu-container {
     display: block;
-    margin-top: -15px;
+  }
+  .navbar .list-3 ul li .menu-container img {
+    width: 30px;
+  }
+  .navbar .list-3 ul li button {
+    display: none;
   }
   .navbar .logo img {
     height: 45px;
@@ -257,24 +283,35 @@
   .navbar .logo img:hover {
     height: 40px;
   }
+  .navbar .close-menu-image img {
+    width: 35px;
+  }
 }
 
 /**********************
 ******* Mobile ********
 **********************/
 @media only screen and (max-width: 576px) {
-  .navbar .list ul li a {
+  .navbar {
+    height: 55px;
+  }
+  .navbar .list {
     display: none;
   }
   .link-container {
     display: none;
   }
-  .navbar .list ul li button {
-    display: none;
+  .navbar .list-3 {
+    width: max-content;
   }
-  .navbar .list ul li .menu-container {
+  .navbar .list-3 ul li .menu-container {
     display: block;
-    margin-top: -15px;
+  }
+  .navbar .list-3 ul li .menu-container img {
+    width: 25px;
+  }
+  .navbar .list-3 ul li button {
+    display: none;
   }
   .navbar .logo img {
     height: 40px;
@@ -284,5 +321,8 @@
   }
   .hamburger .list-2 ul li a {
     font-size: 25px;
+  }
+  .navbar .close-menu-image img {
+    width: 30px;
   }
 }

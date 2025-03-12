@@ -57,7 +57,6 @@ export default function Navbar() {
   };
 
   const navLinks = [
-    { label: "About", href: "#About1" },
     { label: "Experience", href: "#Experience1" },
     { label: "Projects", href: "#Projects1" },
     { label: "Contact Me", href: "#ContactMe1" },
@@ -113,6 +112,10 @@ export default function Navbar() {
                 </li>
               </div>
             ))}
+          </ul>
+        </div>
+        <div className="list-3">
+          <ul>
             <li>
               <button className="shake" onClick={handleDownload}>
                 <Download /> Resume
