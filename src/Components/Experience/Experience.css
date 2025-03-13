@@ -200,6 +200,11 @@
 .rotate-animation:hover {
   animation: rotateBackAndForth 2s ease-in-out infinite;
 }
+.dot-wrapper {
+  display: flex;
+  align-items: flex-start; /* Align items at the top */
+  gap: 5px;
+}
 
 /* ===========================
      Responsive Design 

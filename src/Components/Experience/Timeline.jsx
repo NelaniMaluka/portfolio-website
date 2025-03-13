@@ -53,13 +53,33 @@ export default function CustomizedTimeline() {
               fontSize: { xs: "13px", sm: "14px", md: "16px", lg: "16px" },
             }}
           >
-            • Worked with Git, GitHub, project management tools, and Namecheap
-            for a developer portfolio website.
-            <br />
-            • Led a website redesign to improve user experience and aesthetics.
-            <br />
-            • Built a landing page for data collection and email communication.
-            <br />• Developed an interactive Q&A section to boost engagement.
+            <div className="dot-wrapper">
+              <span>•</span>
+              <span>
+                Worked with Git, GitHub, project management tools, and Namecheap
+                for a developer portfolio website.
+              </span>
+            </div>
+            <div className="dot-wrapper">
+              <span>•</span>
+              <span>
+                Led a website redesign to improve user experience and
+                aesthetics.
+              </span>
+            </div>
+            <div className="dot-wrapper">
+              <span>•</span>
+              <span>
+                Built a landing page for data collection and email
+                communication.
+              </span>
+            </div>
+            <div className="dot-wrapper">
+              <span>•</span>
+              <span>
+                Developed an interactive Q&A section to boost engagement.
+              </span>
+            </div>
           </Typography>
         </TimelineContent>
       </TimelineItem>

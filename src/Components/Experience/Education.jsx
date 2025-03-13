@@ -57,12 +57,33 @@ export default function Education() {
               fontSize: { xs: "13px", sm: "14px", md: "16px", lg: "16px" },
             }}
           >
-            • Completed NQF Level 6 in IT: Database Development at CTU Training
-            Solutions. <br />• Specialized in SQL, Azure, Java, C#, .NET, and
-            web technologies. <br />
-            • Gained foundational knowledge in project management, including
-            task planning and team collaboration. <br />• Developed practical
-            skills in database development, programming, and software solutions.
+            <div className="dot-wrapper">
+              <span>•</span>
+              <span>
+                Completed NQF Level 6 in IT: Database Development at CTU
+                Training Solutions.
+              </span>
+            </div>
+            <div className="dot-wrapper">
+              <span>•</span>
+              <span>
+                Specialized in SQL, Azure, Java, C#, .NET, and web technologies.
+              </span>
+            </div>
+            <div className="dot-wrapper">
+              <span>•</span>
+              <span>
+                Gained foundational knowledge in project management, including
+                task planning and team collaboration.
+              </span>
+            </div>
+            <div className="dot-wrapper">
+              <span>•</span>
+              <span>
+                Developed practical skills in database development, programming,
+                and software solutions.
+              </span>
+            </div>
           </Typography>
         </TimelineContent>
       </TimelineItem>
@@ -98,7 +119,7 @@ export default function Education() {
             variant="subtitle1"
             color="text.secondary"
             sx={{
-              fontSize: { xs: "15px", sm: "16px", md: "18px", lg: "18px" },
+              fontSize: { xs: "14px", sm: "15px", md: "17px", lg: "17px" },
             }}
           >
             Brainnest (Jan 2023 - Feb 2023)
@@ -109,12 +130,26 @@ export default function Education() {
               fontSize: { xs: "13px", sm: "14px", md: "16px", lg: "16px" },
             }}
           >
-            • Gained experience building automation tools for file transfer and
-            email sending.
-            <br />
-            • Developed real-time data display apps, including weather info.
-            <br />• Improved problem-solving through interactive games and
-            encryption algorithms.
+            <div className="dot-wrapper">
+              <span>•</span>
+              <span>
+                Gained experience building automation tools for file transfer
+                and email sending.
+              </span>
+            </div>
+            <div className="dot-wrapper">
+              <span>•</span>
+              <span>
+                Developed real-time data display apps, including weather info.
+              </span>
+            </div>
+            <div className="dot-wrapper">
+              <span>•</span>
+              <span>
+                Improved problem-solving through interactive games and
+                encryption algorithms.
+              </span>
+            </div>
           </Typography>
         </TimelineContent>
       </TimelineItem>
