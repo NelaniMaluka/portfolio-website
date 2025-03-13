@@ -49,7 +49,7 @@ export default function Education() {
               fontSize: { xs: "14px", sm: "15px", md: "17px", lg: "17px" },
             }}
           >
-            CTU Training Solutions (2024–2025)
+            CTU Training Solutions (2023–2025)
           </Typography>
           <Typography
             variant="body2"
