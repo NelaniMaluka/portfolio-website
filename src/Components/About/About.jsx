@@ -72,8 +72,19 @@ export default function About() {
           <div className="button-container">
             <a href="#ContactMe">
               <button className="btn1 shake">
-                <PersonAdd />
                 Hire Me
+                <span>
+                  <PersonAdd
+                    sx={{
+                      height: {
+                        xs: "17px",
+                        sm: "18px",
+                        md: "20px",
+                        lg: "20px",
+                      },
+                    }}
+                  />
+                </span>
               </button>
             </a>
             <button className="btn2 shake">

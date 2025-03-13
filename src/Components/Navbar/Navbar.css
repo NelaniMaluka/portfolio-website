@@ -95,18 +95,22 @@
 
 .navbar .list-3 ul li button {
   color: black;
-  font-size: 17px;
+  font-size: 18px;
   background-color: rgb(255, 175, 54);
-  padding: 3px;
+  padding: 4px;
   width: 120px;
   border-radius: 8px;
   transition: transform 0.2s ease-in-out;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   gap: 4px;
   border: none;
   box-shadow: 0px 2px 8px 0.5px rgb(121, 121, 121);
+  padding-left: 10px;
+}
+.navbar .list-3 ul li button span {
+  height: 20px;
 }
 
 /* Add the shake effect on hover */
@@ -223,8 +227,12 @@
   border-radius: 8px;
   margin-top: 30px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  padding: 0 10px;
   align-items: center;
+}
+.hamburger .cv button span {
+  height: 17px;
 }
 .link-container {
   padding: 4px;

@@ -118,7 +118,19 @@ export default function Navbar() {
           <ul>
             <li>
               <button className="shake" onClick={handleDownload}>
-                <Download /> Resume
+                Resume
+                <span>
+                  <Download
+                    sx={{
+                      height: {
+                        xs: "14px",
+                        sm: "15px",
+                        md: "20px",
+                        lg: "20px",
+                      },
+                    }}
+                  />
+                </span>
               </button>
             </li>
             <li>
@@ -167,7 +179,20 @@ export default function Navbar() {
           </div>
           <div className="cv">
             <button onClick={handleDownload}>
-              <Download /> Resume
+              Resume
+              <span>
+                {" "}
+                <Download
+                  sx={{
+                    height: {
+                      xs: "17px",
+                      sm: "18px",
+                      md: "20px",
+                      lg: "20px",
+                    },
+                  }}
+                />
+              </span>
             </button>
           </div>
         </div>
