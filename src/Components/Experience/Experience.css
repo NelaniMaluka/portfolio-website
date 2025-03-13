@@ -133,20 +133,6 @@
   opacity: 0.8;
 }
 
-/* Add the rotating class to start the rotation */
-.rotating {
-  animation: rotate 4s linear infinite;
-}
-
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
 .timeline-wrapper {
   position: relative; /* Ensures smooth transitions */
   overflow: hidden; /* Prevents content from showing during animation */
@@ -197,9 +183,6 @@
   }
 }
 
-.rotate-animation:hover {
-  animation: rotateBackAndForth 2s ease-in-out infinite;
-}
 .dot-wrapper {
   display: flex;
   align-items: flex-start; /* Align items at the top */
