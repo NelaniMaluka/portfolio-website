@@ -28,6 +28,7 @@
 }
 .navbar.light .link-container:hover {
   background-color: rgb(185, 185, 185);
+  border: 1px solid black;
 }
 .navbar.dark {
   background-color: rgb(32, 32, 32);
@@ -42,6 +43,7 @@
 }
 .navbar.dark .link-container:hover {
   background-color: rgb(96, 100, 100);
+  border: 1px solid rgb(182, 182, 182);
 }
 
 /* Navbar Links */
