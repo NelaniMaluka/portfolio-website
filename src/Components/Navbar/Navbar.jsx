@@ -1,42 +1,60 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Download } from "@mui/icons-material";
 
 import "./Navbar.css";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [showNavbar, setShowNavbar] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
-  const [activeSection, setActiveSection] = useState(""); // Track scrolling
   const [selectedLink, setSelectedLink] = useState(""); // Track clicked link
+  const [theme, setTheme] = useState("default"); // Default theme
 
+  // Change theme based on section scroll or hover
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY < lastScrollY) {
-        setShowNavbar(true);
-      } else {
-        setShowNavbar(false);
-      }
-      setLastScrollY(window.scrollY);
+      const heroSection = document.getElementById("About");
+      const experienceSection = document.getElementById("Experience");
+      const projectsSection = document.getElementById("Projects");
+      const contactSection = document.getElementById("ContactMe");
 
-      // Detect active section on scroll
-      const sections = document.querySelectorAll("section");
-      sections.forEach((section) => {
-        const rect = section.getBoundingClientRect();
-        if (rect.top <= 100 && rect.bottom >= 100) {
-          setActiveSection(section.id);
-        }
-      });
+      // Get the scroll position of the page
+      const scrollPosition = window.scrollY;
+
+      // Change theme based on scroll position and section offsets
+      if (
+        scrollPosition >= heroSection.offsetTop &&
+        scrollPosition < experienceSection.offsetTop
+      ) {
+        setTheme("dark"); // Apply dark theme when in the Hero section
+      } else if (
+        scrollPosition >= experienceSection.offsetTop &&
+        scrollPosition < projectsSection.offsetTop
+      ) {
+        setTheme("light"); // Apply light theme when in the Experience section
+      } else if (
+        scrollPosition >= projectsSection.offsetTop &&
+        scrollPosition < contactSection.offsetTop
+      ) {
+        setTheme("dark"); // Apply a different theme (e.g., blue) when in the Projects section
+      } else if (scrollPosition >= contactSection.offsetTop) {
+        setTheme("light"); // Apply green theme when in the Contact section
+      } else {
+        setTheme("dark"); // Default theme if none of the sections are in view
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScrollY]);
 
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  /* Handle slide Bar */
   const handleMenuClick = () => {
     setIsOpen(!isOpen);
   };
 
+  /* Download CV */
   const handleDownload = () => {
     const link = document.createElement("a");
     link.href = "/Nelani_Maluka_CV.pdf";
@@ -46,6 +64,7 @@ export default function Navbar() {
     document.body.removeChild(link);
   };
 
+  /* Scroll to selected section*/
   const handleSmoothScroll = (event, href) => {
     event.preventDefault();
     const targetSection = document.querySelector(href);
@@ -57,9 +76,10 @@ export default function Navbar() {
   };
 
   const navLinks = [
-    { label: "Experience", href: "#Experience1" },
-    { label: "Projects", href: "#Projects1" },
-    { label: "Contact Me", href: "#ContactMe1" },
+    { label: "About", href: "#About" },
+    { label: "Experience", href: "#Experience" },
+    { label: "Projects", href: "#Projects" },
+    { label: "Contact Me", href: "#ContactMe" },
   ];
 
   const socialLinks = [
@@ -81,58 +101,33 @@ export default function Navbar() {
   ];
 
   return (
-    <div className={`navbar ${showNavbar ? "visible" : "hidden"}`}>
-      <div className="container">
-        <div className="logo">
-          <a href="/">
-            <img src="/Images/logo.png" alt="Logo" />
-          </a>
-        </div>
+    <div className="container">
+      <div className={`navbar ${theme}`}>
+        {/* Nav Links */}
         <div className="list">
           <ul>
             {navLinks.map((link, index) => (
-              <div
-                key={index}
-                className={
-                  selectedLink === link.href.substring(1)
-                    ? "link-container active"
-                    : "link-container"
-                }
-              >
-                <li>
-                  <a
-                    href={link.href}
+              <li key={index} className="a">
+                <a
+                  href={link.href}
+                  className={
+                    selectedLink === link.href.substring(1) ? "active" : ""
+                  }
+                  onClick={(e) => handleSmoothScroll(e, link.href)}
+                >
+                  <div
                     className={
-                      selectedLink === link.href.substring(1) ? "active" : ""
+                      selectedLink === link.href.substring(1)
+                        ? "link-container active"
+                        : "link-container"
                     }
-                    onClick={(e) => handleSmoothScroll(e, link.href)}
                   >
                     {link.label}
-                  </a>
-                </li>
-              </div>
+                  </div>
+                </a>
+              </li>
             ))}
-          </ul>
-        </div>
-        <div className="list-3">
-          <ul>
-            <li>
-              <button className="shake" onClick={handleDownload}>
-                Resume
-                <span>
-                  <Download
-                    sx={{
-                      height: {
-                        xs: "14px",
-                        sm: "15px",
-                        md: "20px",
-                        lg: "20px",
-                      },
-                    }}
-                  />
-                </span>
-              </button>
-            </li>
+            {/* Hamburger Icon */}
             <li>
               {!isOpen && (
                 <div className="menu-container" onClick={handleMenuClick}>
@@ -142,59 +137,63 @@ export default function Navbar() {
             </li>
           </ul>
         </div>
+      </div>
 
-        {/* Sidebar */}
-        <div className={`hamburger ${isOpen ? "open" : ""}`}>
-          <div className="close-menu-image">
-            <img
-              src="/Images/Icons/close.png"
-              alt="close"
-              onClick={handleMenuClick}
-            />
-          </div>
-          <div className="list-2">
-            <ul>
-              {navLinks.map((link, index) => (
-                <li key={index}>
-                  <a
-                    href={link.href}
-                    className={
-                      selectedLink === link.href.substring(1) ? "active" : ""
-                    }
-                    onClick={(e) => handleSmoothScroll(e, link.href)}
-                  >
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-            <hr />
-          </div>
-          <div className="socials">
-            {socialLinks.map((social, index) => (
-              <a href={social.href} key={index}>
-                <img src={social.src} alt={social.alt} />
-              </a>
+      {/* Sidebar */}
+      <div className={`hamburger ${isOpen ? "open" : ""}`}>
+        {/* close-hamburger icon */}
+        <div className="close-menu-image">
+          <img
+            src="/Images/Icons/close.png"
+            alt="close"
+            onClick={handleMenuClick}
+          />
+        </div>
+
+        {/* Nav Links */}
+        <div className="list">
+          <ul>
+            {navLinks.map((link, index) => (
+              <li key={index}>
+                <a
+                  href={link.href}
+                  className={
+                    selectedLink === link.href.substring(1) ? "active" : ""
+                  }
+                  onClick={(e) => handleSmoothScroll(e, link.href)}
+                >
+                  {link.label}
+                </a>
+              </li>
             ))}
-          </div>
-          <div className="cv">
-            <button onClick={handleDownload}>
-              Resume
-              <span>
-                {" "}
-                <Download
-                  sx={{
-                    height: {
-                      xs: "17px",
-                      sm: "18px",
-                      md: "20px",
-                      lg: "20px",
-                    },
-                  }}
-                />
-              </span>
-            </button>
-          </div>
+          </ul>
+          <hr />
+        </div>
+
+        {/* Social Links */}
+        <div className="socials">
+          {socialLinks.map((social, index) => (
+            <a href={social.href} key={index}>
+              <img src={social.src} alt={social.alt} />
+            </a>
+          ))}
+        </div>
+        <div className="cv">
+          <button onClick={handleDownload}>
+            Resume
+            <span>
+              <Download
+                sx={{
+                  height: {
+                    xs: "17px",
+                    sm: "18px",
+                    md: "20px",
+                    lg: "20px",
+                  },
+                }}
+              />
+            </span>
+          </button>
         </div>
       </div>
     </div>

@@ -1,161 +1,107 @@
+/* Navbar */
 .navbar {
-  position: fixed; /* Keep the navbar at the top */
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 75px;
-  padding: 0 5px;
-  background-color: black;
-  transition: transform 0.3s ease-in-out;
-  z-index: 1000;
-  padding-top: 10px;
-  display: flex;
-  align-items: center;
-}
-
-.navbar .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-/* Hide navbar when scrolling down */
-.navbar.hidden {
-  transform: translateY(-100%);
-}
-
-/* Show navbar when scrolling up */
-.navbar.visible {
-  transform: translateY(0);
-}
-
-.navbar .logo {
+  width: max-content;
   height: max-content;
-  width: 200px;
+  z-index: 1000;
+  padding: 6px;
+  border-radius: 20px;
+  position: fixed;
+  margin: auto;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-.navbar .logo img {
-  height: 65px;
+/* Navbar Background */
+.navbar.light {
+  background-color: rgba(201, 201, 201, 0.637);
+  backdrop-filter: blur(40px);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: backdrop-filter 0.3s ease-in-out;
 }
-.navbar .logo img:hover {
-  height: 60px;
+.navbar.light .list ul li a {
+  font-size: 17px;
+  color: black;
+  text-decoration: none;
+}
+.navbar.light .link-container:hover {
+  background-color: rgb(185, 185, 185);
+}
+.navbar.dark {
+  background-color: rgb(32, 32, 32);
+  backdrop-filter: blur(40px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  transition: backdrop-filter 0.3s ease-in-out;
+}
+.navbar.dark .list ul li a {
+  font-size: 17px;
+  color: white;
+  text-decoration: none;
+}
+.navbar.dark .link-container:hover {
+  background-color: rgb(96, 100, 100);
+}
+.navbar.dark .list .link-container:hover li a {
+  font-size: 19px;
 }
 
+/* Navbar Links */
 .navbar .list {
-  display: flex; /* Flex container to align items horizontally */
-  justify-content: center; /* Moves the list to the right */
   width: max-content;
 }
-.navbar .list-3 {
-  display: flex;
-  width: 200px;
-}
-
 .navbar .list ul {
   list-style: none;
   display: flex;
-  gap: 20px; /* Adds space between list items */
-  margin: 0; /* Removes default margin */
   align-items: center;
-}
-.navbar .list-3 ul {
-  list-style: none;
-  display: flex;
-  gap: 20px; /* Adds space between list items */
-  margin: 0; /* Removes default margin */
-  align-items: center;
+  gap: 15px;
 }
 .navbar .list ul li a {
   font-size: 17px;
   color: black;
   text-decoration: none;
 }
-.navbar .list-3 ul li a {
-  color: black;
-  text-decoration: none;
-}
-
-@keyframes shake {
-  0% {
-    transform: translateX(0);
-  }
-  25% {
-    transform: translateX(-5px);
-  }
-  50% {
-    transform: translateX(5px);
-  }
-  75% {
-    transform: translateX(-5px);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
-.navbar .list-3 ul li button {
-  color: black;
-  font-size: 18px;
-  background-color: rgb(255, 175, 54);
-  padding: 8px;
-  width: 120px;
-  border-radius: 8px;
-  transition: transform 0.2s ease-in-out;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 4px;
-  border: none;
-  box-shadow: 0px 2px 8px 0.5px rgb(121, 121, 121);
-  padding-left: 10px;
-}
-.navbar .list-3 ul li button span {
-  height: 20px;
-}
-
-/* Add the shake effect on hover */
-.navbar .list ul li button:hover {
-  animation: shake 0.4s ease-in-out;
-}
-
-.navbar .list-3 ul li .menu-container {
+.navbar .list ul li .menu-container {
   background-color: white;
   border-radius: 50%;
-  padding: 5px 5px 0 5px;
   display: none;
 }
-
-.navbar .list-3 ul li img {
+.navbar .list ul li img {
   width: 30px;
 }
+.link-container {
+  padding: 4px 10px;
+  border-radius: 10px;
+}
+.navbar .list .link-container:hover {
+  font-size: 19px;
+}
 
-.navbar .hamburger {
-  background-color: white !important;
+/* Hamburger menu */
+.hamburger {
+  position: fixed;
+  top: 0;
+  right: 0;
   width: 100%;
   max-width: 400px;
-  position: fixed;
-  right: 0;
-  top: 0;
   height: 100vh;
+  background-color: white;
   z-index: 2000;
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.2);
 
-  /* Slide animation */
+  /* Slide effect */
   transform: translateX(100%);
   transition: transform 0.4s ease-in-out;
 }
-
-.navbar .hamburger.open {
+.hamburger.open {
   transform: translateX(0);
 }
-
-.navbar .close-menu-image img {
-  width: 35px;
-}
-.navbar .close-menu-image {
+.hamburger .close-menu-image {
   height: max-content;
   padding: 10px 20px;
   display: flex;
   justify-content: end;
+  width: 35px;
+  display: none;
 }
 * Close button animation */ .close-menu-image img {
   width: 30px;
@@ -164,46 +110,30 @@
   transition: transform 0.4s ease-in-out;
 }
 
-/* Apply spinning animation when menu is transitioning */
-.spinning {
-  animation: spin 0.4s linear;
-}
-
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.hamburger .list-2 {
-  margin-left: auto; /* Ensures the list is pushed to the right */
+/* Hamburger Links */
+.hamburger .list {
+  margin-left: auto;
   width: max-content;
   padding: 10px;
   width: 100%;
 }
-
-.hamburger .list-2 ul {
+.hamburger .list ul {
   list-style: none;
 }
-
-.hamburger .list-2 ul li {
+.hamburger .list ul li {
   margin: 30px 10px;
 }
-
-.hamburger .list-2 ul li a {
+.hamburger .list ul li a {
   color: black;
   text-decoration: none;
   font-size: 30px;
 }
-
 .hamburger hr {
   width: 90%;
   margin-left: 8px;
 }
 
+/* Hamburger Social Links */
 .hamburger .socials {
   width: max-content;
   margin: auto;
@@ -213,11 +143,11 @@
   margin: 10px 35px;
 }
 
+/* Hamburger Button */
 .hamburger .cv {
   width: max-content;
   margin: auto;
 }
-
 .hamburger .cv button {
   color: black;
   font-size: 16px;
@@ -234,27 +164,14 @@
 .hamburger .cv button span {
   height: 17px;
 }
-.link-container {
-  padding: 4px;
-  min-width: 100px;
-  text-align: center;
-  border-radius: 40px;
-  background-color: aliceblue;
-  box-shadow: 0px 2px 8px 0.5px rgb(121, 121, 121);
-}
-
-.link-container:hover {
-  background-color: rgb(224, 224, 224);
-}
-
-.link-container:has(.active) {
-  background-color: rgb(255, 175, 54);
-}
 
 /**********************
 **** Desktop layout****
 **********************/
 @media only screen and (min-width: 960px) {
+  .navbar {
+    padding: 10px;
+  }
   .navbar .hamburger {
     display: none;
   }
@@ -265,33 +182,31 @@
 **********************/
 @media only screen and (min-width: 576px) and (max-width: 960px) {
   .navbar {
-    height: 60px;
-  }
-  .navbar .list {
-    display: none;
-  }
-  .link-container {
-    display: none;
-  }
-  .navbar .list-3 {
+    height: max-content;
     width: max-content;
+    padding: 0 3px 0 2px;
+    display: flex;
   }
-  .navbar .list-3 ul li .menu-container {
-    display: block;
+
+  /* Navbar Links */
+  .a {
+    display: none;
   }
-  .navbar .list-3 ul li .menu-container img {
+  .navbar .list ul li .menu-container {
+    display: flex;
+    padding: 5px;
+  }
+  .navbar .list ul li .menu-container img {
     width: 30px;
   }
-  .navbar .list-3 ul li button {
-    display: none;
+
+  /* Hamburger Links */
+  .hamburger .close-menu-image {
+    display: flex;
+    justify-content: flex-end;
+    width: 90%;
   }
-  .navbar .logo img {
-    height: 45px;
-  }
-  .navbar .logo img:hover {
-    height: 40px;
-  }
-  .navbar .close-menu-image img {
+  .hamburger .close-menu-image img {
     width: 35px;
   }
 }
@@ -301,36 +216,33 @@
 **********************/
 @media only screen and (max-width: 576px) {
   .navbar {
-    height: 55px;
-  }
-  .navbar .list {
-    display: none;
-  }
-  .link-container {
-    display: none;
-  }
-  .navbar .list-3 {
+    height: max-content;
     width: max-content;
+    padding: 2px 3px 2px 4px;
+    display: flex;
   }
-  .navbar .list-3 ul li .menu-container {
-    display: block;
+
+  /* Navbar Links */
+  .a {
+    display: none;
   }
-  .navbar .list-3 ul li .menu-container img {
+  .navbar .list ul li .menu-container {
+    display: flex;
+  }
+  .navbar .list ul li .menu-container img {
     width: 25px;
   }
-  .navbar .list-3 ul li button {
-    display: none;
-  }
-  .navbar .logo img {
-    height: 40px;
-  }
-  .navbar .logo img:hover {
-    height: 35px;
-  }
-  .hamburger .list-2 ul li a {
+  .hamburger .list ul li a {
     font-size: 25px;
   }
-  .navbar .close-menu-image img {
+
+  /* Hamburger Links */
+  .hamburger .close-menu-image {
+    display: flex;
+    justify-content: flex-end;
+    width: 90%;
+  }
+  .hamburger .close-menu-image img {
     width: 30px;
   }
 }
