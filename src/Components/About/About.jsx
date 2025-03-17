@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { PersonAdd } from "@mui/icons-material";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
+import DownloadIcon from "@mui/icons-material/Download";
 
 import "./About.css";
 
@@ -9,14 +10,32 @@ export default function About() {
     "I'm a Software Developer.",
     "I build scalable web applications.",
   ];
+
   const [text, setText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
   const [index, setIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
 
+  const socialLinks = [
+    {
+      href: "https://www.linkedin.com/in/nelanimaluka/",
+      src: "/Images/Icons/linkedin.png",
+      alt: "LinkedIn",
+    },
+    {
+      href: "https://github.com/NelaniMaluka",
+      src: "/Images/Icons/github.png",
+      alt: "GitHub",
+    },
+    {
+      href: "mailto:malukanelani@gmail.com",
+      src: "/Images/Icons/email.png",
+      alt: "Email",
+    },
+  ];
+
   useEffect(() => {
     const currentText = texts[index];
-
     const typingSpeed = 100;
     const deletingSpeed = 50;
     const pauseTime = 1500; // Pause before deleting
@@ -46,13 +65,42 @@ export default function About() {
     return () => clearTimeout(timeout);
   }, [charIndex, isDeleting, index, texts]);
 
+  {
+    /* Download CV*/
+  }
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = "/Nelani_Maluka_CV.pdf";
+    link.download = "Nelani_Maluka_CV.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <section id="About" className="About">
-      <div className="container About-container">
+      <div className="container">
+        {/* Top Navigation with Logo and Resume Button */}
+        <div className="top-nav">
+          <img src="/Images/logo.png" alt="Logo" />
+          <button onClick={handleDownload} className="btn1">
+            Resume
+            <span>
+              <DownloadIcon
+                sx={{
+                  height: { xs: "17px", sm: "18px", md: "20px", lg: "20px" },
+                }}
+              />
+            </span>
+          </button>
+        </div>
+
+        {/* Main Content */}
         <div className="text">
+          {/* Profile Bar */}
           <div className="bar">
             <div>
-              <img src="Images/Nelani.jpg" alt="" />
+              <img src="Images/Nelani.jpg" alt="Nelani" />
             </div>
             <div>
               <h6>Hello Welcome</h6>
@@ -69,9 +117,11 @@ export default function About() {
               </span>
             </div>
           </div>
+
+          {/* Buttons */}
           <div className="button-container">
             <a href="#ContactMe">
-              <button className="btn1 shake">
+              <button className="btn1">
                 Hire Me
                 <span>
                   <PersonAdd
@@ -87,10 +137,12 @@ export default function About() {
                 </span>
               </button>
             </a>
-            <button className="btn2 shake">
+            <button className="btn2">
               <a href="#Projects">See Projects</a>
             </button>
           </div>
+
+          {/* Animated Text and Paragraph */}
           <div className="atc">
             <h3 className="animated-text">
               {text}
@@ -105,28 +157,23 @@ export default function About() {
               </p>
             </div>
           </div>
-          <div>
-            <a href="https://www.linkedin.com/in/nelanimaluka/">
-              <div className="socials">
-                <div>
-                  <img src="/Images/Icons/linkedin.png" alt="Linkedin" />
+
+          {/* Social Links (Dynamic) */}
+          <div className="socials-container">
+            {socialLinks.map((link, index) => (
+              <a
+                key={index}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="socials">
+                  <div>
+                    <img src={link.src} alt={link.alt} />
+                  </div>
                 </div>
-              </div>
-            </a>
-            <a href="https://github.com/NelaniMaluka">
-              <div className="socials">
-                <div>
-                  <img src="/Images/Icons/github.png" alt="Github" />
-                </div>
-              </div>
-            </a>
-            <a href="mailto:malukanelani@gmail.com">
-              <div className="socials">
-                <div>
-                  <img src="/Images/Icons/email.png" alt="Email" />
-                </div>
-              </div>
-            </a>
+              </a>
+            ))}
           </div>
         </div>
       </div>

@@ -1,14 +1,16 @@
 /* Navbar */
 .navbar {
-  width: max-content;
-  height: max-content;
+  width: 430px;
+  height: 30px;
   z-index: 1000;
-  padding: 6px;
   border-radius: 20px;
   position: fixed;
   margin: auto;
   top: 20px;
   left: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   transform: translateX(-50%);
 }
 
@@ -41,9 +43,6 @@
 .navbar.dark .link-container:hover {
   background-color: rgb(96, 100, 100);
 }
-.navbar.dark .list .link-container:hover li a {
-  font-size: 19px;
-}
 
 /* Navbar Links */
 .navbar .list {
@@ -74,6 +73,9 @@
 }
 .navbar .list .link-container:hover {
   font-size: 19px;
+}
+.navbar .list .link-container:hover ~ .navbar {
+  padding: 0px; /* Change navbar padding on hover */
 }
 
 /* Hamburger menu */

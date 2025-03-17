@@ -1,26 +1,25 @@
+/* About Section */
 #About {
   width: 100%;
-  height: 600px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-size: cover; /* Ensures the image covers the entire element */
-  background-position: center; /* Centers the image */
-  background-repeat: no-repeat; /* Prevents repetition */
-  padding-top: 68px;
-}
-#About .o {
-  color: rgb(255, 175, 54);
-}
-#About .About-container {
-  display: block;
-  flex-wrap: wrap;
-  margin: auto;
-  width: 95%;
-  height: 100%;
-  overflow: hidden; /* Prevents content from overflowing */
+  height: max-content;
+  padding: 10px 0 80px 0;
 }
 
+/* TopNav Section */
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+}
+.top-nav img {
+  height: 70px;
+}
+.top-nav img:hover {
+  height: 65px;
+}
+
+/* Bar Section */
 #About .text {
   width: 48%;
   height: 100%;
@@ -33,7 +32,82 @@
   margin: auto;
   text-align: center;
 }
+.bar {
+  display: flex;
+  border: 2px solid white;
+  padding: 10px;
+  border-radius: 75px;
+  width: max-content;
+  margin: auto;
+  text-align: left;
+  align-items: center;
+  animation: floating 2s infinite ease-in-out;
+  margin-bottom: 0;
+  margin-top: 100px;
+}
+.q {
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  color: rgb(221, 221, 221);
+}
+.bar img {
+  width: 80px;
+  border-radius: 49%;
+  padding-right: 20px;
+}
+.bar h2 {
+  font-size: 35px;
+}
+.bar h6 {
+  font-size: 18px;
+}
+#About .o {
+  color: rgb(255, 175, 54);
+}
 
+/* Button Section */
+#About .button-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+#About button {
+  height: 35px;
+}
+#About .button-container button {
+  width: 120px;
+  margin: 20px;
+  border: none;
+}
+#About .btn1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  gap: 5px;
+  font-size: 17px;
+  border-radius: 10px;
+  background-color: rgb(255, 175, 54);
+}
+#About .btn1 span {
+  height: 20px;
+}
+#About .btn2 {
+  font-size: 17px;
+  background-color: transparent;
+  border: none;
+  display: inline-block;
+}
+#About .btn2 a {
+  color: white;
+  text-decoration: underline;
+}
+
+/* About-Text Section */
+.atc {
+  margin-top: 40px;
+}
 #About .text h3 {
   margin-bottom: 10px;
   display: inline-block;
@@ -41,7 +115,11 @@
   font-size: 2rem;
   font-weight: bold;
 }
-
+#About .p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 #About .text p {
   font-size: 17px;
   width: 75%;
@@ -50,7 +128,6 @@
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-weight: 100;
 }
-
 #About .cursor {
   display: inline-block;
   width: 8px;
@@ -68,6 +145,7 @@
   }
 }
 
+/* Socials Section */
 #About .socials {
   display: inline-block;
   margin-top: 30px;
@@ -84,7 +162,6 @@
   box-shadow: 0px 0px 20px rgb(255, 175, 54);
   border-radius: 50%;
 }
-
 #About .socials div {
   background-color: white;
   border-radius: 45%;
@@ -112,7 +189,6 @@
 #About .socials div {
   animation: floating 2s infinite ease-in-out;
 }
-
 #About .socials div img {
   margin: 0;
   padding: 0;
@@ -120,154 +196,22 @@
   width: 28px;
 }
 
-#About .image {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 48%;
-  height: 100%;
-  margin-left: 2%;
-}
-
-#About .image .setup-image {
-  width: 100%;
-  height: max-content;
-  min-width: 450px;
-  background: transparent;
-  animation: floating 2s infinite ease-in-out;
-}
-
-#About .image .setup-image img {
-  max-width: 700px;
-  width: 100%;
-  position: relative;
-  z-index: 1;
-}
-
-#About .setup-container {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#About .blur-circle {
-  margin-top: 80px;
-  position: absolute;
-  width: 200px;
-  height: 200px;
-  background-color: rgb(255, 175, 54);
-  border-radius: 50%;
-  filter: blur(100px);
-  z-index: 0;
-  animation: floating 2s infinite ease-in-out;
-}
-
-#About .img-text {
-  position: absolute;
-  z-index: 2;
-  color: white;
-  height: 100%;
-  width: max-content;
-  right: 0;
-  text-align: end;
-
-  overflow: hidden;
-}
-#About .img-text h3 {
-  font-size: 30px;
-}
-#About .img-text span {
-  font-size: 18px;
-}
-#About .button-container {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-}
-#About .p {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#About button {
-  width: 120px;
-  margin: 20px;
-  height: 35px;
-  border-radius: 10px;
-  background-color: rgb(255, 175, 54);
-  font-size: 17px;
-  margin-bottom: 65px;
-  border: none;
-}
 #About a {
   text-decoration: none;
-}
-#About .btn1 {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 10px;
-  gap: 5px;
-  font-size: 17px;
-}
-#About .btn1 span {
-  height: 20px;
-}
-#About .btn2 {
-  background-color: transparent;
-  border: none;
-  display: inline-block;
-}
-
-#About .btn2 a {
-  color: white;
-  text-decoration: underline;
-}
-
-.bar {
-  display: flex;
-  border: 2px solid white;
-  padding: 10px;
-  border-radius: 75px;
-  width: max-content;
-  margin: auto;
-  text-align: left;
-  align-items: center;
-  animation: floating 2s infinite ease-in-out;
-  margin-bottom: 0;
-  margin-top: 0;
-}
-.q {
-  font-size: 15px;
-  display: flex;
-  align-items: center;
-  color: rgb(221, 221, 221);
-}
-
-.bar img {
-  width: 80px;
-  border-radius: 49%;
-  padding-right: 20px;
-}
-.bar h2 {
-  font-size: 35px;
-}
-.bar h6 {
-  font-size: 18px;
 }
 
 /**********************
 * large desktop layout*
 **********************/
 @media only screen and (min-width: 1540px) {
+  /* About Section */
   #About {
-    height: 800px;
-    padding-top: 65px;
+    padding-bottom: 110px;
   }
-  #About .socials div:hover {
-    transform: scale(2);
+
+  /* Bar Section */
+  .bar {
+    margin-top: 170px;
   }
   .bar img {
     width: 85px;
@@ -278,20 +222,31 @@
   .bar h6 {
     font-size: 20px;
   }
+
+  /* Button Section */
+  .button-container {
+    margin-top: 30px;
+  }
+
+  /* Socials Section */
+  .atc {
+    margin-top: 60px;
+  }
+  .socials-container {
+    margin-top: 30px;
+  }
+  #About .socials div:hover {
+    transform: scale(2);
+  }
 }
 
 /**********************
 ******* Tablet ********
 **********************/
 @media only screen and (min-width: 576px) and (max-width: 960px) {
+  /* About Section */
   #About {
     height: max-content;
-    padding: 58px 0;
-  }
-  #About .About-container {
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center the items */
-    width: 90%;
   }
   #About .text {
     display: block;
@@ -301,48 +256,18 @@
     text-align: center;
   }
 
-  #About .text h3 {
-    width: 100%;
-    font-size: 25px;
+  /* Top-Nav Section */
+  .top-nav img {
+    height: 50px;
+  }
+  .top-nav img:hover {
+    height: 55px;
+  }
+  .top-nav .btn1 {
+    display: none !important;
   }
 
-  #About .text p {
-    width: 90%;
-    max-width: 500px;
-    margin: auto;
-    font-size: 16px;
-  }
-
-  #About .image {
-    display: block;
-    width: 100%;
-    height: max-content;
-    margin: 0;
-    margin-top: 50px;
-  }
-
-  #About .image .setup-image {
-    align-items: center;
-    justify-content: center;
-    display: flex;
-  }
-  #About .image .setup-image img {
-    width: 500px;
-  }
-  #About .blur-circle {
-    width: 160px;
-    height: 160px;
-  }
-  #About .socials div {
-    margin: 10px 35px;
-  }
-  #About .button-container {
-    align-items: center;
-    justify-content: center;
-  }
-  #About .socials {
-    margin-left: 0;
-  }
+  /* Bar Section */
   .bar {
     margin-top: 60px;
     padding: 10px;
@@ -356,8 +281,34 @@
   .bar h6 {
     font-size: 18px;
   }
+
+  /* Button Section */
+  #About .button-container {
+    align-items: center;
+    justify-content: center;
+  }
   #About .btn1 span {
     height: 17px;
+  }
+
+  /* About Section */
+  #About .text h3 {
+    width: 100%;
+    font-size: 25px;
+  }
+  #About .text p {
+    width: 90%;
+    max-width: 500px;
+    margin: auto;
+    font-size: 16px;
+  }
+
+  /* Socials Section */
+  #About .socials div {
+    margin: 10px 35px;
+  }
+  #About .socials {
+    margin-left: 0;
   }
 }
 
@@ -365,14 +316,10 @@
 ******* Mobile ********
 **********************/
 @media only screen and (max-width: 576px) {
+  /* About Section */
   #About {
     height: max-content;
-    padding: 50px 0;
-  }
-  #About .About-container {
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center the items */
-    width: 90%;
+    padding-top: 0;
   }
   #About .text {
     display: block;
@@ -381,67 +328,16 @@
     height: max-content;
     text-align: center;
   }
-  .atc {
-    height: max-content;
+
+  /* Top-Nav Section */
+  .top-nav img {
+    height: 40px;
   }
-  #About .text h3 {
-    width: 90%;
-    font-size: 22px;
-    max-height: 70px;
-    text-align: left;
-    left: 10;
+  .top-nav img:hover {
+    height: 45px;
   }
 
-  #About .text p {
-    width: 90%;
-    margin: auto;
-    font-size: 14px;
-    padding-top: 10px;
-  }
-
-  #About .image {
-    display: block;
-    width: 100%;
-    height: max-content;
-    margin: 0;
-    margin-top: 50px;
-  }
-
-  #About .image .setup-image {
-    align-items: center;
-    justify-content: center;
-    display: flex;
-  }
-
-  #About .image .setup-image img {
-    width: 380px;
-    margin-top: 35px;
-  }
-  #About .blur-circle {
-    width: 120px;
-    height: 120px;
-  }
-  #About .socials div {
-    margin: 10px 20px;
-  }
-  #About .img-text {
-    position: absolute;
-    z-index: 2;
-    color: white;
-    height: 100%;
-    width: 100%;
-    text-align: end;
-  }
-  #About .img-text h3 {
-    font-size: 20px;
-  }
-  #About .img-text span {
-    font-size: 14px;
-  }
-  #About .button-container {
-    align-items: center;
-    justify-content: center;
-  }
+  /* Bar Section */
   .bar {
     width: max-content;
     margin-top: 90px;
@@ -460,7 +356,43 @@
   .q {
     font-size: 11px;
   }
+
+  /* Button Section */
+  #About .button-container {
+    align-items: center;
+    justify-content: center;
+  }
   #About .btn1 span {
     height: 17px;
+  }
+  .top-nav .btn1 {
+    display: none !important;
+  }
+
+  /* About Section */
+  .atc {
+    height: max-content;
+    width: 100%;
+  }
+  #About .text h3 {
+    width: 90%;
+    font-size: 22px;
+    max-height: 70px;
+    text-align: left;
+    left: 10;
+  }
+  #About .text .p {
+    width: 100%;
+  }
+  #About .text p {
+    font-size: 14px;
+    padding-top: 10px;
+    width: 100%;
+    min-width: 0px;
+  }
+
+  /* Socials Section */
+  #About .socials div {
+    margin: 10px 20px;
   }
 }
