@@ -14,6 +14,7 @@ export default function Experience() {
   const [slide, setSlide] = useState(false);
   const [hoveredIcon, setHoveredIcon] = useState(null);
 
+  // Slider functionality
   const handleSwitchView = (viewType) => {
     if (viewType === isSelected) return;
 
@@ -27,6 +28,7 @@ export default function Experience() {
     }, 300); // Matches animation duration
   };
 
+  /* Handles Chip Click */
   const handleMouseEnter = (icon) => {
     setHoveredIcon(icon);
   };
@@ -53,46 +55,66 @@ export default function Experience() {
   ];
 
   return (
-    <div id="Experience" className="xp-container">
+    <div id="Experience">
       <div className="container">
-        <div className="heading">
-          <h1>Professional Experience</h1>
-          <p className="sub-heading">
-            Gain insight into my journey in software development, from building
-            secure applications to implementing scalable solutions.
-          </p>
-        </div>
-        <div className="xp-content">
-          <div className="timeline-wrapper">
-            <Stack direction="row" spacing={1}>
-              <Chip
-                className="rotate-animation"
-                icon={<WorkIcon />}
-                label="Experience"
-                variant={isSelected === "experience" ? "filled" : "outlined"}
-                onClick={() => handleSwitchView("experience")}
-              />
-              <Chip
-                className="rotate-animation"
-                icon={<SchoolIcon />}
-                label="Education"
-                variant={isSelected === "education" ? "filled" : "outlined"}
-                onClick={() => handleSwitchView("education")}
-              />
-            </Stack>
-            <div className={`view ${slide ? "slide-out" : "slide-in"}`}>
-              {isView}
+        {/* Exprerince Section */}
+        <div className="xp-container">
+          <div className="xp-content">
+            <div className="timeline-wrapper">
+              <div className="heading">
+                <h1>Professional Experience</h1>
+                <p>
+                  Gain insight into my journey in software development, from
+                  building secure applications to implementing scalable
+                  solutions.
+                </p>
+              </div>
+              <div className="timeline">
+                <Stack direction="row" spacing={1}>
+                  <Chip
+                    className={`rotate-animation ${
+                      isSelected === "experience"
+                        ? "selected-chip"
+                        : "unselected-chip"
+                    }`}
+                    icon={<WorkIcon />}
+                    label="Experience"
+                    variant={isSelected === "experience" ? "filled" : "none"}
+                    onClick={() => handleSwitchView("experience")}
+                  />
+                  <Chip
+                    className={`rotate-animation ${
+                      isSelected === "education"
+                        ? "selected-chip"
+                        : "unselected-chip"
+                    }`}
+                    icon={<SchoolIcon />}
+                    label="Education"
+                    variant={isSelected === "education" ? "filled" : "none"}
+                    onClick={() => handleSwitchView("education")}
+                  />
+                </Stack>
+                <hr />
+                <div className={`view ${slide ? "slide-out" : "slide-in"}`}>
+                  {isView}
+                </div>
+              </div>
             </div>
+            <div className="image-cont">abc</div>
           </div>
-          <div className="skills">
-            <div className="heading">
-              <h1>Current Technologies</h1>
-              <p className="sub-heading">
-                Discover my expertise in software development, leveraging modern
-                frameworks and best practices to build secure, scalable
-                applications.
-              </p>
-            </div>
+        </div>
+
+        {/* Skills Section */}
+        <div className="skills">
+          <div className="heading">
+            <h1>Current Technologies</h1>
+            <p>
+              Discover my expertise in software development, leveraging modern
+              frameworks and best practices to build secure, scalable
+              applications.
+            </p>
+          </div>
+          <div className="skill-container">
             {icons.map((icon, index) => (
               <div
                 key={index}

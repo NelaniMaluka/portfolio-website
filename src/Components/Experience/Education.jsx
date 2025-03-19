@@ -5,7 +5,6 @@ import TimelineConnector from "@mui/lab/TimelineConnector";
 import TimelineContent from "@mui/lab/TimelineContent";
 import TimelineDot from "@mui/lab/TimelineDot";
 import { Typography } from "@mui/material";
-import CodeIcon from "@mui/icons-material/Code";
 
 import "./Experience.css";
 
@@ -22,24 +21,14 @@ export default function Education() {
       {/* Education Experience */}
       <TimelineItem>
         <TimelineSeparator>
-          <TimelineDot
-            sx={{
-              bgcolor: "transparent",
-              border: "none",
-              boxShadow: "none",
-              padding: 0,
-            }}
-          >
-            <img
-              src="/Images/Icons/CTU.png" // Change this to your image path
-              alt="CTU Icon"
-              className="work-icon-2"
-            />
-          </TimelineDot>
-          <TimelineConnector sx={{ bgcolor: "rgb(255, 175, 54)" }} />
+          <TimelineDot sx={{ bgcolor: "#E65100", marginTop: "17px" }} />
+          <TimelineConnector />
         </TimelineSeparator>
         <TimelineContent>
-          <Typography variant="h6" sx={{ fontWeight: "bold" }}>
+          <Typography
+            variant="h6"
+            sx={{ fontWeight: "bold", color: "#E65100" }}
+          >
             Education
           </Typography>
           <Typography
@@ -47,6 +36,7 @@ export default function Education() {
             color="text.secondary"
             sx={{
               fontSize: { xs: "14px", sm: "15px", md: "17px", lg: "17px" },
+              color: " rgb(82, 82, 82)",
             }}
           >
             CTU Training Solutions (2023–2025)
@@ -58,30 +48,12 @@ export default function Education() {
             }}
           >
             <div className="dot-wrapper">
-              <span>•</span>
               <span>
-                Completed NQF Level 6 in IT: Database Development at CTU
-                Training Solutions.
-              </span>
-            </div>
-            <div className="dot-wrapper">
-              <span>•</span>
-              <span>
-                Specialized in SQL, Azure, Java, C#, .NET, and web technologies.
-              </span>
-            </div>
-            <div className="dot-wrapper">
-              <span>•</span>
-              <span>
-                Gained foundational knowledge in project management, including
-                task planning and team collaboration.
-              </span>
-            </div>
-            <div className="dot-wrapper">
-              <span>•</span>
-              <span>
-                Developed practical skills in database development, programming,
-                and software solutions.
+                I completed NQF Level 6 in IT: Database Development at CTU,
+                specializing in SQL, Azure, Java, C#, .NET, and web
+                technologies, while gaining skills in project management and
+                software development, enhancing both technical and collaborative
+                abilities.
               </span>
             </div>
           </Typography>
@@ -91,28 +63,13 @@ export default function Education() {
       {/* Personal Projects */}
       <TimelineItem>
         <TimelineSeparator>
-          <TimelineDot sx={{ bgcolor: "rgb(255, 175, 54)" }}>
-            <CodeIcon
-              sx={{
-                color: "#fff",
-                width: {
-                  xs: "20px",
-                  sm: "25px",
-                  md: "30px",
-                  lg: "34px",
-                },
-                height: {
-                  xs: "20px",
-                  sm: "25px",
-                  md: "30px",
-                  lg: "34px",
-                },
-              }}
-            />
-          </TimelineDot>
+          <TimelineDot sx={{ bgcolor: "#E65100", marginTop: "17px" }} />
         </TimelineSeparator>
         <TimelineContent>
-          <Typography variant="h6" sx={{ fontWeight: "bold" }}>
+          <Typography
+            variant="h6"
+            sx={{ fontWeight: "bold", color: "#E65100" }}
+          >
             Training Program
           </Typography>
           <Typography
@@ -120,6 +77,7 @@ export default function Education() {
             color="text.secondary"
             sx={{
               fontSize: { xs: "14px", sm: "15px", md: "17px", lg: "17px" },
+              color: " rgb(82, 82, 82)",
             }}
           >
             Brainnest (Jan 2023 - Feb 2023)
@@ -131,23 +89,11 @@ export default function Education() {
             }}
           >
             <div className="dot-wrapper">
-              <span>•</span>
               <span>
-                Gained experience building automation tools for file transfer
-                and email sending.
-              </span>
-            </div>
-            <div className="dot-wrapper">
-              <span>•</span>
-              <span>
-                Developed real-time data display apps, including weather info.
-              </span>
-            </div>
-            <div className="dot-wrapper">
-              <span>•</span>
-              <span>
-                Improved problem-solving through interactive games and
-                encryption algorithms.
+                I gained experience building automation tools for file transfer
+                and email sending, developed real-time data display apps,
+                including weather info, and improved problem-solving through
+                interactive games and encryption algorithms.
               </span>
             </div>
           </Typography>
