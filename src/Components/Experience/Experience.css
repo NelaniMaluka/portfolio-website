@@ -1,6 +1,6 @@
 /* Experience Section Styles */
 #Experience {
-  padding: 40px 0 60px 0;
+  padding: 40px 0 100px 0;
   background-color: white;
   height: max-content;
 }
@@ -172,6 +172,16 @@
   color: black;
   margin-top: 8px;
 }
+.skill-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.skill-container .i {
+  width: 968px;
+  max-width: 1000px;
+}
 
 /* Selected chip: Apply orange border */
 .selected-chip {
@@ -204,8 +214,8 @@
   .xp-content {
     min-height: 420px;
   }
-  .skills img {
-    width: 35px;
+  .skills .heading h1 {
+    padding-top: 0px;
   }
   .skill {
     margin: 11px;
@@ -277,9 +287,14 @@
   .skill {
     margin: 11px;
     width: 300px;
+    align-self: center;
   }
   .skills .skill-text {
     margin-top: 5px;
+  }
+  .skill-container .i {
+    max-width: 646px;
+    width: 100%;
   }
   .timeline-wrapper {
     min-height: 400px;
@@ -356,6 +371,11 @@
   .skills .skill-text span {
     width: 100%;
   }
+  .skill-container .i {
+    max-width: 280px;
+    width: 100%;
+  }
+
   .timeline-wrapper {
     min-height: 200px;
     margin: 25px 0;
