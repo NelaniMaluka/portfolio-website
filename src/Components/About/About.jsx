@@ -34,6 +34,15 @@ export default function About() {
     document.body.removeChild(link);
   };
 
+  /* Scroll to selected section*/
+  const handleSmoothScroll = (event, href) => {
+    event.preventDefault();
+    const targetSection = document.querySelector(href);
+    if (targetSection) {
+      targetSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section id="About" className="About">
       <div className="container">
@@ -65,11 +74,14 @@ export default function About() {
                 I&rsquo;m <span className="o">Nelani Maluka</span>
               </h2>
             </div>
-          </div>
+          </div> 
 
           {/* Buttons */}
           <div className="button-container">
-            <a href="#ContactMe">
+            <a
+              href="#ContactMe"
+              onClick={(event) => handleSmoothScroll(event, "#ContactMe")}
+            >
               <button className="btn1">
                 Hire Me
                 <span>
@@ -87,7 +99,12 @@ export default function About() {
               </button>
             </a>
             <button className="btn2">
-              <a href="#Projects">See Projects</a>
+              <a
+                href="#Projects"
+                onClick={(event) => handleSmoothScroll(event, "#Projects")}
+              >
+                See Projects
+              </a>
             </button>
           </div>
 
