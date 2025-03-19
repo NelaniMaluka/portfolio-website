@@ -45,12 +45,6 @@
   margin-bottom: 0;
   margin-top: 100px;
 }
-.q {
-  font-size: 15px;
-  display: flex;
-  align-items: center;
-  color: rgb(221, 221, 221);
-}
 .bar img {
   width: 80px;
   border-radius: 49%;
@@ -352,9 +346,6 @@
   }
   .bar h6 {
     font-size: 13px;
-  }
-  .q {
-    font-size: 11px;
   }
 
   /* Button Section */

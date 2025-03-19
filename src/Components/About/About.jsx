@@ -1,21 +1,9 @@
-import { useState, useEffect } from "react";
 import { PersonAdd } from "@mui/icons-material";
-import LocationOnIcon from "@mui/icons-material/LocationOn";
 import DownloadIcon from "@mui/icons-material/Download";
 
 import "./About.css";
 
 export default function About() {
-  const texts = [
-    "I'm a Software Developer.",
-    "I build scalable web applications.",
-  ];
-
-  const [text, setText] = useState("");
-  const [isDeleting, setIsDeleting] = useState(false);
-  const [index, setIndex] = useState(0);
-  const [charIndex, setCharIndex] = useState(0);
-
   const socialLinks = [
     {
       href: "https://www.linkedin.com/in/nelanimaluka/",
@@ -33,37 +21,6 @@ export default function About() {
       alt: "Email",
     },
   ];
-
-  useEffect(() => {
-    const currentText = texts[index];
-    const typingSpeed = 100;
-    const deletingSpeed = 50;
-    const pauseTime = 1500; // Pause before deleting
-
-    const timeout = setTimeout(
-      () => {
-        if (isDeleting) {
-          if (charIndex > 0) {
-            setCharIndex((prev) => prev - 1);
-          } else {
-            setIsDeleting(false);
-            setIndex((prevIndex) => (prevIndex + 1) % texts.length);
-          }
-        } else {
-          if (charIndex < currentText.length) {
-            setCharIndex((prev) => prev + 1);
-          } else {
-            setTimeout(() => setIsDeleting(true), pauseTime);
-          }
-        }
-      },
-      isDeleting ? deletingSpeed : typingSpeed
-    );
-
-    setText(currentText.substring(0, charIndex));
-
-    return () => clearTimeout(timeout);
-  }, [charIndex, isDeleting, index, texts]);
 
   {
     /* Download CV*/
@@ -107,14 +64,6 @@ export default function About() {
               <h2>
                 I&rsquo;m <span className="o">Nelani Maluka</span>
               </h2>
-              <span className="q">
-                <LocationOnIcon
-                  sx={{
-                    height: { xs: "13px", sm: "16px", md: "18px", lg: "20px" },
-                  }}
-                />
-                Randfontein, Johannesburg
-              </span>
             </div>
           </div>
 
@@ -145,8 +94,7 @@ export default function About() {
           {/* Animated Text and Paragraph */}
           <div className="atc">
             <h3 className="animated-text">
-              {text}
-              <span className="cursor">|</span>
+              I build scalable web applications.
             </h3>
             <div className="p">
               <p>
