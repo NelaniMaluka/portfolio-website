@@ -54,7 +54,6 @@
   list-style: none;
   display: flex;
   align-items: center;
-  gap: 15px;
 }
 .navbar .list ul li a {
   font-size: 17px;
@@ -72,12 +71,11 @@
 .link-container {
   padding: 4px 10px;
   border-radius: 10px;
+  margin: 0 10px;
 }
 .navbar .list .link-container:hover {
   font-size: 19px;
-}
-.navbar .list .link-container:hover ~ .navbar {
-  padding: 0px; /* Change navbar padding on hover */
+  margin: 0 5px;
 }
 
 /* Hamburger menu */
