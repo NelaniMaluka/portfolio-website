@@ -115,28 +115,30 @@ export default function Experience() {
             </p>
           </div>
           <div className="skill-container">
-            {icons.map((icon, index) => (
-              <div
-                key={index}
-                className="skill"
-                onMouseEnter={() => handleMouseEnter(icon.name)}
-              >
-                <span className="img">
-                  <img
-                    src={icon.src}
-                    alt={`${icon.name} icon`}
-                    className={`rotate ${
-                      hoveredIcon === icon.name ? "rotating" : ""
-                    }`}
-                  />
-                </span>
-                <div className="skill-text">
-                  <span className="text">{icon.name}</span>
+            <div className="i">
+              {icons.map((icon, index) => (
+                <div
+                  key={index}
+                  className="skill"
+                  onMouseEnter={() => handleMouseEnter(icon.name)}
+                >
+                  <span className="img">
+                    <img
+                      src={icon.src}
+                      alt={`${icon.name} icon`}
+                      className={`rotate ${
+                        hoveredIcon === icon.name ? "rotating" : ""
+                      }`}
+                    />
+                  </span>
+                  <div className="skill-text">
+                    <span className="text">{icon.name}</span>
 
-                  <span className="text">{icon.desc}</span>
+                    <span className="text">{icon.desc}</span>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </div>
