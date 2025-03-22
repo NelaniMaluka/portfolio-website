@@ -2,7 +2,7 @@
   height: max-content;
   background-color: white;
   text-align: center;
-  width: 700px;
+  width: max-content;
   margin-bottom: 50px;
   margin: auto;
   border-radius: 20px;
@@ -10,16 +10,28 @@
   justify-content: center; /* Center the badges */
   flex-wrap: wrap; /* Allow wrapping */
   border: 1.5px solid rgb(255, 175, 54);
-  margin-bottom: 80px;
+  margin-bottom: 70px;
 }
 .w {
-  margin-top: 70px;
+  margin-top: 100px;
+}
+.w .heading {
+  margin: auto;
+  text-align: center;
+}
+.w .heading h1 {
+  width: 100%;
 }
 
 .certificates .badge-container img {
   width: 7%;
+  max-width: 130px;
   margin: 4px 30px;
   animation: none; /* Default state, no animation */
+}
+
+.cert-container {
+  margin-top: 60px;
 }
 
 .certificates .badge-container img.animate {
@@ -68,6 +80,8 @@
   }
   .certificates .badge-container img {
     width: 10%;
+    min-width: 45px;
+    max-width: 50px;
     margin: 3px 17px;
   }
 }
@@ -85,5 +99,6 @@
   .certificates .badge-container img {
     width: 12%;
     margin: 3px 15px;
+    max-width: 37px;
   }
 }

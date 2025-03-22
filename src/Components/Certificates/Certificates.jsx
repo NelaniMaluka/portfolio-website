@@ -46,7 +46,7 @@ export default function Certificates() {
     <div className="w">
       <div className="heading">
         <h1>Certificates</h1>
-        <p className="sub-heading" style={{ color: "rgb(226, 226, 226)" }}>
+        <p>
           A look at the certifications I&rsquo;ve earned throughout my software
           development journey.
         </p>
