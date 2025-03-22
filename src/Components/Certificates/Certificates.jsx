@@ -44,6 +44,7 @@ export default function Certificates() {
 
   return (
     <div className="w">
+      {/* Heading Section */}
       <div className="heading">
         <h1>Certificates</h1>
         <p>
@@ -51,6 +52,8 @@ export default function Certificates() {
           development journey.
         </p>
       </div>
+
+      {/* Certificates Section */}
       <div className="cert-container">
         <div className="certificates">
           <div className="container">

@@ -1,3 +1,9 @@
+/* Certificates Section */
+.w {
+  margin-top: 100px;
+}
+
+/* Certificates Container */
 .certificates {
   height: max-content;
   background-color: white;
@@ -12,9 +18,8 @@
   border: 1.5px solid rgb(255, 175, 54);
   margin-bottom: 70px;
 }
-.w {
-  margin-top: 100px;
-}
+
+/* Heading Section */
 .w .heading {
   margin: auto;
   text-align: center;
@@ -23,17 +28,18 @@
   width: 100%;
 }
 
+/* Badge Image Section */
 .certificates .badge-container img {
   width: 7%;
   max-width: 130px;
   margin: 4px 30px;
   animation: none; /* Default state, no animation */
 }
-
 .cert-container {
   margin-top: 60px;
 }
 
+/* Rotating Animation Section */
 .certificates .badge-container img.animate {
   animation: rotateIn 1s ease-in-out;
 }
@@ -53,19 +59,21 @@
 * large desktop layout*
 **********************/
 @media only screen and (min-width: 1540px) {
-  .cert-container {
-    margin-bottom: 100px;
-  }
+  /* Certificates Container */
   .certificates {
     width: 60%;
     max-width: 700px;
-
     margin: auto;
   }
+
+  /* Badge Image Section */
   .certificates .badge-container img {
     width: 8%;
     max-width: 60px;
     margin: 4px 23px;
+  }
+  .cert-container {
+    margin-bottom: 100px;
   }
 }
 
@@ -73,11 +81,14 @@
 ******* Tablet ********
 **********************/
 @media only screen and (min-width: 576px) and (max-width: 960px) {
+  /* Certificates Container */
   .certificates {
     width: 60%;
     margin: auto;
     margin-bottom: 55px;
   }
+
+  /* Badge Image Section */
   .certificates .badge-container img {
     width: 10%;
     min-width: 45px;
@@ -90,12 +101,14 @@
 ******* Mobile ********
 **********************/
 @media only screen and (max-width: 576px) {
+  /* Certificates Container */
   .certificates {
     width: 90%;
     margin: auto;
     margin-bottom: 50px;
   }
 
+  /* Badge Image Section */
   .certificates .badge-container img {
     width: 12%;
     margin: 3px 15px;
