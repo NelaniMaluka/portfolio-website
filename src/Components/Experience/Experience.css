@@ -9,20 +9,10 @@
 }
 
 /* Heading Section */
-.heading {
-  width: 80%;
-}
 .heading h1 {
-  font-size: 45px;
-  display: block;
-  width: 100%;
   color: black;
 }
 .heading p {
-  padding-top: 15px;
-  font-size: 18px;
-  display: block;
-  width: 100%;
   margin: auto;
   color: rgb(114, 114, 114);
 }
@@ -58,6 +48,16 @@
   transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
+/* Image */
+.image-cont {
+  background-color: antiquewhite;
+  display: flex;
+  justify-content: center;
+}
+.image-cont img {
+  width: 100%;
+}
+
 /* Timeline Sliding animation */
 .slide-out {
   transform: translateX(-100%);
@@ -83,17 +83,6 @@
 .timeline-wrapper hr {
   margin-top: 20px;
   border: 1px solid rgb(230, 230, 230);
-}
-
-/* Icon image styling */
-.work-icon {
-  width: 40px;
-  height: 40px;
-}
-
-.work-icon-2 {
-  width: 50px;
-  height: 50px;
 }
 
 /* Timeline View Section */
@@ -164,14 +153,6 @@
   font-size: 18px;
   color: black;
 }
-
-.dot-wrapper {
-  display: flex;
-  align-items: flex-start; /* Align items at the top */
-  gap: 5px;
-  color: black;
-  margin-top: 8px;
-}
 .skill-container {
   display: flex;
   justify-content: center;
@@ -183,17 +164,26 @@
   max-width: 1000px;
 }
 
-/* Selected chip: Apply orange border */
-.selected-chip {
-  border: 1px solid #ff5722 !important; /* Orange border */
+/* Exprerience content */
+.dot-wrapper {
+  display: flex;
+  align-items: flex-start; /* Align items at the top */
+  gap: 5px;
+  color: black;
+  margin-top: 8px;
 }
 
+/* Selected chip: Apply orange border */
+.selected-chip {
+  border: 1px solid #ff562298 !important; /* Orange border */
+  box-shadow: 0 0 5px #ff5722; /* Subtle orange glow */
+  transition: box-shadow 0.3s ease-in-out;
+}
 /* Unselected chip: Normal border */
 .unselected-chip {
   border: none; /* Light gray border */
   background-color: transparent;
 }
-
 /* Unselected chip (using outlined variant) */
 .unselected-chip.MuiChip-outlined {
   background-color: transparent !important; /* Transparent background */
@@ -205,15 +195,15 @@
      Responsive Design 
      =========================== */
 @media only screen and (min-width: 1540px) {
+  /* Exprerience container */
   .xp-container {
     padding-bottom: 80px;
-  }
-  .heading h1 {
-    padding-top: 40px;
   }
   .xp-content {
     min-height: 420px;
   }
+
+  /* Skills Section */
   .skills .heading h1 {
     padding-top: 0px;
   }
@@ -224,20 +214,10 @@
   .skills .skill-text {
     margin-top: 5px;
   }
-  .work-icon {
-    width: 44px;
-    height: 44px;
-  }
-  .work-icon-2 {
-    width: 54px;
-    height: 54px;
-  }
 }
 
 @media only screen and (max-width: 1300px) {
-  .heading h1 {
-    font-size: 30px;
-  }
+  /* Exprerience container */
   .xp-container .heading {
     width: 90%;
   }
@@ -246,6 +226,17 @@
     display: block;
     width: 100%;
   }
+
+  /* experience and skills container */
+  .experince,
+  .skills {
+    width: 90%;
+    height: max-content;
+    display: block;
+    margin: auto;
+  }
+
+  /* XP-content container */
   .image-cont,
   .timeline-wrapper {
     width: 80%;
@@ -256,33 +247,31 @@
     min-height: 0px;
     padding: 10px;
   }
+
+  /* XP-content Section */
   .xp-content {
     flex-direction: column;
     display: block;
     width: 100%;
   }
-  .experince,
-  .skills {
-    width: 90%;
-    height: max-content;
-    display: block;
-    margin: auto;
+
+  /* Heading Section */
+  .heading p {
+    font-size: 18px;
   }
-  .xp-container {
-    display: block;
-    height: max-content;
-  }
+
+  /* Skills Section */
   .skills {
     max-width: 650px;
+  }
+  .skills .heading h1 {
+    padding-top: 50px;
   }
   .skills span {
     font-size: 16px;
   }
   .skills img {
     width: 35px;
-  }
-  .heading p {
-    font-size: 18px;
   }
   .skill {
     margin: 11px;
@@ -296,27 +285,26 @@
     max-width: 646px;
     width: 100%;
   }
+
+  /* Skills Content Section */
   .timeline-wrapper {
     min-height: 400px;
     width: 80%;
     padding: 25px 0;
   }
-  .work-icon {
-    width: 35px;
-    height: 35px;
-  }
-  .work-icon-2 {
-    width: 40px;
-    height: 40px;
-  }
 }
 
 @media only screen and (max-width: 576px) {
-  .heading h1 {
-    font-size: 28px;
-  }
+  /* Exprerience container */
   .xp-container {
     height: max-content;
+    display: block;
+    width: 100%;
+  }
+
+  /* Exprerience content */
+  .xp-content {
+    flex-direction: column;
     display: block;
     width: 100%;
   }
@@ -324,17 +312,8 @@
   .timeline-wrapper {
     width: 100%;
   }
-  .timeline-wrapper .timeline {
-    height: max-content;
-    min-height: 0px;
-    margin: auto;
-    padding: 1px;
-  }
-  .xp-content {
-    flex-direction: column;
-    display: block;
-    width: 100%;
-  }
+
+  /* Section content */
   .experince,
   .skills {
     width: 90%;
@@ -343,6 +322,16 @@
     display: block;
     margin: auto;
   }
+
+  /* Timeline Section */
+  .timeline-wrapper .timeline {
+    height: max-content;
+    min-height: 0px;
+    margin: auto;
+    padding: 1px;
+  }
+
+  /* Skills Section */
   .skills span {
     font-size: 14px;
     width: 50%;
@@ -376,17 +365,10 @@
     width: 100%;
   }
 
+  /* Timeline Content Section */
   .timeline-wrapper {
     min-height: 200px;
     margin: 25px 0;
     width: 100%;
-  }
-  .work-icon {
-    width: 30px;
-    height: 30px;
-  }
-  .work-icon-2 {
-    width: 35px;
-    height: 35px;
   }
 }

@@ -41,6 +41,11 @@ export default function Experience() {
     },
     { name: "Redux", src: "/Images/Icons/Redux.png", desc: "State manager" },
     {
+      name: "Material UI",
+      src: "/Images/Icons/mui.png",
+      desc: "React UI library",
+    },
+    {
       name: "Spring Boot",
       src: "/Images/Icons/spring-boot.png",
       desc: "Java framework",
@@ -51,6 +56,11 @@ export default function Experience() {
       name: "MS Sql",
       src: "/Images/Icons/sql-server.png",
       desc: "Database system",
+    },
+    {
+      name: "Firebase",
+      src: "/Images/Icons/firebase.png",
+      desc: "Backend-as-a-service",
     },
   ];
 
@@ -65,8 +75,8 @@ export default function Experience() {
                 <h1>Professional Experience</h1>
                 <p>
                   Gain insight into my journey in software development, from
-                  building secure applications to implementing scalable
-                  solutions.
+                  building <span className="n">secure applications</span> to
+                  implementing <span className="n">scalable solutions</span>.
                 </p>
               </div>
               <div className="timeline">
@@ -100,7 +110,9 @@ export default function Experience() {
                 </div>
               </div>
             </div>
-            <div className="image-cont">abc</div>
+            <div className="image-cont">
+              <img src="./Images/DeveloperActivity.gif" alt="DevImage" />
+            </div>
           </div>
         </div>
 
@@ -109,9 +121,10 @@ export default function Experience() {
           <div className="heading">
             <h1>Current Technologies</h1>
             <p>
-              Discover my expertise in software development, leveraging modern
-              frameworks and best practices to build secure, scalable
-              applications.
+              Discover my expertise in software development, leveraging{" "}
+              <span className="n">modern frameworks</span> and{" "}
+              <span className="n">best practices</span> to build secure,
+              scalable applications.
             </p>
           </div>
           <div className="skill-container">
