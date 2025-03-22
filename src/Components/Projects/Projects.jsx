@@ -1,34 +1,29 @@
-import { useState, useEffect } from "react";
-import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
-import Chip from "@mui/material/Chip";
-import { useTheme } from "@mui/material/styles";
-import ImageCarousel from "./ImageCarousel";
+import { useState } from "react";
 import Certificates from "../Certificates/Certificates";
 
 import "./Projects.css";
 
 export default function Projects() {
-  const [showCard, setShowCard] = useState(null); // Updated to track the index of the project being displayed
-  const theme = useTheme();
+  // Track hover states for each project
+  const [hoveredIndex, setHoveredIndex] = useState(null);
+
+  const socialLinks = [
+    {
+      src: "/Images/Icons/internet.png",
+      alt: "GitHub",
+    },
+    {
+      src: "/Images/Icons/github.png",
+      alt: "GitHub",
+    },
+  ];
 
   const projects = [
     {
+      style: 1,
       name: "Kick Land",
-      imgUrls: [
-        "/Images/project-images/Kick-Land/Kick-Land-img.png",
-        "/Images/project-images/Kick-Land/Kick-Land-img1.png",
-        "/Images/project-images/Kick-Land/Kick-Land-img2.png",
-        "/Images/project-images/Kick-Land/Kick-Land-img3.png",
-        "/Images/project-images/Kick-Land/Kick-Land-img4.png",
-        "/Images/project-images/Kick-Land/Kick-Land-img5.png",
-        "/Images/project-images/Kick-Land/Kick-Land-img6.png",
-        "/Images/project-images/Kick-Land/Kick-Land-img7.png",
-      ],
+      img: "/Images/project-images/Kick-Land/Kick-Land-img.png",
+      gif: "/Images/project-images/Kick-Land/kick-land.gif",
       tools: [
         "ReactJS",
         "Redux",
@@ -45,14 +40,10 @@ export default function Projects() {
       githubUrl: "https://github.com/NelaniMaluka/kick-land",
     },
     {
+      style: 2,
       name: "Learnhall",
-      imgUrls: [
-        "/Images/project-images/Learnhall/Learnhall-img.png",
-        "/Images/project-images/Learnhall/Learnhall-img1.png",
-        "/Images/project-images/Learnhall/Learnhall-img2.png",
-        "/Images/project-images/Learnhall/Learnhall-img3.png",
-        "/Images/project-images/Learnhall/Learnhall-img4.png",
-      ],
+      img: "/Images/project-images/Learnhall/Learnhall-img.png",
+      gif: "/Images/project-images/Learnhall/Learnhall.gif",
       tools: ["HTML", "CSS", "JavaScript", "JQuery", "Vue.js"],
       about:
         "Learnhall is an online platform that connects students with tutors. It collects user data, such as course preferences and tutor information, and sends it directly to the company’s email for processing. The platform aims to streamline the connection process between students and tutors, ensuring a smooth and efficient experience.",
@@ -61,133 +52,143 @@ export default function Projects() {
     },
   ];
 
-  // Function to close modal when clicking outside the card
-  const handleOutsideClick = (event) => {
-    if (event.target.classList.contains("modal")) {
-      setShowCard(null); // Close the modal by setting it to null
-    }
-  };
-
-  // Function to close modal on scroll
-  useEffect(() => {
-    const handleScroll = () => {
-      if (showCard !== null) {
-        setShowCard(null); // Close modal on scroll
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [showCard]);
-
   return (
-    <div
-      id="Projects"
-      className={showCard !== null ? "blurred-background" : ""}
-    >
+    <div id="Projects">
       <div className="container">
+        {/* Projects Container Section */}
         <div className="projects-container">
-          <h1>My Work</h1>
-          <p className="sub-text">
-            Discover the projects I’ve worked on, where I apply my skills in
-            software development to build innovative and efficient solutions.
-          </p>
+          {/* Heading Section */}
+          <div className="heading">
+            <h1>My Work</h1>
+            <p>
+              Discover the projects I’ve worked on, where I apply my skills in
+              software development to build{" "}
+              <span className="e">innovative</span> and{" "}
+              <span className="e">efficient</span> solutions.
+            </p>
+          </div>
+
+          {/* Projects Section */}
           <div className="project">
-            {/* Image Container */}
+            {/* Mapping through projects */}
             {projects.map((project, index) => (
-              <div key={index} className="image-container">
-                {Array.isArray(project.imgUrls) &&
-                project.imgUrls.length > 0 ? (
-                  <img src={project.imgUrls[0]} alt="Project Image" />
-                ) : null}
-                <button
-                  className="learn-more"
-                  onClick={() => setShowCard(index)}
-                >
-                  Learn More
-                </button>
+              <div
+                key={index}
+                className="project-cont"
+                onMouseEnter={() => setHoveredIndex(index)}
+                onMouseLeave={() => setHoveredIndex(null)}
+              >
+                {project.style === 1 ? (
+                  <div className="project-wrapper">
+                    {/* Gif Image Section */}
+                    <div className="img">
+                      <img
+                        src={hoveredIndex === index ? project.gif : project.img}
+                        alt={project.name}
+                      />
+                    </div>
+                    {/* Project Content */}
+                    <div className="project-content">
+                      <h1>{project.name}</h1>
+                      <p>{project.about}</p>
+
+                      {/* Social Links (Dynamic) */}
+                      <div className="socials-container">
+                        <div key={index}>
+                          {project.liveUrl && (
+                            <a
+                              href={project.liveUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              <div className="socials">
+                                <div>
+                                  <img
+                                    src={socialLinks[0].src}
+                                    alt={socialLinks[0].alt}
+                                  />
+                                </div>
+                              </div>
+                            </a>
+                          )}
+
+                          <a
+                            href={project.githubUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <div className="socials">
+                              <div>
+                                <img
+                                  src={socialLinks[1].src}
+                                  alt={socialLinks[1].alt}
+                                />
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ) : (
+                  <div className="project-wrapper">
+                    {/* Project Content */}
+                    <div className="project-content">
+                      <h1>{project.name}</h1>
+                      <p>{project.about}</p>
+
+                      {/* Social Links (Dynamic) */}
+                      <div className="socials-container">
+                        <div key={index}>
+                          {project.liveUrl && (
+                            <a
+                              href={project.liveUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              <div className="socials">
+                                <div>
+                                  <img
+                                    src={socialLinks[0].src}
+                                    alt={socialLinks[0].alt}
+                                  />
+                                </div>
+                              </div>
+                            </a>
+                          )}
+
+                          <a
+                            href={project.githubUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <div className="socials">
+                              <div>
+                                <img
+                                  src={socialLinks[1].src}
+                                  alt={socialLinks[1].alt}
+                                />
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    {/* Gif Image Section */}
+                    <div className="img">
+                      <img
+                        src={hoveredIndex === index ? project.gif : project.img}
+                        alt={project.name}
+                      />
+                    </div>
+                  </div>
+                )}
               </div>
             ))}
-
-            {/* Card - Shows only when showCard is not null */}
-            {showCard !== null && (
-              <div className="modal" onClick={handleOutsideClick}>
-                <div className="modal-content">
-                  <Card
-                    sx={{ maxWidth: 800, boxShadow: "none", border: "none" }}
-                  >
-                    <CardMedia
-                      sx={{
-                        height: 370,
-                        border: "none",
-                        boxShadow: "none",
-                        [theme.breakpoints.down("sm")]: {
-                          height: 200,
-                        },
-                      }}
-                      title="Project Image"
-                    >
-                      {projects[showCard] && (
-                        <ImageCarousel project={projects[showCard]} />
-                      )}
-                    </CardMedia>
-                    <CardContent>
-                      <Typography
-                        gutterBottom
-                        variant="h5"
-                        component="div"
-                        sx={{ margin: "5px" }}
-                      >
-                        {projects[showCard].name}
-                      </Typography>
-                      {projects[showCard].tools.map((tool, index) => (
-                        <Chip
-                          key={index}
-                          label={tool}
-                          variant="filled"
-                          sx={{ margin: "5px" }}
-                        />
-                      ))}
-                      <Typography
-                        variant="body2"
-                        sx={{ color: "text.secondary", margin: "5px" }}
-                      >
-                        {projects[showCard].about}
-                      </Typography>
-                    </CardContent>
-                    <CardActions>
-                      {projects[showCard].liveUrl ? (
-                        <a
-                          href={projects[showCard].liveUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <Button size="small" sx={{ color: "black" }}>
-                            Live Site
-                          </Button>
-                        </a>
-                      ) : (
-                        ""
-                      )}
-                      <a
-                        href={projects[showCard].githubUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <img
-                          className="github-icon"
-                          src="/Images/Icons/github.png"
-                          alt="GitHub"
-                        />
-                      </a>
-                    </CardActions>
-                  </Card>
-                </div>
-              </div>
-            )}
           </div>
         </div>
       </div>
+      {/* Certificate Section */}
       <Certificates />
     </div>
   );
