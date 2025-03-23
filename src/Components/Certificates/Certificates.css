@@ -31,7 +31,7 @@
 /* Badge Image Section */
 .certificates .badge-container img {
   width: 7%;
-  max-width: 130px;
+  max-width: 100px;
   margin: 4px 30px;
   animation: none; /* Default state, no animation */
 }
@@ -69,7 +69,7 @@
   /* Badge Image Section */
   .certificates .badge-container img {
     width: 8%;
-    max-width: 60px;
+    max-width: 50px;
     margin: 4px 23px;
   }
   .cert-container {
