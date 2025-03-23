@@ -68,6 +68,7 @@
 .project .project-content p {
   margin-top: 15px;
   color: #d3d3d3;
+  line-height: 1.4;
 }
 .project .socials-container {
   display: flex;
