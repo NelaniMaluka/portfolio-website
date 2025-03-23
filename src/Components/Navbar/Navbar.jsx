@@ -173,7 +173,7 @@ export default function Navbar() {
         {/* Social Links */}
         <div className="socials">
           {socialLinks.map((social, index) => (
-            <a href={social.href} key={index}>
+            <a href={social.href} key={index} target="_blank">
               <img src={social.src} alt={social.alt} />
             </a>
           ))}
