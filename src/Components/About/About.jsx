@@ -63,18 +63,12 @@ export default function About() {
 
         {/* Main Content */}
         <div className="text">
-          {/* Profile Bar */}
-          <div className="bar">
-            <div>
-              <img src="Images/Nelani.jpg" alt="Nelani" />
-            </div>
-            <div>
-              <h6>Hello Welcome</h6>
-              <h2>
-                I&rsquo;m <span className="o">Nelani Maluka</span>
-              </h2>
-            </div>
-          </div> 
+          <div className="intro">
+            <h6>Hello Welcome</h6>
+            <h2>
+              I&rsquo;m <span className="o">Nelani Maluka</span>
+            </h2>
+          </div>
 
           {/* Buttons */}
           <div className="button-container">
