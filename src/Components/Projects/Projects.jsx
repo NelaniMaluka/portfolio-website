@@ -26,7 +26,7 @@ export default function Projects() {
       gif: "/Images/project-images/Kick-Land/kick-land.gif",
       tools: ["ReactJS", "Redux", "Spring Boot", "MySQL", "Stripe"],
       about:
-        "Kick Land is a full-stack web application that provides a platform for selling sneakers. It is built using React.js for the frontend and Java with Spring Boot for the backend. The application includes features such as user authentication, product browsing, shopping cart management, order management, profile management and state management.",
+        "A full-stack web application for buying and selling sneakers, built with React.js for the frontend and Java with Spring Boot for the backend. Features include user authentication, product browsing, shopping cart and order management, profile management, and state management. Integrated with Stripe for payments and SMTP for email notifications.",
       //liveUrl: "",
       githubUrl: "https://github.com/NelaniMaluka/kick-land",
     },
@@ -37,7 +37,7 @@ export default function Projects() {
       gif: "/Images/project-images/Learnhall/Learnhall.gif",
       tools: ["HTML", "CSS", "JavaScript", "JQuery", "Vue.js"],
       about:
-        "Learnhall is an online platform that connects students with tutors. It collects user data, such as course preferences and tutor information, and sends it directly to the company’s email for processing. The platform aims to streamline the connection process between students and tutors, ensuring a smooth and efficient experience.",
+        "An online platform connecting students with tutors. Collects user data, such as course preferences and tutor details, and sends it directly to the company's email for processing. Designed to streamline the connection process, ensuring a seamless and efficient experience for both students and tutors.",
       liveUrl: "https://learnhall.com/",
       githubUrl: "https://github.com/NelaniMaluka/learnhall-1",
     },

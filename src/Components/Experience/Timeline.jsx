@@ -51,10 +51,12 @@ export default function CustomizedTimeline() {
           >
             <div className="dot-wrapper">
               <span>
-                I developed a developer portfolio using Git, GitHub, and
-                Namecheap, led a website redesign, and created a landing page
-                and interactive Q&A section to enhance engagement, improving
-                both functionality and user experience.
+                Built this website using HTML, CSS, and JavaScript. Led a
+                website redesign, improving functionality and user engagement
+                with a landing page and interactive Q&A section. Integrated
+                forms for data transfer to the company email. Contributed to
+                their quiz/exam codebase, implementing features like a timer to
+                enhance usability.
               </span>
             </div>
           </Typography>

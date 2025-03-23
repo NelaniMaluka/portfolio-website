@@ -29,7 +29,7 @@ export default function Education() {
             variant="h6"
             sx={{ fontWeight: "bold", color: "#E65100" }}
           >
-            Education
+            Completed NQF Level 6 in IT: Database Development at CTU
           </Typography>
           <Typography
             variant="subtitle1"
@@ -49,11 +49,11 @@ export default function Education() {
           >
             <div className="dot-wrapper">
               <span>
-                I completed NQF Level 6 in IT: Database Development at CTU,
-                specializing in SQL, Azure, Java, C#, .NET, and web
-                technologies, while gaining skills in project management and
-                software development, enhancing both technical and collaborative
-                abilities.
+                Gained hands-on experience in database design, web app
+                development, and cloud services. Applied problem-solving skills
+                to build scalable software, manage projects, and collaborate in
+                teams, strengthening technical expertise and delivering
+                efficient solutions.
               </span>
             </div>
           </Typography>
@@ -90,10 +90,11 @@ export default function Education() {
           >
             <div className="dot-wrapper">
               <span>
-                I gained experience building automation tools for file transfer
-                and email sending, developed real-time data display apps,
-                including weather info, and improved problem-solving through
-                interactive games and encryption algorithms.
+                Gained hands-on experience building automation tools for file
+                transfer and email sending. Developed real-time data display
+                apps, including weather information, and improved
+                problem-solving skills by working on interactive games and
+                encryption algorithms.
               </span>
             </div>
           </Typography>

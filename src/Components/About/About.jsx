@@ -119,9 +119,7 @@ export default function About() {
 
           {/* Animated Text and Paragraph */}
           <div className="atc">
-            <h3 className="animated-text">
-              I build scalable web applications.
-            </h3>
+            <h3 className="animated-text">Software Developer</h3>
             <div className="p">
               <p>
                 Graduate software developer with experience in full-stack
