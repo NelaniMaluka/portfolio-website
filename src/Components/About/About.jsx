@@ -1,5 +1,6 @@
 import { PersonAdd } from "@mui/icons-material";
 import DownloadIcon from "@mui/icons-material/Download";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
 
 import "./About.css";
 
@@ -63,11 +64,25 @@ export default function About() {
 
         {/* Main Content */}
         <div className="text">
-          <div className="intro">
-            <h6>Hello Welcome</h6>
-            <h2>
-              I&rsquo;m <span className="o">Nelani Maluka</span>
-            </h2>
+          {/* Profile Bar */}
+          <div className="bar">
+            <div>
+              <img src="Images/Nelani.jpg" alt="Nelani" />
+            </div>
+            <div>
+              <h6>Hello Welcome</h6>
+              <h2>
+                I&rsquo;m <span className="o">Nelani Maluka</span>
+              </h2>
+              <span className="q">
+                <LocationOnIcon
+                  sx={{
+                    height: { xs: "13px", sm: "16px", md: "18px", lg: "20px" },
+                  }}
+                />
+                Johannesburg
+              </span>
+            </div>
           </div>
 
           {/* Buttons */}
