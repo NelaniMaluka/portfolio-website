@@ -25,15 +25,17 @@ export default function ContactMe() {
   return (
     <div id="ContactMe">
       <div className="container">
-        <h1>Let&apos;s Work Together</h1>
-        <span className="sub-heading">
-          Let’s collaborate and bring ideas to life—reach out and let’s create
-          something great together!
-        </span>
+        <div className="heading">
+          <h1>Let&apos;s Work Together</h1>
+          <p>
+            Let’s collaborate and bring ideas to life—reach out and let’s create
+            something great together!
+          </p>
+        </div>
         <div className="form-container">
           <div className="socials-1">
             {socialLinks.map((link, index) => (
-              <a href={link.href} key={index}>
+              <a href={link.href} key={index} target="_blank">
                 <div className="socials">
                   <img src={link.imgSrc} alt={link.altText} />
                 </div>

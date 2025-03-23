@@ -2,13 +2,19 @@
   background-color: white;
   height: 600px;
   padding: 20px 0;
+  margin: auto;
 }
-#ContactMe h1 {
-  width: max-content;
+#ContactMe .heading {
+  width: 100%;
+}
+#ContactMe .heading h1 {
   font-size: 45px;
   margin-top: 20px;
   text-align: center;
   width: 100%;
+}
+#ContactMe .heading p {
+  text-align: center;
 }
 #ContactMe .form-container {
   margin-top: 30px;
