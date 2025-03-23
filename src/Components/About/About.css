@@ -1,7 +1,7 @@
 /* About Section */
 #About {
   width: 100%;
-  height: max-content;
+  height: 100vh;
   padding: 10px 0 80px 0;
 }
 
@@ -247,6 +247,7 @@
   /* About Section */
   #About {
     height: max-content;
+    padding-bottom: 150px;
   }
   #About .text {
     display: block;
@@ -269,7 +270,7 @@
 
   /* Bar Section */
   .bar {
-    margin-top: 60px;
+    margin-top: 160px;
     padding: 10px;
   }
   .bar img {
@@ -319,12 +320,12 @@
   /* About Section */
   #About {
     height: max-content;
-    padding-top: 0;
+    padding-bottom: 160px;
   }
   #About .text {
     display: block;
     width: 100%;
-    margin: 0;
+    margin-top: 130px;
     height: max-content;
     text-align: center;
   }
