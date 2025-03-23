@@ -9,16 +9,16 @@ function App() {
   return (
     <div className="app">
       <Navbar />
-      <div id="About1">
+      <div>
         <About />
       </div>
-      <div id="Experience1">
+      <div>
         <Experience />
       </div>
-      <div id="Projects1">
+      <div>
         <Projects />
       </div>
-      <div id="ContactMe1">
+      <div>
         <ContactMe />
       </div>
     </div>
