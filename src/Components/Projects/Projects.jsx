@@ -24,16 +24,7 @@ export default function Projects() {
       name: "Kick Land",
       img: "/Images/project-images/Kick-Land/Kick-Land-img.png",
       gif: "/Images/project-images/Kick-Land/kick-land.gif",
-      tools: [
-        "ReactJS",
-        "Redux",
-        "Spring Boot",
-        "MySQL",
-        "JWT",
-        "JUnit",
-        "SMTP",
-        "Stripe",
-      ],
+      tools: ["ReactJS", "Redux", "Spring Boot", "MySQL", "Stripe"],
       about:
         "Kick Land is a full-stack web application that provides a platform for selling sneakers. It is built using React.js for the frontend and Java with Spring Boot for the backend. The application includes features such as user authentication, product browsing, shopping cart management, order management, profile management and state management.",
       //liveUrl: "",
@@ -90,6 +81,13 @@ export default function Projects() {
                     {/* Project Content */}
                     <div className="project-content">
                       <h1>{project.name}</h1>
+                      <div className="tools">
+                        <ul>
+                          {project.tools.map((tool, toolIndex) => (
+                            <li key={toolIndex}>{tool}</li>
+                          ))}
+                        </ul>
+                      </div>
                       <p>{project.about}</p>
 
                       {/* Social Links (Dynamic) */}
@@ -135,6 +133,13 @@ export default function Projects() {
                     {/* Project Content */}
                     <div className="project-content">
                       <h1>{project.name}</h1>
+                      <div className="tools">
+                        <ul>
+                          {project.tools.map((tool, toolIndex) => (
+                            <li key={toolIndex}>{tool}</li>
+                          ))}
+                        </ul>
+                      </div>
                       <p>{project.about}</p>
 
                       {/* Social Links (Dynamic) */}

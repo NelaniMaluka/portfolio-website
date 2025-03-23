@@ -63,10 +63,11 @@
 }
 .project .project-content h1 {
   margin-top: 20px;
+  color: #ffa500;
 }
 .project .project-content p {
   margin-top: 15px;
-  color: rgb(208, 216, 216);
+  color: #d3d3d3;
 }
 .project .socials-container {
   display: flex;
@@ -84,6 +85,31 @@
 .project .socials-container .socials img {
   width: 30px;
   height: 30px;
+}
+
+.tools {
+  margin-top: 15px;
+}
+.tools ul {
+  list-style: none;
+  display: flex;
+  height: max-content;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.tools ul li {
+  border: 1px solid rgb(141, 140, 140);
+  padding: 5px;
+  margin: 0 10px 5px 0;
+  border-radius: 10px;
+  background-color: rgba(255, 140, 0, 0.096); /* Slight orange background */
+  font-weight: bold;
+}
+.tools ul li:hover {
+  transform: scale(1.01);
+}
+.project-cont:hover {
+  transform: scale(1.02);
 }
 
 /**********************
