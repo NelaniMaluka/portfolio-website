@@ -1,4 +1,4 @@
-import "./About.css";
+import "./Home.css";
 
 export default function About() {
   const socialLinks = [

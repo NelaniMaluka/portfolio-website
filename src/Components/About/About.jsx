@@ -8,7 +8,7 @@ import Education from "./Education";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import DownloadIcon from "@mui/icons-material/Download";
 
-import "./Experience.css";
+import "./About.css";
 
 export default function Experience() {
   const [isView, setView] = useState(<CustomizedTimeline />);

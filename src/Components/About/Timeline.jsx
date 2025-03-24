@@ -5,7 +5,7 @@ import TimelineContent from "@mui/lab/TimelineContent";
 import TimelineConnector from "@mui/lab/TimelineConnector";
 import TimelineDot from "@mui/lab/TimelineDot";
 import { Typography } from "@mui/material";
-import "./Experience.css";
+import "./About.css";
 
 export default function CustomizedTimeline() {
   return (
