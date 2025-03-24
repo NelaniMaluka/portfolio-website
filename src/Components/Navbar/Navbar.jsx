@@ -11,8 +11,8 @@ export default function Navbar() {
   // Change theme based on section scroll or hover
   useEffect(() => {
     const handleScroll = () => {
-      const heroSection = document.getElementById("About");
-      const experienceSection = document.getElementById("Experience");
+      const heroSection = document.getElementById("Home");
+      const aboutSection = document.getElementById("About");
       const projectsSection = document.getElementById("Projects");
       const contactSection = document.getElementById("ContactMe");
 
@@ -22,11 +22,11 @@ export default function Navbar() {
       // Change theme based on scroll position and section offsets
       if (
         scrollPosition >= heroSection.offsetTop &&
-        scrollPosition < experienceSection.offsetTop
+        scrollPosition < aboutSection.offsetTop
       ) {
         setTheme("dark"); // Apply dark theme when in the Hero section
       } else if (
-        scrollPosition >= experienceSection.offsetTop &&
+        scrollPosition >= aboutSection.offsetTop &&
         scrollPosition < projectsSection.offsetTop
       ) {
         setTheme("light"); // Apply light theme when in the Experience section
@@ -76,8 +76,8 @@ export default function Navbar() {
   };
 
   const navLinks = [
-    { label: "About", href: "#About" },
-    { label: "Experience", href: "#Experience" },
+    { label: "Home", href: "#Home" },
+    { label: "About Me", href: "#About" },
     { label: "Projects", href: "#Projects" },
     { label: "Contact Me", href: "#ContactMe" },
   ];
