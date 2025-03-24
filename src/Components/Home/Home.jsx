@@ -46,8 +46,8 @@ export default function About() {
           {/* Buttons */}
           <div className="button-container">
             <a
-              href="#AboutMe"
-              onClick={(event) => handleSmoothScroll(event, "#AboutMe")}
+              href="#About"
+              onClick={(event) => handleSmoothScroll(event, "#About")}
             >
               <button className="btn1">About Me</button>
             </a>
