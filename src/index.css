@@ -32,44 +32,47 @@ a {
 }
 
 .heading {
-  width: 80%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 50px;
 }
 .heading h1 {
-  font-size: 45px;
-  display: block;
+  font-size: 65px;
 }
-.heading p {
-  padding-top: 15px;
-  font-size: 18px;
-  display: block;
+.heading hr {
   width: 100%;
+  height: 1px;
+  border: 2px solid #a6bbcc;
 }
 
+/**********************
+**** Large Desktop ****
+**********************/
 @media only screen and (min-width: 1540px) {
-  .heading {
-    padding-top: 40px;
-  }
 }
 
 /**********************
 ******* Tablet ********
 **********************/
 @media only screen and (min-width: 576px) and (max-width: 960px) {
-  .sub-heading {
-    width: 100%;
+  .heading {
+    gap: 20px;
   }
   .heading h1 {
-    font-size: 30px;
+    font-size: 53px;
   }
 }
 
-/* Mobile View */
+/**********************
+******* Mobile ********
+**********************/
 @media only screen and (max-width: 576px) {
-  .sub-heading {
-    font-size: 15px;
-    width: 100%;
+  .heading {
+    gap: 20px;
+    display: block;
   }
   .heading h1 {
-    font-size: 28px;
+    font-size: 33px;
   }
 }
