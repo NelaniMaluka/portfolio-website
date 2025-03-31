@@ -4,17 +4,17 @@ export default function About() {
   const socialLinks = [
     {
       href: "https://www.linkedin.com/in/nelanimaluka/",
-      src: "/Images/Icons/linkedin.png",
+      src: "/Images/Icons/linkedin-1.png",
       alt: "LinkedIn",
     },
     {
       href: "https://github.com/NelaniMaluka",
-      src: "/Images/Icons/github.png",
+      src: "/Images/Icons/github-1.png",
       alt: "GitHub",
     },
     {
       href: "mailto:malukanelani@gmail.com",
-      src: "/Images/Icons/email.png",
+      src: "/Images/Icons/email-1.png",
       alt: "Email",
     },
   ];
