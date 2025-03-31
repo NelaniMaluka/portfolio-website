@@ -55,7 +55,7 @@
   border: none;
   font-size: 20px;
   font-weight: 700;
-  border-bottom: 1px solid white;
+  border-bottom: 2px solid #a6bbcc;
   transition: transform 0.3s ease, color 0.3s ease;
   color: white;
 }
