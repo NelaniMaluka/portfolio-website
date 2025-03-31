@@ -89,7 +89,7 @@ export default function Navbar() {
           <div className="nav">
             {/* Logo */}
             <div className="c">
-              <a href="#Home">
+              <a href="#Home" onClick={(e) => handleSmoothScroll(e, "#Home")}>
                 <span>Nelani</span>Maluka
               </a>
             </div>
