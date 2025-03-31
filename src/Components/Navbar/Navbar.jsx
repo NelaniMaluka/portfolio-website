@@ -6,40 +6,22 @@ import "./Navbar.css";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedLink, setSelectedLink] = useState(""); // Track clicked link
-  const [theme, setTheme] = useState("default"); // Default theme
+  const [scrollingDown, setScrollingDown] = useState(false); // Track scrolling direction
+  const [lastScrollY, setLastScrollY] = useState(0); // Track last scroll position
 
   // Change theme based on section scroll or hover
   useEffect(() => {
     const handleScroll = () => {
-      const heroSection = document.getElementById("Home");
-      const aboutSection = document.getElementById("About");
-      const projectsSection = document.getElementById("Projects");
-      const contactSection = document.getElementById("ContactMe");
-
-      // Get the scroll position of the page
       const scrollPosition = window.scrollY;
 
-      // Change theme based on scroll position and section offsets
-      if (
-        scrollPosition >= heroSection.offsetTop &&
-        scrollPosition < aboutSection.offsetTop
-      ) {
-        setTheme("dark"); // Apply dark theme when in the Hero section
-      } else if (
-        scrollPosition >= aboutSection.offsetTop &&
-        scrollPosition < projectsSection.offsetTop
-      ) {
-        setTheme("light"); // Apply light theme when in the Experience section
-      } else if (
-        scrollPosition >= projectsSection.offsetTop &&
-        scrollPosition < contactSection.offsetTop
-      ) {
-        setTheme("dark"); // Apply a different theme (e.g., blue) when in the Projects section
-      } else if (scrollPosition >= contactSection.offsetTop) {
-        setTheme("light"); // Apply green theme when in the Contact section
+      // Detect scrolling direction
+      if (scrollPosition > lastScrollY) {
+        setScrollingDown(true); // Scrolling down
       } else {
-        setTheme("dark"); // Default theme if none of the sections are in view
+        setScrollingDown(false); // Scrolling up
       }
+
+      setLastScrollY(scrollPosition); // Update last scroll position
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -47,14 +29,14 @@ export default function Navbar() {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [lastScrollY]);
 
-  /* Handle slide Bar */
+  // Handle slide Bar
   const handleMenuClick = () => {
     setIsOpen(!isOpen);
   };
 
-  /* Download CV */
+  // Download CV
   const handleDownload = () => {
     const link = document.createElement("a");
     link.href = "/Nelani_Maluka_CV.pdf";
@@ -64,7 +46,7 @@ export default function Navbar() {
     document.body.removeChild(link);
   };
 
-  /* Scroll to selected section*/
+  // Scroll to selected section
   const handleSmoothScroll = (event, href) => {
     event.preventDefault();
     const targetSection = document.querySelector(href);
@@ -77,9 +59,8 @@ export default function Navbar() {
 
   const navLinks = [
     { label: "Home", href: "#Home" },
-    { label: "About Me", href: "#About" },
+    { label: "About", href: "#About" },
     { label: "Projects", href: "#Projects" },
-    { label: "Contact Me", href: "#ContactMe" },
   ];
 
   const socialLinks = [
@@ -101,47 +82,61 @@ export default function Navbar() {
   ];
 
   return (
-    <div className="container">
-      <div className={`navbar ${theme}`}>
-        {/* Nav Links */}
-        <div className="list">
-          <ul>
-            {navLinks.map((link, index) => (
-              <li key={index} className="a">
-                <a
-                  href={link.href}
-                  className={
-                    selectedLink === link.href.substring(1) ? "active" : ""
-                  }
-                  onClick={(e) => handleSmoothScroll(e, link.href)}
-                >
-                  <div
-                    className={
-                      selectedLink === link.href.substring(1)
-                        ? "link-container active"
-                        : "link-container"
-                    }
-                  >
-                    {link.label}
-                  </div>
-                </a>
-              </li>
-            ))}
-            {/* Hamburger Icon */}
-            <li>
-              {!isOpen && (
-                <div className="menu-container" onClick={handleMenuClick}>
-                  <img src="/Images/Icons/menu.png" alt="menu" />
-                </div>
-              )}
-            </li>
-          </ul>
+    <div>
+      <div className={`navbar ${scrollingDown ? "hidden" : ""}`}>
+        <div className="container">
+          {/* Nav */}
+          <div className="nav">
+            {/* Logo */}
+            <div className="c">
+              <a href="#Home">
+                <span>Nelani</span>Maluka
+              </a>
+            </div>
+            {/* Nav Links */}
+            <div className="list">
+              <ul>
+                {navLinks.map((link, index) => (
+                  <li key={index} className="a">
+                    <a
+                      href={link.href}
+                      className={
+                        selectedLink === link.href.substring(1) ? "active" : ""
+                      }
+                      onClick={(e) => handleSmoothScroll(e, link.href)}
+                    >
+                      <div
+                        className={
+                          selectedLink === link.href.substring(1)
+                            ? "link-container active"
+                            : "link-container"
+                        }
+                      >
+                        {link.label}
+                      </div>
+                    </a>
+                  </li>
+                ))}
+                {/* Hamburger Icon */}
+                <li>
+                  {!isOpen && (
+                    <div className="menu-container" onClick={handleMenuClick}>
+                      <img src="/Images/Icons/menu.png" alt="menu" />
+                    </div>
+                  )}
+                </li>
+              </ul>
+            </div>
+            {/* Resume Button */}
+            <div className="c">
+              <button onClick={handleDownload}>Resume</button>
+            </div>
+          </div>
         </div>
       </div>
 
       {/* Sidebar */}
       <div className={`hamburger ${isOpen ? "open" : ""}`}>
-        {/* close-hamburger icon */}
         <div className="close-menu-image">
           <img
             src="/Images/Icons/close.png"
@@ -190,6 +185,7 @@ export default function Navbar() {
                     md: "20px",
                     lg: "20px",
                   },
+                  color: "black",
                 }}
               />
             </span>
