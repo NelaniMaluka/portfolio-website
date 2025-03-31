@@ -8,122 +8,70 @@
   justify-content: center;
   align-items: center;
   height: 100%;
-  color: aliceblue;
+}
+
+/* About Container */
+#Home .Home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 100%;
+  gap: 8%;
+}
+.home-text,
+.img {
+  width: 50%;
 }
 
 /* Intro Section */
 #Home .text {
-  text-align: center;
+  text-align: left;
 }
 #Home .text h6 {
   font-size: 22px;
-}
-#Home .text h6 .o {
-  color: rgb(255, 175, 54);
+  margin-left: 5px;
 }
 #Home .text h2 {
-  font-size: 45px;
-  margin-top: 10px;
-}
-#Home .text h2 .o {
-  color: rgb(255, 175, 54);
-}
-
-/* Wave Animation */
-@keyframes wave {
-  0% {
-    transform: rotate(0deg);
-  }
-  20% {
-    transform: rotate(-15deg);
-  }
-  40% {
-    transform: rotate(10deg);
-  }
-  60% {
-    transform: rotate(-10deg);
-  }
-  80% {
-    transform: rotate(5deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-}
-.wave {
-  display: inline-block;
-  font-size: 2rem;
-  animation: wave 1.5s infinite ease-in-out;
-  transform-origin: 70% 70%; /* Adjusts rotation pivot for a more natural wave */
-}
-
-/* Button Section */
-#Home .button-container {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-}
-#Home button {
-  height: 35px;
-}
-#Home .button-container button {
-  width: 120px;
-  margin: 20px;
-  border: none;
-}
-#Home .btn1 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 10px;
-  gap: 5px;
-  font-size: 17px;
-  border-radius: 10px;
-  background-color: rgb(255, 175, 54);
-}
-#Home .btn2 {
-  font-size: 17px;
-  background-color: transparent;
-  border: none;
-  display: inline-block;
-}
-#Home .btn2 a {
-  color: white;
-  text-decoration: underline;
+  font-size: 85px;
 }
 
 /* Socials Section */
 #Home .socials-container {
   width: max-content;
-  margin: auto;
+  margin-left: 5px;
 }
 #Home .socials {
   display: inline-block;
-  margin-top: 30px;
-  margin-left: 20px;
+  margin-top: 60px;
   width: max-content;
-}
-#Home .socials div {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border-radius: 50%;
 }
 #Home .socials div:hover {
   transform: scale(2.5);
-  box-shadow: 0px 0px 20px rgb(255, 175, 54);
+  box-shadow: 0px 0px 20px #a6bbcc;
   border-radius: 50%;
 }
 #Home .socials div {
   background-color: white;
-  border-radius: 45%;
-  width: 33px;
-  height: 33px;
-  margin-right: 40px;
+  border-radius: 50%;
+  padding: 0.5px 0.2px;
+  width: 37px;
+  height: 37px;
+  margin-right: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: floating 3s infinite ease-in-out;
+}
+#Home .socials div img {
+  margin: 0;
+  padding: 0;
+  height: 36px;
+  width: 36px;
 }
 
+/* Floating animation */
 @keyframes floating {
   0% {
     transform: translateY(0);
@@ -136,18 +84,10 @@
   }
 }
 
-#Home .socials div {
-  animation: floating 2s infinite ease-in-out;
-}
-#Home .socials div img {
-  margin: 0;
-  padding: 0;
-  height: 36px;
-  width: 36px;
-}
-
-#Home a {
-  text-decoration: none;
+/* image section */
+#Home .img img {
+  width: 100%;
+  max-width: 600px;
 }
 
 /**********************
@@ -165,14 +105,15 @@
   }
 
   /* Socials Section */
-  .atc {
-    margin-top: 60px;
-  }
   .socials-container {
     margin-top: 30px;
   }
   #Home .socials div:hover {
     transform: scale(2);
+  }
+  #Home .socials div {
+    width: 39px;
+    height: 39px;
   }
   #Home .socials div img {
     margin: 0;
@@ -192,12 +133,24 @@
     max-height: 800px;
   }
 
+  #Home .Home-container {
+    display: block;
+    align-items: center;
+    width: 100%;
+    height: max-content;
+  }
+  .home-text,
+  .img {
+    width: 100%;
+  }
+
   /* Intro Section */
   #Home .text h6 {
-    font-size: 17px;
+    font-size: 20px;
+    margin-top: 20px;
   }
   #Home .text h2 {
-    font-size: 33px;
+    font-size: 55px;
     margin-top: 1px;
   }
   #Home .text {
@@ -208,33 +161,31 @@
     text-align: center;
   }
 
-  /* Button Section */
-  #Home .button-container {
-    align-items: center;
-    justify-content: center;
-  }
-  #Home .btn1 span {
-    height: 17px;
-  }
-
-  /* About Section */
-  #Home .text h3 {
-    width: 100%;
-    font-size: 25px;
-  }
-  #Home .text p {
-    width: 90%;
-    max-width: 500px;
-    margin: auto;
-    font-size: 16px;
-  }
-
   /* Socials Section */
+  #Home .socials-container {
+    margin: auto;
+  }
   #Home .socials div {
     margin: 10px 35px;
   }
-  #Home .socials {
-    margin-left: 0;
+  #Home .socials div {
+    height: 37px;
+    width: 37px;
+  }
+  #Home .socials div img {
+    height: 35px;
+    width: 35px;
+  }
+
+  /* image section */
+  #Home .img {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  #Home .img img {
+    width: 100%;
+    max-width: 300px;
   }
 }
 
@@ -248,19 +199,33 @@
     max-height: 800px;
   }
 
+  #Home .Home-container {
+    display: block;
+    align-items: center;
+    width: 100%;
+    height: max-content;
+  }
+  .home-text,
+  .img {
+    width: 100%;
+  }
+
+  /* Intro Section */
+  #Home .text h6 {
+    font-size: 18px;
+    margin-top: 40px;
+  }
+  #Home .text h2 {
+    font-size: 50px;
+    margin-top: 1px;
+  }
+
   /* Intro Section */
   #Home .text {
     display: block;
     width: 100%;
     height: max-content;
     text-align: center;
-  }
-  #Home .text h6 {
-    font-size: 17px;
-  }
-  #Home .text h2 {
-    font-size: 33px;
-    margin-top: 1px;
   }
 
   /* Button Section */
@@ -273,10 +238,6 @@
   }
 
   /* About Section */
-  .atc {
-    height: max-content;
-    width: 100%;
-  }
   #Home .text h3 {
     width: 90%;
     font-size: 22px;
@@ -295,7 +256,27 @@
   }
 
   /* Socials Section */
+  #Home .socials-container {
+    margin: auto;
+  }
   #Home .socials div {
     margin: 10px 20px;
+    height: 32px;
+    width: 32px;
+  }
+  #Home .socials div img {
+    height: 30px;
+    width: 30px;
+  }
+
+  /* image section */
+  #Home .img {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  #Home .img img {
+    width: 100%;
+    max-width: 200px;
   }
 }

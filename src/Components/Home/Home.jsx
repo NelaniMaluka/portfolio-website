@@ -19,64 +19,39 @@ export default function About() {
     },
   ];
 
-  /* Scroll to selected section*/
-  const handleSmoothScroll = (event, href) => {
-    event.preventDefault();
-    const targetSection = document.querySelector(href);
-    if (targetSection) {
-      targetSection.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   return (
     <section id="Home" className="Home">
       <div className="container">
         <div className="Home-container">
-          {/* Main Content */}
-          <div className="text">
-            <h6>
-              Hello I&rsquo;m <span className="o">Nelani Maluka</span>
-              <span className="wave">👋</span>
-            </h6>
-            <h2>
-              I&rsquo;m a <span className="o">Software Developer</span>
-            </h2>
-          </div>
+          <div className="home-text">
+            {/* Main Content */}
+            <div className="text">
+              <h6>Hello I&rsquo;m Nelani, </h6>
+              <h2 className="e">Software Developer</h2>
+            </div>
 
-          {/* Buttons */}
-          <div className="button-container">
-            <a
-              href="#About"
-              onClick={(event) => handleSmoothScroll(event, "#About")}
-            >
-              <button className="btn1">About Me</button>
-            </a>
-            <button className="btn2">
-              <a
-                href="#Projects"
-                onClick={(event) => handleSmoothScroll(event, "#Projects")}
-              >
-                See Projects
-              </a>
-            </button>
-          </div>
-
-          {/* Social Links (Dynamic) */}
-          <div className="socials-container">
-            {socialLinks.map((link, index) => (
-              <a
-                key={index}
-                href={link.href}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <div className="socials">
-                  <div>
-                    <img src={link.src} alt={link.alt} />
+            {/* Social Links (Dynamic) */}
+            <div className="socials-container">
+              {socialLinks.map((link, index) => (
+                <a
+                  key={index}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div className="socials">
+                    <div>
+                      <img src={link.src} alt={link.alt} />
+                    </div>
                   </div>
-                </div>
-              </a>
-            ))}
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {/* Image Section */}
+          <div className="img">
+            <img src="/Images/coder.png" alt="Coder-Image" />
           </div>
         </div>
       </div>
