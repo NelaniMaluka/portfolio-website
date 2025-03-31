@@ -21,13 +21,13 @@ export default function Education() {
       {/* Education Experience */}
       <TimelineItem>
         <TimelineSeparator>
-          <TimelineDot sx={{ bgcolor: "#E65100", marginTop: "17px" }} />
+          <TimelineDot sx={{ bgcolor: "#a6bbcc", marginTop: "17px" }} />
           <TimelineConnector />
         </TimelineSeparator>
         <TimelineContent>
           <Typography
             variant="h6"
-            sx={{ fontWeight: "bold", color: "#E65100" }}
+            sx={{ fontWeight: "bold", color: "#a6bbcc" }}
           >
             Completed NQF Level 6 in IT: Database Development at CTU
           </Typography>
@@ -36,7 +36,7 @@ export default function Education() {
             color="text.secondary"
             sx={{
               fontSize: { xs: "14px", sm: "15px", md: "17px", lg: "17px" },
-              color: " rgb(82, 82, 82)",
+              color: "rgb(255, 255, 255)",
             }}
           >
             CTU Training Solutions (2023–2025)
@@ -63,12 +63,12 @@ export default function Education() {
       {/* Personal Projects */}
       <TimelineItem>
         <TimelineSeparator>
-          <TimelineDot sx={{ bgcolor: "#E65100", marginTop: "17px" }} />
+          <TimelineDot sx={{ bgcolor: "#a6bbcc", marginTop: "17px" }} />
         </TimelineSeparator>
         <TimelineContent>
           <Typography
             variant="h6"
-            sx={{ fontWeight: "bold", color: "#E65100" }}
+            sx={{ fontWeight: "bold", color: "#a6bbcc" }}
           >
             Training Program
           </Typography>
@@ -77,7 +77,7 @@ export default function Education() {
             color="text.secondary"
             sx={{
               fontSize: { xs: "14px", sm: "15px", md: "17px", lg: "17px" },
-              color: " rgb(82, 82, 82)",
+              color: "rgb(255, 255, 255)",
             }}
           >
             Brainnest (Jan 2023 - Feb 2023)

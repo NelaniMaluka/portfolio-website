@@ -20,7 +20,7 @@ export default function CustomizedTimeline() {
       {/* Experience Section */}
       <TimelineItem>
         <TimelineSeparator>
-          <TimelineDot sx={{ bgcolor: "#E65100", marginTop: "17px" }} />
+          <TimelineDot sx={{ bgcolor: "#a6bbcc", marginTop: "17px" }} />
           <TimelineConnector />
         </TimelineSeparator>
         <TimelineContent>
@@ -28,7 +28,7 @@ export default function CustomizedTimeline() {
             variant="h6"
             sx={{
               fontWeight: "bold",
-              color: "#E65100",
+              color: "#a6bbcc",
             }}
           >
             Web Developer (Internship)
@@ -38,7 +38,7 @@ export default function CustomizedTimeline() {
             color="text.secondary"
             sx={{
               fontSize: { xs: "14px", sm: "15px", md: "17px", lg: "17px" },
-              color: " #333333",
+              color: "rgb(255, 255, 255)",
             }}
           >
             Learnhall (Nov 2024 - April 2025)
