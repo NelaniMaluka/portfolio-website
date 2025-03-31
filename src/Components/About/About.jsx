@@ -79,17 +79,17 @@ export default function Experience() {
   const socialLinks = [
     {
       href: "https://www.linkedin.com/in/nelanimaluka/",
-      src: "/Images/Icons/linkedin.png",
+      src: "/Images/Icons/linkedin-1.png",
       alt: "LinkedIn",
     },
     {
       href: "https://github.com/NelaniMaluka",
-      src: "/Images/Icons/github.png",
+      src: "/Images/Icons/github-1.png",
       alt: "GitHub",
     },
     {
       href: "mailto:malukanelani@gmail.com",
-      src: "/Images/Icons/email.png",
+      src: "/Images/Icons/email-1.png",
       alt: "Email",
     },
   ];
@@ -97,143 +97,155 @@ export default function Experience() {
   return (
     <div id="About">
       <div className="container">
-        {/* Exprerince Section */}
-        <div className="xp-container">
-          <div className="xp-content">
-            <div className="text-cont">
-              <div className="profile">
-                <img src="Images/Nelani.jpg" alt="Profile image" />
-                <div>
-                  <span style={{ marginLeft: "24px" }}>Nelani Maluka</span>
-                  <span className="q">
-                    <LocationOnIcon
-                      sx={{
-                        height: {
-                          xs: "13px",
-                          sm: "16px",
-                          md: "18px",
-                          lg: "20px",
-                        },
-                      }}
-                    />
-                    Johannesburg
-                  </span>
-                </div>
-              </div>
-              <div className="text">
-                <h4>About Me</h4>
-                <hr />
-                <p>
-                  Graduate software developer with experience in full-stack
-                  development using Java, React, and Spring Boot. Skilled in
-                  building reliable APIs, improving performance, and creating
-                  easy-to-use applications.
-                </p>
-              </div>
-              <div className="socials">
-                {socialLinks.map((social, index) => (
-                  <a key={index} href={social.href} target="_blank">
-                    <img src={social.src} alt={social.alt} />
-                  </a>
-                ))}
-              </div>
-              <div className="button-cont">
-                {" "}
-                <button onClick={handleDownload}>
-                  Resume
-                  <span>
-                    <DownloadIcon
-                      sx={{
-                        height: {
-                          xs: "17px",
-                          sm: "18px",
-                          md: "20px",
-                          lg: "20px",
-                        },
-                      }}
-                    />
-                  </span>
-                </button>
-              </div>
-            </div>
-            <div className="timeline-wrapper">
-              <div className="heading">
-                <h1>Professional Experience</h1>
-                <p>
-                  Gain insight into my journey in software development, from
-                  building <span className="n">secure applications</span> to
-                  implementing <span className="n">scalable solutions</span>.
-                </p>
-              </div>
-              <div className="timeline">
-                <Stack direction="row" spacing={1}>
-                  <Chip
-                    className={`rotate-animation ${
-                      isSelected === "experience"
-                        ? "selected-chip"
-                        : "unselected-chip"
-                    }`}
-                    icon={<WorkIcon />}
-                    label="Experience"
-                    variant={isSelected === "experience" ? "filled" : "none"}
-                    onClick={() => handleSwitchView("experience")}
-                  />
-                  <Chip
-                    className={`rotate-animation ${
-                      isSelected === "education"
-                        ? "selected-chip"
-                        : "unselected-chip"
-                    }`}
-                    icon={<SchoolIcon />}
-                    label="Education"
-                    variant={isSelected === "education" ? "filled" : "none"}
-                    onClick={() => handleSwitchView("education")}
-                  />
-                </Stack>
-                <hr />
-                <div className={`view ${slide ? "slide-out" : "slide-in"}`}>
-                  {isView}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Skills Section */}
-        <div className="skills">
+        {/* About Section */}
+        <div className="about-container">
           <div className="heading">
-            <h1>Current Technologies</h1>
-            <p>
-              Discover my expertise in software development, leveraging{" "}
-              <span className="n">modern frameworks</span> and{" "}
-              <span className="n">best practices</span> to build secure,
-              scalable applications.
-            </p>
+            <h1 className="e">About</h1>
+            <hr />
           </div>
-          <div className="skill-container">
-            <div className="i">
-              {icons.map((icon, index) => (
-                <div
-                  key={index}
-                  className="skill"
-                  onMouseEnter={() => handleMouseEnter(icon.name)}
-                >
-                  <span className="img">
-                    <img
-                      src={icon.src}
-                      alt={`${icon.name} icon`}
-                      className={`rotate ${
-                        hoveredIcon === icon.name ? "rotating" : ""
-                      }`}
-                    />
-                  </span>
-                  <div className="skill-text">
-                    <span className="text">{icon.name}</span>
 
-                    <span className="text">{icon.desc}</span>
+          {/* Exprerince Section */}
+          <div className="xp-container">
+            <div className="xp-content">
+              <div className="text-cont">
+                <div className="profile">
+                  <img src="Images/Nelani.jpg" alt="Profile image" />
+                  <div>
+                    <span className="q">
+                      <LocationOnIcon
+                        sx={{
+                          height: {
+                            xs: "13px",
+                            sm: "16px",
+                            md: "18px",
+                            lg: "20px",
+                          },
+                        }}
+                      />
+                      Johannesburg
+                    </span>
                   </div>
                 </div>
-              ))}
+                <div className="text">
+                  <h4>About Me</h4>
+                  <hr />
+                  <p>
+                    Graduate software developer with experience in full-stack
+                    development using Java, React, and Spring Boot. Skilled in
+                    building reliable APIs, improving performance, and creating
+                    easy-to-use applications.
+                  </p>
+                </div>
+                <div className="socials">
+                  {socialLinks.map((social, index) => (
+                    <a key={index} href={social.href} target="_blank">
+                      <img src={social.src} alt={social.alt} />
+                    </a>
+                  ))}
+                </div>
+                <div className="button-cont">
+                  {" "}
+                  <button onClick={handleDownload}>
+                    Resume
+                    <span>
+                      <DownloadIcon
+                        sx={{
+                          height: {
+                            xs: "17px",
+                            sm: "18px",
+                            md: "20px",
+                            lg: "20px",
+                          },
+                          color: "black",
+                        }}
+                      />
+                    </span>
+                  </button>
+                </div>
+              </div>
+              <div className="timeline-wrapper">
+                <div className="heading-2">
+                  <h1>Professional Experience</h1>
+                  <p>
+                    Gain insight into my journey in software development, from
+                    building <span className="e">secure applications</span> to
+                    implementing <span className="e">scalable solutions</span>.
+                  </p>
+                </div>
+                <div className="timeline">
+                  <Stack direction="row" spacing={1}>
+                    <Chip
+                      className={`rotate-animation ${
+                        isSelected === "experience"
+                          ? "selected-chip"
+                          : "unselected-chip"
+                      }`}
+                      icon={
+                        <WorkIcon style={{ color: " rgb(211, 211, 211)" }} />
+                      }
+                      label="Experience"
+                      variant={isSelected === "experience" ? "filled" : "none"}
+                      onClick={() => handleSwitchView("experience")}
+                    />
+                    <Chip
+                      className={`rotate-animation ${
+                        isSelected === "education"
+                          ? "selected-chip"
+                          : "unselected-chip"
+                      }`}
+                      icon={
+                        <SchoolIcon style={{ color: " rgb(211, 211, 211)" }} />
+                      }
+                      label="Education"
+                      variant={isSelected === "education" ? "filled" : "none"}
+                      onClick={() => handleSwitchView("education")}
+                    />
+                  </Stack>
+                  <hr />
+                  <div className={`view ${slide ? "slide-out" : "slide-in"}`}>
+                    {isView}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Skills Section */}
+          <div className="skills">
+            <div className="heading-2">
+              <h1>Current Technologies</h1>
+              <p>
+                Discover my expertise in software development, leveraging{" "}
+                <span className="e">modern frameworks</span> and{" "}
+                <span className="e">best practices</span> to build secure,
+                scalable applications.
+              </p>
+            </div>
+            <div className="skill-container">
+              <div className="i">
+                {icons.map((icon, index) => (
+                  <div
+                    key={index}
+                    className="skill"
+                    onMouseEnter={() => handleMouseEnter(icon.name)}
+                  >
+                    <span className="img">
+                      <img
+                        src={icon.src}
+                        alt={`${icon.name} icon`}
+                        className={`rotate ${
+                          hoveredIcon === icon.name ? "rotating" : ""
+                        }`}
+                      />
+                    </span>
+                    <div className="skill-text">
+                      <span className="text">{icon.name}</span>
+
+                      <span className="text">{icon.desc}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>

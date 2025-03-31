@@ -1,7 +1,6 @@
 /* Experience Section Styles */
 #About {
   padding: 40px 0 100px 0;
-  background-color: white;
   height: max-content;
 }
 .xp-container {
@@ -9,18 +8,20 @@
 }
 
 /* Heading Section */
-.heading h1 {
-  color: black;
+.heading-2 h1 {
+  margin-top: 40px;
+  font-size: 35px;
+  margin-bottom: 15px;
 }
-.heading p {
+.heading-2 p {
   margin: auto;
-  color: rgb(114, 114, 114);
+  color: rgb(211, 211, 211);
 }
-.xp-container .heading {
+.xp-container .heading-2 {
   text-align: left;
   padding: 20px;
 }
-.skills .heading {
+.skills .heading-2 {
   text-align: center;
   width: 100%;
   margin-bottom: 40px;
@@ -42,7 +43,7 @@
   margin-top: 50px;
   width: 25%;
   height: 400px;
-  border-right: 1px solid rgb(202, 202, 202);
+  border-right: 1px solid #a6bbcc;
   padding: 20px;
   margin-left: 100px;
   margin-right: 20px;
@@ -55,25 +56,27 @@
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  border: 1px solid rgb(255, 128, 0);
+  border: 1px solid #a6bbcc;
 }
 .text-cont .profile span {
-  color: rgb(82, 82, 82);
+  color: white;
   display: flex;
 }
 .text-cont .profile .img-cont {
   width: max-content;
-  background-color: antiquewhite;
 }
 .text-cont .text h4 {
-  color: rgb(71, 71, 71);
+  color: white;
 }
 .text-cont .text hr {
-  border-color: rgb(255, 255, 255);
+  border-color: #a6bbcc;
 }
 .text-cont .text {
-  color: rgb(83, 83, 83);
   margin-top: 20px;
+}
+.text-cont .text p {
+  color: rgb(211, 211, 211);
+  margin-top: 10px;
 }
 .text-cont .socials {
   display: flex;
@@ -84,7 +87,8 @@
   margin-right: 20px;
 }
 .text-cont .socials img:hover {
-  box-shadow: 0 0 5px #ff5722; /* Subtle orange glow */
+  box-shadow: 0 0 5px #a6bbcc; /* Subtle orange glow */
+  border-radius: 5px;
 }
 .text-cont .button-cont {
   margin-top: 20px;
@@ -97,11 +101,11 @@
   height: 30px;
   padding: 5px;
   border: none;
-  background-color: rgb(218, 218, 218);
-  color: rgb(60, 60, 60);
+  background-color: #a6bbcc;
+  color: black;
 }
 .text-cont .button-cont button:hover {
-  box-shadow: 0 0 5px #ff5722; /* Subtle orange glow */
+  box-shadow: 0 0 5px #a6bbcc; /* Subtle orange glow */
   padding: 6px;
 }
 .text-cont .button-cont button span {
@@ -137,7 +141,7 @@
   border-radius: 20px;
   position: relative;
   overflow: hidden;
-  min-height: 460px;
+  min-height: 480px;
   width: 90%;
 }
 .timeline-wrapper hr {
@@ -170,11 +174,11 @@
   display: inline-block;
   margin: 11px;
   width: 300px;
-  background-color: rgb(238, 241, 241);
+  background-color: rgb(61, 61, 61);
   text-align: left;
 }
 .skill:hover {
-  background-color: rgb(230, 229, 229);
+  background-color: rgb(104, 104, 104);
 }
 .skill .skill-text {
   width: 60%;
@@ -207,11 +211,10 @@
 .skills .text {
   display: block;
   padding: 3px;
-  color: rgba(66, 66, 66, 0.849);
+  color: rgb(201, 201, 201);
 }
 .skills .text:first-child {
   font-size: 18px;
-  color: black;
 }
 .skill-container {
   display: flex;
@@ -229,14 +232,16 @@
   display: flex;
   align-items: flex-start; /* Align items at the top */
   gap: 5px;
-  color: black;
   margin-top: 8px;
+}
+.dot-wrapper span {
+  color: rgb(211, 211, 211);
 }
 
 /* Selected chip: Apply orange border */
 .selected-chip {
-  border: 1px solid #ff562298 !important; /* Orange border */
-  box-shadow: 0 0 5px #ff5722; /* Subtle orange glow */
+  border: 1px solid #a6bbcc !important; /* Orange border */
+  box-shadow: 0 0 5px #a6bbcc; /* Subtle orange glow */
   transition: box-shadow 0.3s ease-in-out;
 }
 /* Unselected chip: Normal border */
@@ -371,6 +376,7 @@
     height: max-content;
     display: block;
     width: 100%;
+    margin-top: 30px;
   }
 
   /* Exprerience content */
