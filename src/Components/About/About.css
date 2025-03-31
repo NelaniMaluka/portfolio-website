@@ -178,7 +178,7 @@
   text-align: left;
 }
 .skill:hover {
-  background-color: rgb(104, 104, 104);
+  background-color: rgb(85, 85, 85);
 }
 .skill .skill-text {
   width: 60%;
@@ -376,7 +376,6 @@
     height: max-content;
     display: block;
     width: 100%;
-    margin-top: 30px;
   }
 
   /* Exprerience content */
