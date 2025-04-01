@@ -77,12 +77,12 @@
     margin-top: 40px;
   }
   #ContactMe {
-    margin-bottom: 140px;
+    margin-bottom: 30px;
   }
 
   /* Form Inputs */
   .form input {
-    margin: 15px 0;
+    margin: 25px 0;
   }
   .form textarea {
     margin: 15px 0;
@@ -104,7 +104,7 @@
 
   /* Heading Section */
   #ContactMe .heading h1 {
-    width: 480px;
+    width: 540px;
   }
 
   /* Form Section */
@@ -150,6 +150,7 @@
   #ContactMe {
     width: 100%;
     height: max-content;
+    padding-bottom: 30px;
   }
   #ContactMe .form-container {
     display: block;
