@@ -4,6 +4,7 @@ import About from "./Components/About/About";
 import Projects from "./Components/Projects/Projects";
 import Certificates from "./Components/Certificates/Certificates";
 import ContactMe from "./Components/ContactMe/ContactMe";
+import Footer from "./Components/Footer/Footer";
 import "./App.css";
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       <Projects />
       <Certificates />
       <ContactMe />
+      <Footer />
     </div>
   );
 }
