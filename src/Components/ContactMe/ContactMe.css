@@ -1,75 +1,70 @@
+/* Contact Me */
 #ContactMe {
-  background-color: white;
-  height: 600px;
-  padding: 20px 0;
+  height: max-content;
+  padding: 80px 0 80px 0;
   margin: auto;
 }
-#ContactMe .heading {
-  width: 100%;
-}
+
+/* Headig Section */
 #ContactMe .heading h1 {
-  font-size: 45px;
-  margin-top: 20px;
-  text-align: center;
-  width: 100%;
+  width: 500px;
 }
 #ContactMe .heading p {
   text-align: center;
 }
+
+/* Form Section */
 #ContactMe .form-container {
   margin-top: 30px;
   display: flex;
   justify-content: center;
+  margin-top: 50px;
+  width: 100%;
 }
-#ContactMe .socials-1 {
-  margin-right: 20px;
-  margin-top: 20px;
-}
-#ContactMe .socials img {
-  width: 30px;
-  margin: 25px 0;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border-radius: 50%;
+#ContactMe .form {
+  width: 60%;
 }
 
-.socials img:hover {
-  transform: scale(1.2);
-  box-shadow: 0px 0px 20px rgb(255, 175, 54);
-  border-radius: 50%;
-}
-
-#ContactMe form button {
-  margin: 10px;
-  width: 140px;
-  height: 40px;
-  background-color: rgb(255, 175, 54);
-  border-radius: 10px;
-
-  border: 1px solid black;
-  font-size: 18px;
-}
-#ContactMe .socials {
-  padding: 10px;
-}
+/* Form Inputs */
 .form input {
-  margin: 10px;
-  width: 300px;
+  width: 100%;
   height: 32px;
   padding: 0 10px;
-  border-radius: 15px;
   margin-top: 40px;
   font-size: 18px;
+  border: none;
+  border-bottom: 1px solid #a6bbcc;
+  outline: none;
+  background: transparent;
+  color: white;
+}
+.form input::placeholder {
+  color: rgb(202, 202, 202);
+}
+.form textarea::placeholder {
+  color: rgb(202, 202, 202);
 }
 .form textarea {
   display: block;
-  margin: 10px;
-  width: 645px;
-  height: 250px;
-  border-radius: 15px;
+  margin-top: 40px;
+  width: 100%;
+  height: 200px;
   padding: 10px;
   font-size: 18px;
+  border: none;
+  border-bottom: 1px solid #a6bbcc;
+  outline: none;
+  background: transparent;
+  color: white;
 }
-.sub-heading {
+
+/* Form Button */
+#ContactMe form button {
+  margin: 50px 10px;
+  width: 140px;
+  height: 40px;
+  background-color: #a6bbcc;
+  border-radius: 10px;
   font-size: 18px;
 }
 
@@ -77,25 +72,20 @@
 * large desktop layout*
 **********************/
 @media only screen and (min-width: 1540px) {
-  #ContactMe h1 {
-    padding-top: 50px;
-  }
-  .form input {
-    margin: 15px;
-    width: 380px;
-  }
-  .form textarea {
-    width: 816px;
-    margin: 15px;
-  }
+  /* Form Section */
   .form {
     margin-top: 40px;
   }
-  #ContactMe .socials img {
-    width: 39px;
-  }
   #ContactMe {
     margin-bottom: 140px;
+  }
+
+  /* Form Inputs */
+  .form input {
+    margin: 15px 0;
+  }
+  .form textarea {
+    margin: 15px 0;
   }
 }
 
@@ -103,44 +93,31 @@
 ******* Tablet ********
 **********************/
 @media only screen and (min-width: 576px) and (max-width: 960px) {
-  #ContactMe h1 {
-    font-size: 30px;
-  }
-  #ContactMe .form-container {
-    display: block;
-  }
+  /* Contact Me Section */
   #ContactMe {
     width: 100%;
     height: max-content;
   }
+  #ContactMe .form-container {
+    display: block;
+  }
+
+  /* Heading Section */
+  #ContactMe .heading h1 {
+    width: 480px;
+  }
+
+  /* Form Section */
   .form {
     width: 100%;
-  }
-  #ContactMe .socials-1 {
-    margin-right: 0px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    height: max-content;
-  }
-  #ContactMe .socials {
-    width: 30px;
-    margin: 0 20px;
-    height: max-content;
-    padding: 0;
-  }
-  #ContactMe .socials a {
-    width: max-content;
-    height: max-content;
-  }
-  #ContactMe .socials img {
-    width: 30px;
   }
   .form {
     width: 70%;
     min-width: 500px;
     margin: auto;
   }
+
+  /* Form Inputs */
   .form input {
     margin: auto;
     width: 90%;
@@ -156,13 +133,12 @@
     margin: 10px 0;
     font-size: 16px;
   }
+
+  /* Form Buttons */
   #ContactMe form button {
     width: 120px;
     height: 35px;
     font-size: 14px;
-  }
-  .sub-heading {
-    font-size: 18px;
   }
 }
 
@@ -170,45 +146,25 @@
 ******* Mobile ********
 **********************/
 @media only screen and (max-width: 576px) {
+  /* Contact Me */
   #ContactMe {
     width: 100%;
     height: max-content;
   }
-  #ContactMe h1 {
-    font-size: 28px;
-  }
   #ContactMe .form-container {
     display: block;
   }
-  .form {
+
+  /* Form Section */
+  #ContactMe .form {
     width: 100%;
-  }
-  #ContactMe .socials-1 {
-    margin-right: 0px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    height: max-content;
-  }
-  #ContactMe .socials {
-    width: 30px;
-    margin: 0 20px;
-    height: max-content;
-    padding: 0;
-  }
-  #ContactMe .socials a {
-    width: max-content;
-    height: max-content;
-  }
-  #ContactMe .socials img {
-    width: 28px;
   }
 
+  /* Form Inputs */
   .form input {
     margin: auto;
     width: 90%;
-    padding: 10px;
-    margin: 10px 0;
+    margin: 20px 0;
     height: 20px;
     font-size: 14px;
   }
@@ -219,12 +175,11 @@
     margin: 10px 0;
     font-size: 14px;
   }
+
+  /* Form Button */
   #ContactMe form button {
     width: 120px;
     height: 35px;
     font-size: 14px;
-  }
-  .sub-heading {
-    font-size: 15px;
   }
 }

@@ -4,49 +4,44 @@ import { useForm } from "@formspree/react";
 export default function ContactMe() {
   const [state, handleSubmit] = useForm("xkggwrpe");
 
-  const socialLinks = [
-    {
-      href: "https://www.linkedin.com/in/nelanimaluka/",
-      imgSrc: "/Images/Icons/linkedin.png",
-      altText: "Linkedin",
-    },
-    {
-      href: "https://github.com/NelaniMaluka",
-      imgSrc: "/Images/Icons/github.png",
-      altText: "Github",
-    },
-    {
-      href: "mailto:malukanelani@gmail.com",
-      imgSrc: "/Images/Icons/email.png",
-      altText: "Email",
-    },
-  ];
-
   return (
     <div id="ContactMe">
       <div className="container">
         <div className="heading">
-          <h1>Let&apos;s Work Together</h1>
+          <h1 className="e">Contact Me</h1>
+          <hr />
+        </div>
+        <div className="heading-2">
+          {" "}
           <p>
-            Let’s collaborate and bring ideas to life—reach out and let’s create
-            something great together!
+            Let’s collaborate and bring <span className="e">ideas to life</span>
+            —reach out and let’s{" "}
+            <span className="e">create something great together!</span>
           </p>
         </div>
+
         <div className="form-container">
-          <div className="socials-1">
-            {socialLinks.map((link, index) => (
-              <a href={link.href} key={index} target="_blank">
-                <div className="socials">
-                  <img src={link.imgSrc} alt={link.altText} />
-                </div>
-              </a>
-            ))}
-          </div>
           <div className="form">
             <form onSubmit={handleSubmit}>
-              <input type="text" name="name" placeholder="Full Name" required />
-              <input type="email" name="email" placeholder="Email" required />
+              <input
+                id="fullName"
+                type="text"
+                name="name"
+                placeholder="Full Name"
+                required
+              />
+
+              <input
+                id="email"
+                type="email"
+                name="email"
+                placeholder="Email"
+                required
+              />
+
               <textarea
+                id="message"
+                type="text"
                 name="message"
                 placeholder="Message"
                 required
