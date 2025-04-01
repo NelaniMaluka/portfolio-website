@@ -1,7 +1,6 @@
 /* Projects Section */
 #Projects {
   height: max-content;
-  background-color: black;
   padding: 80px 0 40px 0;
   margin-bottom: 20px;
 }
@@ -9,23 +8,15 @@
   display: block;
   justify-content: center;
   align-items: center;
-  width: 90%;
+  width: 100%;
   margin: auto;
 }
 
 /* Heading Section */
-#Projects .projects-container .heading {
-  width: 70%;
-}
 #Projects .heading h1 {
-  color: white;
+  width: 370px;
 }
-#Projects .projects-container .heading h1 {
-  text-align: center;
-  width: 100%;
-  text-align: left;
-}
-#Projects .heading p {
+#Projects .heading-2 p {
   width: 100%;
   color: rgb(208, 216, 216);
 }
@@ -33,6 +24,8 @@
 /* Projects Section */
 .project {
   height: max-content;
+  width: 90%;
+  margin: auto;
 }
 
 /* Project Container Section */
@@ -63,7 +56,6 @@
 }
 .project .project-content h1 {
   margin-top: 20px;
-  color: #ffa500;
 }
 .project .project-content p {
   margin-top: 15px;
@@ -72,20 +64,35 @@
 }
 .project .socials-container {
   display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+.project .socials-container .cont {
+  display: flex;
+  align-items: center;
+}
+.project .socials-container a {
+  text-decoration: none;
+}
+.project .socials-container .text {
+  font-size: 20px;
+  margin-right: 50px;
+}
+.project .socials-container .text:hover {
+  text-decoration: underline;
 }
 
 /* Project Meadi Link Section */
 .project .socials-container .socials {
-  background-color: white;
-  width: max-content;
-  border-radius: 50% 70%;
+  border-radius: 50%;
   display: inline-block;
-  margin-top: 30px;
-  margin-right: 30px;
+
+  width: 40px;
+  height: 40px;
 }
 .project .socials-container .socials img {
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
 }
 
 .tools {
@@ -103,14 +110,11 @@
   padding: 5px;
   margin: 0 10px 5px 0;
   border-radius: 10px;
-  background-color: rgba(255, 140, 0, 0.096); /* Slight orange background */
+  background-color: rgba(0, 204, 255, 0.151); /* Slight orange background */
   font-weight: bold;
 }
 .tools ul li:hover {
   transform: scale(1.01);
-}
-.project-cont:hover {
-  transform: scale(1.02);
 }
 
 /**********************
@@ -128,11 +132,8 @@
 **********************/
 @media only screen and (min-width: 576px) and (max-width: 960px) {
   /* Heading Section */
-  #Projects .projects-container .heading {
-    width: 100%;
-  }
-  #Projects h1 {
-    font-size: 30px;
+  #Projects .heading h1 {
+    width: 340px;
   }
 
   /* Project Section */
@@ -166,6 +167,13 @@
     display: flex;
     margin-bottom: 20px;
   }
+  .project .socials-container .text {
+    font-size: 19px;
+  }
+  .project .socials-container .socials img {
+    width: 38px;
+    height: 38px;
+  }
 }
 
 /**********************
@@ -173,9 +181,6 @@
 **********************/
 @media only screen and (max-width: 576px) {
   /* Heading Section */
-  #Projects .projects-container .heading {
-    width: 100%;
-  }
   #Projects h1 {
     font-size: 28px;
   }
@@ -204,8 +209,11 @@
   .project .project-content p {
     font-size: 14px;
   }
+  .project .socials-container .text {
+    font-size: 18px;
+  }
   .project .socials-container .socials img {
-    width: 25px;
-    height: 25px;
+    width: 35px;
+    height: 35px;
   }
 }

@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Certificates from "../Certificates/Certificates";
 
 import "./Projects.css";
 
@@ -13,7 +12,7 @@ export default function Projects() {
       alt: "GitHub",
     },
     {
-      src: "/Images/Icons/github.png",
+      src: "/Images/Icons/github-1.png",
       alt: "GitHub",
     },
   ];
@@ -50,7 +49,10 @@ export default function Projects() {
         <div className="projects-container">
           {/* Heading Section */}
           <div className="heading">
-            <h1>My Work</h1>
+            <h1 className="e">My Work</h1>
+            <hr />
+          </div>
+          <div className="heading-2">
             <p>
               Discover the projects I’ve worked on, where I apply my skills in
               software development to build{" "}
@@ -80,7 +82,7 @@ export default function Projects() {
                     </div>
                     {/* Project Content */}
                     <div className="project-content">
-                      <h1>{project.name}</h1>
+                      <h1 className="e">{project.name}</h1>
                       <div className="tools">
                         <ul>
                           {project.tools.map((tool, toolIndex) => (
@@ -92,21 +94,14 @@ export default function Projects() {
 
                       {/* Social Links (Dynamic) */}
                       <div className="socials-container">
-                        <div key={index}>
+                        <div key={index} className="cont">
                           {project.liveUrl && (
                             <a
                               href={project.liveUrl}
                               target="_blank"
                               rel="noopener noreferrer"
                             >
-                              <div className="socials">
-                                <div>
-                                  <img
-                                    src={socialLinks[0].src}
-                                    alt={socialLinks[0].alt}
-                                  />
-                                </div>
-                              </div>
+                              <span className="text">Live Site</span>
                             </a>
                           )}
 
@@ -132,7 +127,7 @@ export default function Projects() {
                   <div className="project-wrapper">
                     {/* Project Content */}
                     <div className="project-content">
-                      <h1>{project.name}</h1>
+                      <h1 className="e">{project.name}</h1>
                       <div className="tools">
                         <ul>
                           {project.tools.map((tool, toolIndex) => (
@@ -144,21 +139,14 @@ export default function Projects() {
 
                       {/* Social Links (Dynamic) */}
                       <div className="socials-container">
-                        <div key={index}>
+                        <div key={index} className="cont">
                           {project.liveUrl && (
                             <a
                               href={project.liveUrl}
                               target="_blank"
                               rel="noopener noreferrer"
                             >
-                              <div className="socials">
-                                <div>
-                                  <img
-                                    src={socialLinks[0].src}
-                                    alt={socialLinks[0].alt}
-                                  />
-                                </div>
-                              </div>
+                              <span className="text">Live Site</span>
                             </a>
                           )}
 
@@ -193,8 +181,6 @@ export default function Projects() {
           </div>
         </div>
       </div>
-      {/* Certificate Section */}
-      <Certificates />
     </div>
   );
 }
