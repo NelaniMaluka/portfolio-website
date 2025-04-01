@@ -1,6 +1,6 @@
 /* Certificates Section */
 .w {
-  margin-top: 100px;
+  margin-top: 20px;
 }
 
 /* Certificates Container */
@@ -15,16 +15,17 @@
   display: flex;
   justify-content: center; /* Center the badges */
   flex-wrap: wrap; /* Allow wrapping */
-  border: 1.5px solid rgb(255, 175, 54);
+  border: 1.5px solid #a6bbcc;
   margin-bottom: 70px;
 }
 
 /* Heading Section */
-.w .heading {
+.w .heading-2 {
   margin: auto;
   text-align: center;
 }
-.w .heading h1 {
+.w .heading-2 h1 {
+  font-size: 40px;
   width: 100%;
 }
 

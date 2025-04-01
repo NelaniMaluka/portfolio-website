@@ -45,11 +45,12 @@ export default function Certificates() {
   return (
     <div className="w">
       {/* Heading Section */}
-      <div className="heading">
+      <div className="heading-2">
         <h1>Certificates</h1>
         <p>
-          A look at the certifications I&rsquo;ve earned throughout my software
-          development journey.
+          Take a look at the <span className="e">certifications</span>{" "}
+          I&rsquo;ve earned throughout my{" "}
+          <span className="e">software development</span> journey.
         </p>
       </div>
 
