@@ -103,6 +103,14 @@ export default function Experience() {
             <h1 className="e">About</h1>
             <hr />
           </div>
+          <div className="heading-2">
+            <p>
+              Take a closer look at my journey, explore my experience, and gain
+              deeper insight into my <span className="e">skills</span>,
+              background, and
+              <span className="e">professional growth</span>.
+            </p>
+          </div>
 
           {/* Exprerince Section */}
           <div className="xp-container">
