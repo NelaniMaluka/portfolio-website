@@ -86,13 +86,16 @@
 .project .socials-container .socials {
   border-radius: 50%;
   display: inline-block;
-
   width: 40px;
   height: 40px;
 }
 .project .socials-container .socials img {
   width: 40px;
   height: 40px;
+  border-radius: 50%;
+}
+.project .socials-container .socials img:hover {
+  box-shadow: 0px 0px 20px #a6bbcc;
 }
 
 .tools {
