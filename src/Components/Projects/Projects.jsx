@@ -26,7 +26,7 @@ export default function Projects() {
       tools: ["ReactJS", "Redux", "Spring Boot", "MySQL", "Stripe"],
       about:
         "A full-stack web application for buying and selling sneakers, built with React.js for the frontend and Java with Spring Boot for the backend. Features include user authentication, product browsing, shopping cart and order management, profile management, and state management. Integrated with Stripe for payments and SMTP for email notifications.",
-      //liveUrl: "",
+      liveUrl: "https://kick-land.web.app/",
       githubUrl: "https://github.com/NelaniMaluka/kick-land",
     },
     {
