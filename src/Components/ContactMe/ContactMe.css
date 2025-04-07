@@ -57,6 +57,11 @@
   background: transparent;
   color: white;
 }
+.error-message {
+  color: rgb(241, 78, 78);
+  font-size: 0.9rem;
+  margin: 6px;
+}
 
 /* Form Button */
 #ContactMe form button {
