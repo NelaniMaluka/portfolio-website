@@ -107,7 +107,7 @@ export default function Experience() {
             <p>
               Take a closer look at my journey, explore my experience, and gain
               deeper insight into my <span className="e">skills</span>,
-              background, and
+              background, and {""}
               <span className="e">professional growth</span>.
             </p>
           </div>
