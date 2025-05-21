@@ -40,6 +40,18 @@ export default function Projects() {
       liveUrl: "https://learnhall.com/",
       githubUrl: "https://github.com/NelaniMaluka/learnhall-1",
     },
+    {
+      style: 1,
+      name: "Scout Underground Locating",
+      img: "/Images/project-images/Scout/Scout-img.png",
+      gif: "/Images/project-images/Scout/Scout.gif",
+      tools: ["HTML", "CSS", "JavaScript", "JQuery", "Boostrap"],
+      about:
+        "Developed a responsive website for Scout Underground Locating, showcasing their utility and septic tank locating services across Northern California. The site emphasizes safety, precision, and over 20 years of trusted experience, with clear navigation and service-focused content.",
+      liveUrl: "https://www.scoutundergroundlocating.com/",
+      githubUrl:
+        "https://github.com/moorparkdesigns/ScoutUndergroundLocating.com",
+    },
   ];
 
   return (
