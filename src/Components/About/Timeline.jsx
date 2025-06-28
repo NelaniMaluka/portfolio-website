@@ -31,7 +31,7 @@ export default function CustomizedTimeline() {
               color: "#a6bbcc",
             }}
           >
-            Web Developer (Internship)
+            Web Developer Intern (Volunteer)
           </Typography>
           <Typography
             variant="subtitle1"
@@ -51,12 +51,14 @@ export default function CustomizedTimeline() {
           >
             <div className="dot-wrapper">
               <span>
-                Built this website using HTML, CSS, and JavaScript. Led a
-                website redesign, improving functionality and user engagement
-                with a landing page and interactive Q&A section. Integrated
-                forms for data transfer to the company email. Contributed to
-                their quiz/exam codebase, implementing features like a timer to
-                enhance usability.
+                Built the main LearnHall website using HTML, CSS, JavaScript,
+                and React as the company’s internal web developer. Also
+                developed websites for external clients, handling design and
+                functionality. Led a site redesign for LearnHall by adding a
+                landing page and an interactive Q&A section to improve
+                usability. Integrated forms to send user data directly to the
+                company’s email. Helped develop the quiz and exam system, adding
+                features like a countdown timer to enhance user experience.
               </span>
             </div>
           </Typography>
