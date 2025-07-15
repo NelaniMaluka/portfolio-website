@@ -138,10 +138,11 @@ export default function Experience() {
                   <h4>About Me</h4>
                   <hr />
                   <p>
-                    Graduate software developer with experience in full-stack
-                    development using Java, React, and Spring Boot. Skilled in
-                    building reliable APIs, improving performance, and creating
-                    easy-to-use applications.
+                    Motivated software developer skilled in Java, React, and
+                    Spring Boot. Experienced in building APIs and creating
+                    easy-to-use applications. Recently completed an NQF Level 6
+                    qualification and worked as a frontend developer intern.
+                    Enjoys solving problems and learning new skills.
                   </p>
                 </div>
                 <div className="socials">
