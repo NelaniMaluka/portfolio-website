@@ -41,7 +41,7 @@ export default function CustomizedTimeline() {
               color: "rgb(255, 255, 255)",
             }}
           >
-            Learnhall (Nov 2024 - April 2025)
+            Learnhall (Nov 2024 - Current)
           </Typography>
           <Typography
             variant="body2"
