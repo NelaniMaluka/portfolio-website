@@ -31,7 +31,7 @@ export default function CustomizedTimeline() {
               color: "#a6bbcc",
             }}
           >
-            Web Developer Intern (Volunteer)
+            Freelance Web Developer – Learnhall (Moopark Designs Startup)
           </Typography>
           <Typography
             variant="subtitle1"
@@ -50,16 +50,28 @@ export default function CustomizedTimeline() {
             }}
           >
             <div className="dot-wrapper">
-              <span>
-                Built the main LearnHall website using HTML, CSS, JavaScript,
-                and React as the company’s internal web developer. Also
-                developed websites for external clients, handling design and
-                functionality. Led a site redesign for LearnHall by adding a
-                landing page and an interactive Q&A section to improve
-                usability. Integrated forms to send user data directly to the
-                company’s email. Helped develop the quiz and exam system, adding
-                features like a countdown timer to enhance user experience.
-              </span>
+              <ul style={{ paddingLeft: "16px", margin: 0 }}>
+                <li>
+                  Built the main LearnHall website using HTML, CSS, JavaScript,
+                  and React as the company’s internal web developer.
+                </li>
+                <li>
+                  Developed websites for external clients, handling design and
+                  functionality.
+                </li>
+                <li>
+                  Led a site redesign by adding a landing page and an
+                  interactive Q&A section to improve usability.
+                </li>
+                <li>
+                  Integrated forms to send user data directly to the company’s
+                  email.
+                </li>
+                <li>
+                  Developed the quiz and exam system, adding features like a
+                  countdown timer to enhance user experience.
+                </li>
+              </ul>
             </div>
           </Typography>
         </TimelineContent>
