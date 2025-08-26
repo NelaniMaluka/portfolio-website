@@ -87,13 +87,13 @@
 .text {
   display: block;
   padding: 0 0 3px 3px;
-  color: rgb(201, 201, 201);
+  color: rgb(255, 255, 255);
 }
 .text2 {
   display: block;
   padding: 0px 3px;
   font-size: 0.4rem;
-  color: rgb(201, 201, 201);
+  color: rgb(247, 247, 247);
 }
 
 /* --- Responsive --- */
