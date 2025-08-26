@@ -1,0 +1,85 @@
+.heading2 h1 {
+  margin-top: 40px;
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.heading2 p {
+  margin: auto;
+  color: rgb(211, 211, 211);
+  font-size: 0.6rem;
+  max-width: 800px;
+  text-align: center;
+}
+
+.servicesGrid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 2rem 0;
+  justify-items: center;
+}
+
+.card {
+  background-color: rgb(61, 61, 61);
+  width: max-content;
+  padding: 0.7rem 1rem;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.card .heading {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid rgb(136, 136, 136);
+  padding-bottom: 0.2rem;
+}
+
+.card .heading img {
+  height: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+.card .heading h2 {
+  font-size: 0.65rem;
+}
+
+.card p {
+  font-size: 0.5rem;
+  min-height: 1.6rem;
+}
+
+.card ul {
+  color: rgb(236, 236, 236);
+  font-size: 0.5rem;
+  margin-top: 0.8rem;
+  list-style: none;
+  list-style: circle;
+  margin-left: 0.5rem;
+}
+
+.card li {
+  text-decoration: none;
+}
+
+@media (min-width: 1025px) {
+  .card:nth-child(4) {
+    grid-column: 2;
+  }
+}
+
+@media (max-width: 1024px) {
+  .servicesGrid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 700px) {
+  .servicesGrid {
+    grid-template-columns: repeat(1, 1fr);
+    grid-column: auto;
+  }
+}

@@ -1,0 +1,182 @@
+/* Contact Me */
+.contactMeCont {
+  height: max-content;
+  margin: 3rem 0;
+}
+
+/* Headig Section */
+.heading2 {
+  text-align: center;
+}
+
+.heading2 h1 {
+  margin-top: 40px;
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.heading2 p {
+  margin: auto;
+  color: rgb(211, 211, 211);
+  font-size: 0.6rem;
+  max-width: 800px;
+}
+
+/* Form Section */
+.formContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem !important;
+  width: 100%;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+.contactInfo,
+.form {
+  width: 50%;
+}
+
+.contactInfo {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contactInfo a {
+  font-size: 0.5rem;
+  display: flex;
+  align-items: center;
+  margin: 0.5rem 0rem;
+  background-color: rgb(61, 61, 61);
+  padding: 0.3rem 0.9rem;
+  width: 60%;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.contactInfo a:hover {
+  background-color: rgb(85, 85, 85);
+}
+
+.contactInfo svg {
+  height: 0.8rem;
+  margin: 0;
+  padding: 0;
+}
+
+.contactInfo a,
+.contactInfo input,
+.contactInfo textarea {
+  max-width: 100%;
+  word-break: break-word;
+}
+
+.form form {
+  max-width: 500px;
+  margin: auto;
+  width: 100%;
+}
+
+.form label {
+  color: aliceblue;
+  font-size: 0.45rem;
+}
+
+/* Form Inputs */
+.form input {
+  width: 100%;
+  padding: 0.3rem 0.5rem;
+  font-size: 0.45rem !important;
+
+  border: 1px solid #a6bbcc;
+  outline: none;
+  background: transparent;
+  color: white;
+}
+.form input::placeholder {
+  color: rgb(202, 202, 202);
+}
+.form textarea::placeholder {
+  color: rgb(202, 202, 202);
+}
+.form textarea {
+  display: block;
+  padding: 0.3rem 0.5rem;
+  font-size: 0.45rem;
+  width: 100%;
+  height: 4rem;
+
+  border: 1px solid #a6bbcc;
+  outline: none;
+  background: transparent;
+  color: white;
+}
+.errorMessage {
+  color: rgb(241, 78, 78);
+  font-size: 0.4rem;
+  margin-top: 1px;
+  height: 0.5rem;
+}
+
+/* Form Button */
+.form button {
+  background-color: rgb(146, 203, 253) !important;
+  font-size: 0.5rem !important;
+  padding: 0.2rem 0.9rem !important;
+  border-radius: 5px !important;
+  display: flex;
+  align-items: center;
+  width: max-content;
+  margin-top: 1rem;
+}
+
+.form button:hover {
+  background-color: rgb(112, 188, 255) !important;
+}
+
+.form button img {
+  height: 0.6rem;
+  margin-left: 0.2rem;
+}
+
+/**********************
+******* Tablet ********
+**********************/
+@media only screen and (min-width: 576px) and (max-width: 960px) {
+  /* Form Section */
+  .formContainer {
+    flex-direction: column;
+  }
+
+  .contactInfo,
+  .form {
+    width: 100%;
+  }
+}
+
+/**********************
+******* Mobile ********
+**********************/
+@media only screen and (max-width: 576px) {
+  /* Contact Me */
+  .formContainer {
+    flex-direction: column;
+  }
+
+  .contactInfo,
+  .form {
+    width: 100%;
+  }
+
+  .contactInfo {
+    margin-bottom: 1.5rem;
+  }
+
+  .contactInfo a {
+    width: 100%;
+  }
+}

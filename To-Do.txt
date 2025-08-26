@@ -1,0 +1,6 @@
+- Services (Done)
+- About me (Done)
+- Nav bar (Done)
+- Footer (Done)
+- About Project
+- AI chatbot

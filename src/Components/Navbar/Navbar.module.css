@@ -13,8 +13,8 @@
   right: 0;
   transition: top 0.3s ease;
   background-color: #1a1a1a69;
-  backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 }
 .navbar.hidden {
   top: -80px;
@@ -41,9 +41,7 @@
   font-family: "Inter", sans-serif;
   text-decoration: none;
 }
-.nav .c a:hover {
-  transform: scale(0.9);
-}
+
 .nav .c a span {
   font-weight: 700;
 }
@@ -55,44 +53,47 @@
   border: none;
   font-size: 20px;
   font-weight: 700;
-  border-bottom: 2px solid #a6bbcc;
+  border-bottom: 2px solid rgb(146, 203, 253);
   transition: transform 0.3s ease, color 0.3s ease;
   color: white;
 }
 .nav .c button:hover {
-  color: #a6bbcc;
+  color: rgb(146, 203, 253);
   transform: rotate(10deg) scale(1.15);
 }
 
 /* Navbar Links */
-.navbar .list {
+.list {
   width: max-content;
 }
-.navbar .list ul {
+.list ul {
   list-style: none;
   display: flex;
   align-items: center;
 }
-.navbar .list ul li a {
-  font-size: 20px;
-  text-decoration: none;
+
+.list ul li {
+  margin: 0 0.4rem;
 }
-.navbar .list ul li .menu-container {
+
+.list ul li a {
+  font-size: 0.55rem;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.list ul li a:hover {
+  transform: scale(1.15) !important;
+  color: rgb(146, 203, 253) !important;
+}
+
+.list ul li .menuContainer {
   background-color: white;
   border-radius: 50%;
   display: none;
 }
-.navbar .list ul li img {
+.list ul li img {
   width: 30px;
-}
-.link-container {
-  padding: 4px 10px;
-  border-radius: 10px;
-  margin: 0 10px;
-}
-.navbar .list .link-container:hover {
-  transform: scale(1.15);
-  color: #a6bbcc;
 }
 
 /* Hamburger menu */
@@ -113,19 +114,17 @@
   transform: translateX(0);
   right: 0;
 }
-.hamburger .close-menu-image {
+.hamburger .closeMenuImage {
   height: max-content;
-  padding: 10px 20px;
+  padding: 10px 0px;
   display: flex;
   justify-content: end;
   width: 35px;
   display: none;
 }
-* Close button animation */ .close-menu-image img {
+.closeMenuImage img {
   width: 30px;
   height: 30px;
-  cursor: pointer;
-  transition: transform 0.4s ease-in-out;
 }
 
 /* Hamburger Links */
@@ -137,6 +136,7 @@
 }
 .hamburger .list ul {
   list-style: none;
+  display: block;
 }
 .hamburger .list ul li {
   margin: 30px 10px;
@@ -168,19 +168,19 @@
 }
 .hamburger .cv button {
   color: black;
-  font-size: 16px;
-  background-color: #a6bbcc;
-  height: 40px;
-  width: 150px;
-  border-radius: 8px;
-  margin-top: 30px;
+  background-color: rgb(146, 203, 253);
+  text-decoration: none;
+  font-size: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 5px;
+  margin-top: 1.5rem !important;
   display: flex;
-  justify-content: space-between;
-  padding: 0 10px;
   align-items: center;
+  width: max-content;
 }
-.hamburger .cv button span {
-  height: 17px;
+.hamburger .cv button img {
+  height: 0.7rem;
+  margin-left: 0.5rem;
 }
 
 /**********************
@@ -217,21 +217,21 @@
   .a {
     display: none;
   }
-  .navbar .list ul li .menu-container {
+  .navbar .list ul li .menuContainer {
     display: flex;
     padding: 5px;
   }
-  .navbar .list ul li .menu-container img {
+  .navbar .list ul li .menuContainer img {
     width: 30px;
   }
 
   /* Hamburger Links */
-  .hamburger .close-menu-image {
+  .hamburger .closeMenuImage {
     display: flex;
     justify-content: flex-end;
     width: 90%;
   }
-  .hamburger .close-menu-image img {
+  .hamburger .closeMenuImage img {
     width: 35px;
   }
 }
@@ -263,12 +263,12 @@
   .a {
     display: none;
   }
-  .navbar .list ul li .menu-container {
+  .navbar .list ul li .menuContainer {
     display: flex;
     right: 0;
     align-self: flex-end;
   }
-  .navbar .list ul li .menu-container img {
+  .navbar .list ul li .menuContainer img {
     width: 28px;
     background-color: aliceblue;
     border-radius: 50%;
@@ -282,12 +282,12 @@
   }
 
   /* Hamburger Links */
-  .hamburger .close-menu-image {
+  .hamburger .closeMenuImage {
     display: flex;
     justify-content: flex-end;
     width: 90%;
   }
-  .hamburger .close-menu-image img {
+  .hamburger .closeMenuImage img {
     width: 28px;
   }
 }

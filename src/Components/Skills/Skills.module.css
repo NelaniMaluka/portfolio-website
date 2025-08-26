@@ -1,0 +1,118 @@
+.skills {
+  border-radius: 10px;
+  color: white;
+  height: max-content;
+  width: 100%;
+  margin: 3rem 0;
+}
+
+.heading2 h1 {
+  margin-top: 40px;
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.heading2 p {
+  margin: auto;
+  color: rgb(211, 211, 211);
+  font-size: 0.6rem;
+  max-width: 800px;
+}
+
+.skills .heading2 {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+/* --- Grid Layout --- */
+.skillContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.iconsWrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 on desktop */
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* --- Card Styles --- */
+.skill {
+  border-radius: 10px;
+  background-color: rgb(61, 61, 61);
+  text-align: left;
+  transition: background-color 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.skill:hover {
+  background-color: rgb(85, 85, 85);
+}
+
+.skillText {
+  display: flex;
+  flex-direction: column;
+  color: black;
+  margin-top: 5px;
+  font-size: 0.5rem;
+}
+
+.imgWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.icon {
+  width: 40px;
+  transition: transform 0.5s ease-in-out;
+  opacity: 0.8;
+}
+
+.rotate {
+  transition: transform 0.5s ease-in-out;
+}
+
+.rotating {
+  transform: rotate(360deg);
+}
+
+.text {
+  display: block;
+  padding: 0 0 3px 3px;
+  color: rgb(201, 201, 201);
+}
+.text2 {
+  display: block;
+  padding: 0px 3px;
+  font-size: 0.4rem;
+  color: rgb(201, 201, 201);
+}
+
+/* --- Responsive --- */
+@media (max-width: 1024px) {
+  .iconsWrapper {
+    grid-template-columns: repeat(2, 1fr); /* 2 on tablet */
+  }
+}
+
+@media (max-width: 576px) {
+  .iconsWrapper {
+    grid-template-columns: 1fr; /* 1 on mobile */
+  }
+
+  .icon {
+    width: 30px;
+  }
+
+  .skill {
+    padding: 8px;
+  }
+}

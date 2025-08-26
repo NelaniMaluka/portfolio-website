@@ -1,42 +1,26 @@
 import { useEffect, useState } from "react";
 import { Download } from "@mui/icons-material";
-
-import "./Navbar.css";
+import styles from "./Navbar.module.css";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedLink, setSelectedLink] = useState(""); // Track clicked link
-  const [scrollingDown, setScrollingDown] = useState(false); // Track scrolling direction
-  const [lastScrollY, setLastScrollY] = useState(0); // Track last scroll position
+  const [selectedLink, setSelectedLink] = useState("");
+  const [scrollingDown, setScrollingDown] = useState(false);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
-  // Change theme based on section scroll or hover
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-
-      // Detect scrolling direction
-      if (scrollPosition > lastScrollY) {
-        setScrollingDown(true); // Scrolling down
-      } else {
-        setScrollingDown(false); // Scrolling up
-      }
-
-      setLastScrollY(scrollPosition); // Update last scroll position
+      setScrollingDown(scrollPosition > lastScrollY);
+      setLastScrollY(scrollPosition);
     };
 
     window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
 
-  // Handle slide Bar
-  const handleMenuClick = () => {
-    setIsOpen(!isOpen);
-  };
+  const handleMenuClick = () => setIsOpen(!isOpen);
 
-  // Download CV
   const handleDownload = () => {
     const link = document.createElement("a");
     link.href = "/Nelani_Maluka_CV.pdf";
@@ -46,21 +30,22 @@ export default function Navbar() {
     document.body.removeChild(link);
   };
 
-  // Scroll to selected section
   const handleSmoothScroll = (event, href) => {
     event.preventDefault();
     const targetSection = document.querySelector(href);
     if (targetSection) {
       targetSection.scrollIntoView({ behavior: "smooth" });
-      setIsOpen(false); // Close menu on mobile
-      setSelectedLink(href.substring(1)); // Set clicked link as selected
+      setIsOpen(false);
+      setSelectedLink(href.substring(1));
     }
   };
 
   const navLinks = [
-    { label: "Home", href: "#Home" },
     { label: "About", href: "#About" },
+    { label: "Skills", href: "#Skills" },
     { label: "Projects", href: "#Projects" },
+    { label: "Services", href: "#Services" },
+    { label: "Contact", href: "#Contact" },
   ];
 
   const socialLinks = [
@@ -83,52 +68,47 @@ export default function Navbar() {
 
   return (
     <div>
-      <div className={`navbar ${scrollingDown ? "hidden" : ""}`}>
+      {/* Navbar */}
+      <div className={`${styles.navbar} ${scrollingDown ? styles.hidden : ""}`}>
         <div className="container">
-          {/* Nav */}
-          <div className="nav">
+          <div className={styles.nav}>
             {/* Logo */}
-            <div className="c">
+            <div className={styles.c}>
               <a href="#Home" onClick={(e) => handleSmoothScroll(e, "#Home")}>
                 <span>Nelani</span>Maluka
               </a>
             </div>
+
             {/* Nav Links */}
-            <div className="list">
+            <div className={styles.list}>
               <ul>
                 {navLinks.map((link, index) => (
-                  <li key={index} className="a">
+                  <li key={index} className={styles.a}>
                     <a
                       href={link.href}
-                      className={
-                        selectedLink === link.href.substring(1) ? "active" : ""
-                      }
                       onClick={(e) => handleSmoothScroll(e, link.href)}
                     >
-                      <div
-                        className={
-                          selectedLink === link.href.substring(1)
-                            ? "link-container active"
-                            : "link-container"
-                        }
-                      >
-                        {link.label}
-                      </div>
+                      <div>{link.label}</div>
                     </a>
                   </li>
                 ))}
+
                 {/* Hamburger Icon */}
                 <li>
                   {!isOpen && (
-                    <div className="menu-container" onClick={handleMenuClick}>
+                    <div
+                      className={styles.menuContainer}
+                      onClick={handleMenuClick}
+                    >
                       <img src="/Images/Icons/menu.png" alt="menu" />
                     </div>
                   )}
                 </li>
               </ul>
             </div>
+
             {/* Resume Button */}
-            <div className="c">
+            <div className={styles.c}>
               <button onClick={handleDownload}>Resume</button>
             </div>
           </div>
@@ -136,8 +116,8 @@ export default function Navbar() {
       </div>
 
       {/* Sidebar */}
-      <div className={`hamburger ${isOpen ? "open" : ""}`}>
-        <div className="close-menu-image">
+      <div className={`${styles.hamburger} ${isOpen ? styles.open : ""}`}>
+        <div className={styles.closeMenuImage}>
           <img
             src="/Images/Icons/close.png"
             alt="close"
@@ -146,14 +126,14 @@ export default function Navbar() {
         </div>
 
         {/* Nav Links */}
-        <div className="list">
+        <div className={styles.list}>
           <ul>
             {navLinks.map((link, index) => (
               <li key={index}>
                 <a
                   href={link.href}
                   className={
-                    selectedLink === link.href.substring(1) ? "active" : ""
+                    selectedLink === link.href.substring(1) ? styles.active : ""
                   }
                   onClick={(e) => handleSmoothScroll(e, link.href)}
                 >
@@ -166,29 +146,19 @@ export default function Navbar() {
         </div>
 
         {/* Social Links */}
-        <div className="socials">
+        <div className={styles.socials}>
           {socialLinks.map((social, index) => (
             <a href={social.href} key={index} target="_blank">
               <img src={social.src} alt={social.alt} />
             </a>
           ))}
         </div>
-        <div className="cv">
+
+        {/* CV Button */}
+        <div className={styles.cv}>
           <button onClick={handleDownload}>
             Resume
-            <span>
-              <Download
-                sx={{
-                  height: {
-                    xs: "17px",
-                    sm: "18px",
-                    md: "20px",
-                    lg: "20px",
-                  },
-                  color: "black",
-                }}
-              />
-            </span>
+            <img src="/Images/Icons/download.png" alt="download-icon" />
           </button>
         </div>
       </div>
