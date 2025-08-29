@@ -2,11 +2,12 @@ import * as React from "react";
 import styles from "./Home.module.css";
 import { socialLinks, iconMap } from "../Common/links";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function About() {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedLink, setSelectedLink] = useState("");
+  const [showScrollBtn, setShowScrollBtn] = useState(true);
 
   const handleSmoothScroll = (event, href) => {
     event.preventDefault();
@@ -18,6 +19,31 @@ export default function About() {
     }
   };
 
+  // Scroll to section
+  const scrollToSection = () => {
+    const element = document.getElementById("About");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  // Show button only at the very top
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY === 0) {
+        setShowScrollBtn(true);
+      } else {
+        setShowScrollBtn(false);
+      }
+    };
+
+    // Run on load in case user refreshes mid-scroll
+    handleScroll();
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <section id="Home" className={styles.Home}>
       <div className="container">
@@ -28,7 +54,7 @@ export default function About() {
                 Turning ideas into functional web applications
               </p>
               <h1>Hello, I&rsquo;m Nelani,</h1>
-              <h1 className={styles.e}>Java Full-Stack Developer</h1>
+              <h1 className={styles.e}>Full-Stack Developer</h1>
               <p className={styles.intro}>
                 I design and build full-stack web applications with React,
                 Spring Boot, and SQL. I love creating solutions that are clean,
@@ -68,6 +94,13 @@ export default function About() {
           </div>
         </div>
       </div>
+
+      {showScrollBtn && (
+        <div className={styles.scrollBtn} onClick={scrollToSection}>
+          Learn more!
+          <img src="/Images/Icons/arrow-down-blue.png" alt="Coder-Image" />
+        </div>
+      )}
     </section>
   );
 }

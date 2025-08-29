@@ -107,8 +107,8 @@
   background-color: white;
   z-index: 2000;
   box-shadow: -2px 0 8px rgba(0, 0, 0, 0.2);
-  transform: translateX(100%); /* Initially hidden off-screen */
-  transition: transform 0.3s ease; /* Smooth transition for sliding */
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
 }
 .hamburger.open {
   transform: translateX(0);

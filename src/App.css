@@ -9,6 +9,7 @@ html,
 body {
   overflow-x: hidden;
   font-size: 35px;
+  scroll-behavior: smooth;
 }
 
 h1,
@@ -21,6 +22,10 @@ span,
 p,
 a {
   color: white;
+}
+
+section {
+  padding: 1.5rem 0;
 }
 
 .app {

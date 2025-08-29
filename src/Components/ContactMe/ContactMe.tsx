@@ -90,7 +90,7 @@ const ContactMe: React.FC = () => {
   };
 
   return (
-    <div id="Contact" className={styles.contactMeCont}>
+    <section id="Contact" className={styles.contactMeCont}>
       <div className="container">
         {/* Heading */}
         <div className={styles.heading2}>
@@ -191,7 +191,7 @@ const ContactMe: React.FC = () => {
           {snackbar.message}
         </MuiAlert>
       </Snackbar>
-    </div>
+    </section>
   );
 };
 

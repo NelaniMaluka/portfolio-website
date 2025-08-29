@@ -41,7 +41,7 @@ export const services: Service[] = [
 
 export const Services = () => {
   return (
-    <div id="Services" className="container">
+    <section id="Services" className="container">
       {/* Heading */}
       <div className={styles.heading2}>
         <h1 className={styles.e}>Services</h1>
@@ -75,6 +75,6 @@ export const Services = () => {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };

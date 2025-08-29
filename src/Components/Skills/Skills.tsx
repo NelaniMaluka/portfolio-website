@@ -40,7 +40,7 @@ export const Skills = () => {
   ];
 
   return (
-    <div id="Skills" className={styles.skills}>
+    <section id="Skills" className={styles.skills}>
       <div className="container">
         <div className={styles.heading2}>
           <h1>Tools & Technologies</h1>
@@ -78,6 +78,6 @@ export const Skills = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };

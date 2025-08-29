@@ -24,7 +24,8 @@ export default function Navbar() {
   const handleDownload = () => {
     const link = document.createElement("a");
     link.href = "/Nelani_Maluka_CV.pdf";
-    link.download = "Nelani_Maluka_CV.pdf";
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);

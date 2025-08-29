@@ -41,7 +41,7 @@ const projects: Project[] = [
 
 const Projects: React.FC = () => {
   return (
-    <div id="Projects" className={styles.projectsHolder}>
+    <section id="Projects" className={styles.projectsHolder}>
       <div className="container">
         {/* Heading */}
         <div className={styles.heading2}>
@@ -89,7 +89,7 @@ const Projects: React.FC = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

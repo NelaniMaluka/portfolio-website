@@ -6,8 +6,18 @@ import { socialLinks, iconMap } from "../Common/links";
 import styles from "./About.module.css";
 
 export const About = () => {
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = "/Nelani_Maluka_CV.pdf";
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
-    <div id="About" className={styles.about}>
+    <section id="About" className={styles.about}>
       <div className="container">
         {/* Heading */}
         <div className={styles.heading2}>
@@ -60,7 +70,11 @@ export const About = () => {
                 </a>
               ))}
             </div>
-            <a href="#Projects" className={styles.button}>
+            <a
+              href="#Projects"
+              className={styles.button}
+              onClick={handleDownload}
+            >
               Resume
               <img
                 src="/Images/Icons/download.png"
@@ -75,6 +89,6 @@ export const About = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
