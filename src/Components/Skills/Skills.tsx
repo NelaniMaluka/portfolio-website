@@ -14,12 +14,13 @@ export const Skills = () => {
       src: "/Images/Icons/react.png",
       desc: "JavaScript library",
     },
-    { name: "Redux", src: "/Images/Icons/Redux.png", desc: "State manager" },
+
     {
-      name: "Material UI",
-      src: "/Images/Icons/mui.png",
-      desc: "React UI library",
+      name: "TypeScript",
+      src: "/Images/Icons/typescript.png",
+      desc: "Typed JavaScript",
     },
+    { name: "Redux", src: "/Images/Icons/Redux.png", desc: "State manager" },
     {
       name: "Spring Boot",
       src: "/Images/Icons/spring-boot.png",
@@ -33,9 +34,9 @@ export const Skills = () => {
       desc: "Database system",
     },
     {
-      name: "Firebase",
-      src: "/Images/Icons/firebase.png",
-      desc: "Backend-as-a-service",
+      name: "Material UI",
+      src: "/Images/Icons/mui.png",
+      desc: "React UI library",
     },
   ];
 

@@ -31,7 +31,14 @@ const projects: Project[] = [
   {
     name: "Blog-Land",
     img: "/Images/project-images/Kick-Land/kick-land-1.png",
-    tools: ["ReactJS", "Spring Boot", "MySQL", "JWT (Auth)", "CRUD Features"],
+    tools: [
+      "ReactJS",
+      "TypeScript",
+      "Spring Boot",
+      "MySQL",
+      "JWT (Auth)",
+      "CRUD Features",
+    ],
     about:
       "A full-stack blogging platform where users can register, authenticate, create posts, and comment on community content. Features JWT authentication, CRUD operations, and a responsive, clean UI design. Deployed with a MySQL database and REST APIs.",
     liveUrl: "https://blog-land.web.app/",

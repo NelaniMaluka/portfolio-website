@@ -13,7 +13,14 @@ export const services: Service[] = [
     title: "Front-End Development",
     description:
       "Building responsive and interactive user interfaces using modern frameworks and libraries.",
-    techStack: ["HTML", "CSS", "JavaScript", "React.js", "Material UI"],
+    techStack: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "React.js",
+      "TypeScript",
+      "Material UI",
+    ],
     icon: "/Images/Icons/frontend.png",
   },
   {
