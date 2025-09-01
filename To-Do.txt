@@ -3,4 +3,5 @@
 - Nav bar (Done)
 - Footer (Done)
 - About Project
+- SEO
 - AI chatbot
