@@ -82,13 +82,23 @@ const Projects: React.FC = () => {
                 </ul>
                 <div className={styles.links}></div>
                 <div className={styles.buttonGroup}>
-                  <a href={project.liveUrl} className={styles.button}>
+                  <a
+                    href={project.liveUrl}
+                    className={styles.button}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     Live Site
                     <img src="./Images/Icons/link.png" alt="link-icon" />
                   </a>
-                  <a href="/" className={styles.button2}>
-                    {" "}
-                    Learn More
+                  <a
+                    href={project.githubUrl}
+                    className={styles.button2}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Github
+                    <img src="./Images/Icons/redirect.png" alt="link-icon" />
                   </a>
                 </div>
               </div>
