@@ -14,7 +14,7 @@ interface Project {
 const projects: Project[] = [
   {
     name: "Kick-Land",
-    img: "/Images/project-images/Kick-Land/kick-land-1.png",
+    img: "/Images/project-images/kick-Land.png",
     tools: [
       "ReactJS",
       "Redux",
@@ -30,7 +30,7 @@ const projects: Project[] = [
   },
   {
     name: "Blog-Land",
-    img: "/Images/project-images/Kick-Land/kick-land-1.png",
+    img: "/Images/project-images/Blog-Land.png",
     tools: [
       "ReactJS",
       "TypeScript",

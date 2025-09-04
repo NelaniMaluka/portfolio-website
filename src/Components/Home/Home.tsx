@@ -56,10 +56,9 @@ export default function About() {
               <h1>Hello, I&rsquo;m Nelani,</h1>
               <h1 className={styles.e}>Full-Stack Developer</h1>
               <p className={styles.intro}>
-                I design and build full-stack web applications with React,
-                Spring Boot, and SQL. I love creating solutions that are clean,
-                efficient, and easy to use, while continuously learning and
-                improving my craft.
+                I build full-stack web applications with React, Spring Boot, and
+                SQL. I love creating solutions that are clean, efficient, and
+                easy to use, while continuously learning and improving my craft.
               </p>
               <a
                 href="#Projects"

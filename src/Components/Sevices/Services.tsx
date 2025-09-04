@@ -34,14 +34,14 @@ export const services: Service[] = [
     title: "Database Management",
     description:
       "Designing and managing relational databases for efficient and reliable data storage.",
-    techStack: ["MySQL", "MS SQL", "Oracle", "Firebase"],
+    techStack: ["MySQL", "MS SQL", "Oracle"],
     icon: "/Images/Icons/database.png",
   },
   {
     title: "Full-Stack Projects",
     description:
       "Combining front-end and back-end skills to build complete web applications, e-commerce platforms, and blogs.",
-    techStack: ["React.js", "Spring Boot", "MySQL", "Stripe API", "Firebase"],
+    techStack: ["React.js", "Spring Boot", "MySQL", "Stripe API"],
     icon: "/Images/Icons/projects.png",
   },
 ];
