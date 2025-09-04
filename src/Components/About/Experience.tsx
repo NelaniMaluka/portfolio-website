@@ -37,7 +37,7 @@ export default function Experience() {
                     Delivered custom websites for external clients, implementing
                     Q&A sections and integrated forms for seamless
                     communication.
-                    <br /> <strong>Tech:</strong> React.js, Formspree, REST APIs
+                    <br /> <strong>Tech:</strong> React.js, REST APIs
                   </li>
                 </ul>
               </div>
