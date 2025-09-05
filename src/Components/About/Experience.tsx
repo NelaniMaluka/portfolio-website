@@ -19,7 +19,7 @@ export default function Experience() {
           </TimelineSeparator>
           <TimelineContent>
             <Typography variant="h6" className={styles.heading}>
-              Frontend Developer Intern – LearnHall
+              Software Developer Intern – LearnHall
             </Typography>
             <Typography variant="subtitle1" className={styles.subHeading}>
               Learnhall (Nov 2024 – Aug 2025)
