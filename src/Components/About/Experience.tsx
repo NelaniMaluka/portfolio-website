@@ -31,7 +31,7 @@ export default function Experience() {
                     Designed and developed the main LearnHall platform with
                     improved usability and responsive UI, increasing user
                     engagement.
-                    <br /> <strong>Tech:</strong> HTML, CSS, JavaScript, VueJs
+                    <br /> <strong>Tech:</strong> HTML, CSS, JavaScript
                   </li>
                   <li>
                     Delivered custom websites for external clients, implementing
