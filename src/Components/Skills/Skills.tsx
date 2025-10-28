@@ -9,34 +9,52 @@ export const Skills = () => {
   };
 
   const icons = [
+    // --- Core Java Development ---
     {
-      name: "React js",
-      src: "/Images/Icons/react.png",
-      desc: "JavaScript library",
+      name: "Java",
+      src: "/Images/Icons/java.png",
+      desc: "Object-oriented programming language",
     },
-
-    {
-      name: "TypeScript",
-      src: "/Images/Icons/typescript.png",
-      desc: "Typed JavaScript",
-    },
-    { name: "Redux", src: "/Images/Icons/Redux.png", desc: "State manager" },
     {
       name: "Spring Boot",
       src: "/Images/Icons/spring-boot.png",
-      desc: "Java framework",
-    },
-    { name: "Git", src: "/Images/Icons/Git.png", desc: "Version control" },
-    { name: "Mysql", src: "/Images/Icons/mysql.png", desc: "Relational DB" },
-    {
-      name: "MS Sql",
-      src: "/Images/Icons/sql-server.png",
-      desc: "Database system",
+      desc: "Backend framework for RESTful APIs",
     },
     {
-      name: "Material UI",
-      src: "/Images/Icons/mui.png",
-      desc: "React UI library",
+      name: "JUnit",
+      src: "/Images/Icons/Junit.png",
+      desc: "Testing framework for Java applications",
+    },
+
+    // --- Databases & Persistence ---
+    {
+      name: "SQL",
+      src: "/Images/Icons/sql.png",
+      desc: "Relational database design and queries",
+    },
+
+    // --- Tools & Infrastructure ---
+    {
+      name: "Git",
+      src: "/Images/Icons/Git.png",
+      desc: "Version control and collaboration",
+    },
+    {
+      name: "Docker",
+      src: "/Images/Icons/docker.png",
+      desc: "Containerization and deployment",
+    },
+    {
+      name: "TypeScript",
+      src: "/Images/Icons/typescript.png",
+      desc: "Typed version of JavaScript",
+    },
+
+    // --- Frontend (Support Skill) ---
+    {
+      name: "React.js",
+      src: "/Images/Icons/react.png",
+      desc: "Interactive frontend library",
     },
   ];
 

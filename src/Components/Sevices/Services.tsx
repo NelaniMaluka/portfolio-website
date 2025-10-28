@@ -13,36 +13,28 @@ export const services: Service[] = [
     title: "Front-End Development",
     description:
       "Building responsive and interactive user interfaces using modern frameworks and libraries.",
-    techStack: [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "React.js",
-      "TypeScript",
-      "Material UI",
-    ],
+    techStack: ["HTML", "CSS", "JavaScript", "React.js", "TypeScript"],
     icon: "/Images/Icons/frontend.png",
   },
   {
     title: "Back-End Development",
     description:
-      "Creating secure, scalable APIs and server-side applications with Java and Spring Boot.",
-    techStack: ["Java", "Spring Boot", "JWT Authentication", "REST APIs"],
+      "Building maintainable and scalable server-side applications with Java and Spring Boot, focusing on clean code, security, and efficient data handling.",
+    techStack: [
+      "Java",
+      "Spring Boot",
+      "Authentication and Authorization",
+      "REST APIs",
+      "Unit Testing",
+    ],
     icon: "/Images/Icons/backend.png",
   },
   {
     title: "Database Management",
     description:
       "Designing and managing relational databases for efficient and reliable data storage.",
-    techStack: ["MySQL", "MS SQL", "Oracle"],
+    techStack: ["MySQL", "MS SQL", "Oracle", "PostgreSQL"],
     icon: "/Images/Icons/database.png",
-  },
-  {
-    title: "Full-Stack Projects",
-    description:
-      "Combining front-end and back-end skills to build complete web applications, e-commerce platforms, and blogs.",
-    techStack: ["React.js", "Spring Boot", "MySQL", "Stripe API"],
-    icon: "/Images/Icons/projects.png",
   },
 ];
 

@@ -51,14 +51,15 @@ export default function About() {
           <div className={styles.column1}>
             <div className={styles.text}>
               <p className={styles.hook}>
-                Turning ideas into functional web applications
+                Turning ideas into functional applications
               </p>
               <h1>Hello, I&rsquo;m Nelani,</h1>
-              <h1 className={styles.e}>Full-Stack Developer</h1>
+              <h1 className={styles.e}>Software Developer</h1>
               <p className={styles.intro}>
-                I build full-stack web applications with React, Spring Boot, and
-                SQL. I love creating solutions that are clean, efficient, and
-                easy to use, while continuously learning and improving my craft.
+                I build backend applications using Java and Spring Boot, working
+                with SQL databases to manage and organize data efficiently. I
+                enjoy learning new technologies, improving my coding skills, and
+                creating clean and maintainable backend solutions.
               </p>
               <a
                 href="#Projects"
