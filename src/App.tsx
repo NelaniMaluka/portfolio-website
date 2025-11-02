@@ -27,14 +27,14 @@ function App() {
   return (
     <div className="app">
       <Helmet>
-        <title>Nelani Maluka | Full-Stack Developer Portfolio</title>
+        <title>Nelani Maluka | Software Developer Portfolio</title>
         <meta
           name="description"
-          content="Portfolio of Nelani Maluka, Full-Stack Developer skilled in React, Spring Boot, Java, and SQL. Explore projects like Blog Land and Kick Land, services in frontend, backend, and database development."
+          content="Portfolio of Nelani Maluka, Software Developer skilled in React, Spring Boot, Java, and SQL. Explore projects like Blog Land and Kick Land, services in frontend, backend, and database development."
         />
         <meta
           name="keywords"
-          content="Nelani Maluka, Full-Stack Developer, React, Spring Boot, Java Developer, SQL, Portfolio, Blog Land, Kick Land, Frontend, Backend, Software Engineer, Johannesburg Developer"
+          content="Nelani Maluka, Software Developer, React, Spring Boot, Java Developer, SQL, Portfolio, Blog Land, Kick Land, Frontend, Backend, Software Engineer, Johannesburg Developer"
         />
         <meta name="author" content="Nelani Maluka" />
         <meta name="robots" content="index, follow" />
@@ -42,7 +42,7 @@ function App() {
         {/* Open Graph (Facebook, LinkedIn) */}
         <meta
           property="og:title"
-          content="Nelani Maluka | Full-Stack Developer Portfolio"
+          content="Nelani Maluka | Software Developer Portfolio"
         />
         <meta
           property="og:description"
@@ -63,7 +63,7 @@ function App() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="Nelani Maluka | Full-Stack Developer Portfolio"
+          content="Nelani Maluka | Software Developer Portfolio"
         />
         <meta
           name="twitter:description"
