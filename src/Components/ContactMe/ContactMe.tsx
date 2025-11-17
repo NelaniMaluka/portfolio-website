@@ -5,7 +5,6 @@ import Snackbar from "@mui/material/Snackbar";
 import MuiAlert, { AlertColor } from "@mui/material/Alert";
 import styles from "./ContactMe.module.css";
 import { socialLinks, iconMap } from "../Common/links";
-import PhoneIcon from "@mui/icons-material/PhoneOutlined";
 
 interface SnackbarState {
   open: boolean;
@@ -116,10 +115,6 @@ const ContactMe: React.FC = () => {
                 {link.value}
               </a>
             ))}
-            <a key={4} href="tel:068 071 2025">
-              <PhoneIcon />
-              068 071 2025
-            </a>
           </div>
           <div className={styles.form}>
             <form onSubmit={onFormSubmit}>
