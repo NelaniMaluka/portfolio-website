@@ -1,0 +1,71 @@
+.certsSection {
+  display: flex;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.certs {
+  background-color: rgb(61, 61, 61);
+  border-radius: 10px;
+  padding: 1rem;
+  width: 100%;
+}
+
+.certs h5 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.badgeContainer {
+  display: flex;
+  display: grid;
+}
+
+.badgeContainer img {
+  width: 1.3rem;
+}
+
+.badge {
+  display: flex;
+  gap: 0.5rem;
+  margin: 0.3rem;
+  align-items: center;
+}
+
+.badge:hover {
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+.badgeContainer a {
+  text-decoration: none;
+}
+
+.badge .name {
+  font-size: 0.43rem !important;
+}
+
+.badge p {
+  font-size: 0.37rem;
+  height: max-content;
+}
+
+/**********************
+* Tablet layout *
+**********************/
+@media only screen and (max-width: 960px) {
+  .certsSection {
+    flex-direction: column;
+  }
+
+  .certs h5 {
+    margin-top: 0.3rem;
+  }
+
+  .certs {
+    background-color: rgb(61, 61, 61);
+    border-radius: 10px;
+    padding: 0.2rem;
+  }
+}
