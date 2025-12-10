@@ -14,14 +14,13 @@ export default function Education() {
         <TimelineItem className={styles.timelineItem}>
           <TimelineSeparator>
             <TimelineDot className={styles.timelineDot} />
-            <TimelineConnector />
           </TimelineSeparator>
           <TimelineContent>
             <Typography variant="h6" className={styles.heading}>
-              NQF Level 6 – IT: Systems Development
+              Diploma in IT Systems Development (NQF Level 6)
             </Typography>
             <Typography variant="subtitle1" className={styles.subHeading}>
-              CTU Training Solutions (2023–2025)
+              CTU Training Solutions • 2023 – 2025
             </Typography>
             <Typography variant="body2" className={styles.body} component="div">
               <div className={styles.dotWrapper}>

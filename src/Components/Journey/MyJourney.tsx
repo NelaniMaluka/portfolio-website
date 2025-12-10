@@ -25,7 +25,7 @@ export const MyJourney = () => {
       <div className="container">
         {/* Heading */}
         <div className={styles.heading2}>
-          <h1 className={styles.e}>My Journey</h1>
+          <h1 className={styles.e}>Professional Experience</h1>
           <p>
             A passionate <span className={styles.e}>developer</span> with
             hands-on

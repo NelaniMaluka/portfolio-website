@@ -14,14 +14,13 @@ export default function Experience() {
         <TimelineItem className={styles.timelineItem}>
           <TimelineSeparator>
             <TimelineDot className={styles.timelineDot} />
-            <TimelineConnector />
           </TimelineSeparator>
           <TimelineContent>
             <Typography variant="h6" className={styles.heading}>
               Software Developer Intern
             </Typography>
             <Typography variant="subtitle1" className={styles.subHeading}>
-              Learnhall (Nov 2024 – Aug 2025)
+              Learnhall • Nov 2024 – Aug 2025
             </Typography>
             <Typography variant="body2" className={styles.body} component="div">
               <div className={styles.dotWrapper}>

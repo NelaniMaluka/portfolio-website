@@ -50,17 +50,17 @@
 .heading {
   font-weight: bold !important;
   color: rgb(146, 203, 253) !important;
-  font-size: 0.73rem !important;
+  font-size: 0.64rem !important;
 }
 
 .subHeading {
-  color: rgb(255, 255, 255) !important;
+  color: rgba(255, 255, 255, 0.808) !important;
   font-size: 0.55rem !important;
 }
 
 .body {
   font-size: 0.47rem !important;
-  color: rgb(236, 236, 236) !important;
+  color: rgb(241, 241, 241) !important;
   margin-bottom: 0.9rem !important;
   line-height: 0.7rem !important;
 }

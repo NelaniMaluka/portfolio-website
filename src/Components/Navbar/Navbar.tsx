@@ -31,7 +31,10 @@ export default function Navbar() {
     document.body.removeChild(link);
   };
 
-  const handleSmoothScroll = (event, href) => {
+  const handleSmoothScroll = (
+    event: React.MouseEvent<HTMLAnchorElement>,
+    href: string
+  ) => {
     event.preventDefault();
     const targetSection = document.querySelector(href);
     if (targetSection) {
@@ -43,7 +46,7 @@ export default function Navbar() {
 
   const navLinks = [
     { label: "About", href: "#About" },
-    { label: "Skills", href: "#Skills" },
+    { label: "Experience", href: "#Skills" },
     { label: "Projects", href: "#Projects" },
     { label: "Services", href: "#Services" },
     { label: "Contact", href: "#Contact" },
@@ -70,13 +73,13 @@ export default function Navbar() {
   return (
     <div>
       {/* Navbar */}
-      <div className={`${styles.navbar} ${scrollingDown ? styles.hidden : ""}`}>
+      <div className={`${styles.navbar}`}>
         <div className="container">
           <div className={styles.nav}>
             {/* Logo */}
             <div className={styles.c}>
               <a href="#Home" onClick={(e) => handleSmoothScroll(e, "#Home")}>
-                <span>Nelani</span>Maluka
+                <span>Nelani</span> Maluka
               </a>
             </div>
 
@@ -94,6 +97,12 @@ export default function Navbar() {
                   </li>
                 ))}
 
+                <li className={styles.resume}>
+                  <a onClick={handleDownload}>
+                    <div>Resume</div>
+                  </a>
+                </li>
+
                 {/* Hamburger Icon */}
                 <li>
                   {!isOpen && (
@@ -106,11 +115,10 @@ export default function Navbar() {
                   )}
                 </li>
               </ul>
-            </div>
 
-            {/* Resume Button */}
-            <div className={styles.c}>
-              <button onClick={handleDownload}>Resume</button>
+              <a href="#Contact" className={styles.contactBtn}>
+                Let's Talk
+              </a>
             </div>
           </div>
         </div>
@@ -143,9 +151,9 @@ export default function Navbar() {
               </li>
             ))}
           </ul>
-          <hr />
         </div>
 
+        <hr />
         {/* Social Links */}
         <div className={styles.socials}>
           {socialLinks.map((social, index) => (

@@ -12,7 +12,7 @@
 /* About Container */
 .HomeContainer {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   height: 100%;
   padding-top: 80px;
@@ -20,45 +20,91 @@
 
 .column1,
 .column2 {
-  width: 50%;
+  width: 48%;
+}
+
+.column1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.openToWork {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  border: 2px solid #48a74b;
+  background-color: rgba(76, 175, 80, 0.1); /* subtle green tint */
+  font-size: 14px;
+  font-weight: 500;
+  color: #48a74b; /* green text */
+  margin: auto;
+  margin-bottom: 0.7rem;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #4caf50; /* green dot */
 }
 
 /* Intro Section */
 .text {
-  text-align: left;
+  text-align: center;
 }
 
 .text h1 {
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
-.hook {
-  font-size: 0.53rem;
-  margin-bottom: 0.5rem;
-  font-style: italic;
+.column1 .e {
+  color: rgb(146, 203, 253);
+  font-size: 1.3rem;
 }
 
 .intro {
-  font-size: 0.55rem;
-  max-width: 600px;
+  margin: auto;
+  font-size: 0.54rem;
+  line-height: 0.75rem;
+  max-width: 550px;
   margin-top: 0.7rem;
+  font-weight: 200;
+  color: rgb(218, 218, 218);
+}
+
+.butnHolder {
+  display: flex;
+  gap: 1rem;
 }
 
 .button {
   color: black;
   background-color: rgb(146, 203, 253);
   text-decoration: none;
-  font-size: 0.5rem;
+  font-size: 0.47rem;
   padding: 0.25rem 0.5rem;
   border-radius: 5px;
-  margin-top: 1.5rem !important;
+  margin-top: 1rem !important;
   display: flex;
   align-items: center;
   width: max-content;
+  border: 1px solid transparent;
+}
+
+.button:last-child {
+  background-color: transparent;
+  color: white;
 }
 
 .button:hover {
   background-color: rgb(112, 188, 255);
+}
+
+.button:last-child:hover {
+  border: 1px solid white;
+  background-color: transparent;
 }
 
 .button .icon {
@@ -68,6 +114,7 @@
 /* Socials Section */
 .socialsContainer {
   display: flex;
+  margin: auto;
   gap: 1.1rem;
   margin-top: 1.4rem;
   width: max-content;
@@ -79,8 +126,8 @@
 }
 
 .socials svg {
-  width: 1.1rem;
-  height: 1.1rem;
+  width: 1.3rem;
+  height: 1.3rem;
   transition: transform 0.3s ease;
 }
 
@@ -89,51 +136,50 @@
   color: rgb(112, 188, 255);
 }
 
-/* Image section */
-.column2 img {
-  width: 100%;
-  max-width: 600px;
-}
-
-.e {
-  text-decoration: underline;
-  text-decoration-color: rgb(146, 203, 253);
-  text-decoration-style: wavy;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 10px;
-}
-
-.scrollBtn {
-  color: rgb(146, 203, 253);
-  position: absolute;
-  bottom: 1rem;
-  font-size: 0.5rem;
+.location {
   display: flex;
-  flex-direction: column;
+  align-items: center !important;
+  gap: 5px;
+  margin-bottom: 1rem;
+}
+
+.location .icon {
+  color: rgb(228, 228, 228);
   align-items: center;
   justify-content: center;
-  animation: bounce 2s infinite;
-  cursor: pointer;
+  height: 27px;
+  font-size: 27px !important;
 }
 
-.scrollBtn img {
-  height: 1rem;
+.location .hook {
+  font-size: 0.5rem;
+  font-style: italic;
+  color: rgb(228, 228, 228);
 }
 
-@keyframes bounce {
-  0%,
-  20%,
-  50%,
-  80%,
-  100% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(10px);
-  }
-  60% {
-    transform: translateY(5px);
-  }
+.column2 .info {
+  color: white;
+  display: flex;
+  gap: 0.5rem;
+  text-align: center;
+  width: 70%;
+  margin-top: 20px;
+}
+
+.column2 .info div {
+  width: 30%;
+  border: 1px solid rgb(78, 78, 78);
+  border-radius: 20px;
+  padding: 0.4rem;
+  font-size: 0.7rem;
+  min-width: 120px;
+}
+
+.column2 .info span {
+  display: block;
+  color: rgb(220, 222, 224);
+  font-size: 0.45rem;
+  margin-top: 5px;
 }
 
 /**********************
@@ -170,13 +216,14 @@
 /**********************
 * Tablet layout *
 **********************/
-@media only screen and (min-width: 576px) and (max-width: 960px) {
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
   .HomeContainer {
     flex-direction: column;
     width: 100%;
     align-items: center;
     justify-content: center;
     padding-top: 150px;
+    gap: 1.3rem;
   }
 
   .Home {
@@ -206,35 +253,46 @@
     margin-top: 0.7rem;
   }
 
-  .button {
-    margin: auto;
-  }
-
   .socials:last-child {
     padding-right: 0rem;
   }
 
   .column2 {
     width: 100%;
-    max-width: 400px;
+    max-width: 580px;
     margin: auto;
   }
 
-  .scrollBtn {
-    display: none;
+  .column2 .info {
+    width: 100%;
+    justify-content: space-between;
+    gap: 0;
+  }
+
+  .column2 .info div {
+    width: 32%;
+    min-width: 0;
+  }
+
+  .butnHolder {
+    gap: 1rem !important;
+    align-items: flex-start;
+    margin: auto;
+    width: max-content;
   }
 }
 
 /**********************
 * Mobile layout *
 **********************/
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 768px) {
   .HomeContainer {
     flex-direction: column;
     width: 100%;
     align-items: center;
     justify-content: center;
     padding-top: 130px;
+    gap: 1.3rem;
   }
 
   .Home {
@@ -264,25 +322,31 @@
     margin-top: 0.7rem;
   }
 
-  .button {
-    margin: auto;
-  }
-
   .socials:last-child {
     padding-right: 0rem;
   }
 
   .column2 {
-    width: 100%;
-    max-width: 300px;
+    width: 150% !important;
     margin: auto;
+    max-width: 100%;
   }
 
-  .column2 img {
-    margin-top: 1rem;
+  .column2 .info {
+    width: 100%;
+    justify-content: space-between;
+    gap: 0;
   }
 
-  .scrollBtn {
-    display: none;
+  .column2 .info div {
+    width: 32%;
+    min-width: 0;
+  }
+
+  .butnHolder {
+    gap: 1rem !important;
+    align-items: flex-start;
+    margin: auto;
+    width: max-content;
   }
 }
