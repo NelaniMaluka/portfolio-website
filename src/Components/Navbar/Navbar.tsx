@@ -48,7 +48,6 @@ export default function Navbar() {
     { label: "About", href: "#About" },
     { label: "Experience", href: "#Skills" },
     { label: "Projects", href: "#Projects" },
-    { label: "Services", href: "#Services" },
     { label: "Contact", href: "#Contact" },
   ];
 
