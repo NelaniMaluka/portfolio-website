@@ -72,7 +72,7 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <h6>Socials</h6>
+            <h6>Connect</h6>
 
             {/* Social Links */}
             <div className={styles.socials}>

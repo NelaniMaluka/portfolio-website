@@ -13,36 +13,73 @@ interface Project {
 
 const projects: Project[] = [
   {
-    name: "Kick-Land",
-    img: "/Images/project-images/kick-Land.png",
+    name: "AI Recipe Generator",
+    img: "/Images/project-images/Ai-Recipe-Gen.png",
     tools: [
-      "ReactJS",
-      "Redux",
+      "Java",
       "Spring Boot",
-      "MySQL",
-      "Stripe (Payments)",
-      "SMTP (Emails)",
+      "Postges SQL",
+      "REST API",
+      "JUnit",
+      "Real-time",
     ],
     about:
-      "A full-stack e-commerce web app for buying and selling sneakers. Built with React.js (frontend) and Spring Boot (backend), it includes user authentication, shopping cart, order management, and profile management. Integrated with Stripe for secure payments and SMTP for email notifications.",
-    liveUrl: "https://kick-land.web.app/",
-    githubUrl: "https://github.com/NelaniMaluka/kick-land",
+      "An AI-powered API that generates detailed recipes based on user-provided ingredients or meal preferences, providing instructions and ingredient lists dynamically.",
+    liveUrl: "ai-recipe-generator-5rbk.onrender.com/swagger-ui/index.html",
+    githubUrl: "github.com/NelaniMaluka/AI-Recipe-Generator",
   },
   {
     name: "Blog-Land",
     img: "/Images/project-images/Blog-Land.png",
     tools: [
-      "ReactJS",
-      "TypeScript",
+      "Java",
       "Spring Boot",
-      "MySQL",
-      "JWT (Auth)",
-      "CRUD Features",
+      "TypeScript",
+      "JWT + OAuth",
+      "Hiernate/JPA",
+      "Real-time",
     ],
     about:
-      "A full-stack blogging platform where users can register, authenticate, create posts, and comment on community content. Features JWT authentication, CRUD operations, and a responsive, clean UI design. Deployed with a MySQL database and REST APIs.",
-    liveUrl: "https://blog-land.web.app/",
-    githubUrl: "https://github.com/NelaniMaluka/blog-land",
+      "A full-featured blogging platform where users can register, create posts, comment, and interact with content. Includes authentication, CRUD functionality, and AI-powered content moderation to ensure safe posts.",
+    liveUrl: "blog-land.web.app/",
+    githubUrl: "github.com/NelaniMaluka/blog-land",
+  },
+  {
+    name: "Kick-Land",
+    img: "/Images/project-images/kick-Land.png",
+    tools: ["Java", "Spring Boot", "ReactJS", "Redux", "MySQL"],
+    about:
+      "A full-featured e-commerce platform for buying and selling sneakers. Includes user authentication, shopping cart and order management, secure payments, and email notifications.",
+    liveUrl: "kick-land.web.app/",
+    githubUrl: "github.com/NelaniMaluka/kick-land",
+  },
+  {
+    name: "Learnhall",
+    img: "/Images/project-images/Learnhall.png",
+    tools: ["HTML", "CSS", "JavaScript"],
+    about:
+      "A tutoring services website that showcases Learnhall's programs, connects students with qualified tutors, and collects session inquiries via a contact form. Designed to highlight services, share tutor information, display reviews, and make it easy for parents and students to get started with tutoring.",
+    liveUrl: "learnhall.com/",
+    githubUrl: "github.com/NelaniMaluka/learnhall-1",
+  },
+  {
+    name: "Manar Facility Solutions",
+    img: "/Images/project-images/Manar-Facility-Solutions.png",
+    tools: ["ReactJS", "TypeScript", "HTML", "CSS", "JavaScript"],
+    about:
+      "A professional cleaning services website that showcases Manar Facility Solutions' commercial, residential, and specialized cleaning offerings. Features service descriptions, customer testimonials, and a contact form to schedule appointments, designed to highlight trust, professionalism, and ease of client engagement.",
+    liveUrl: "manarfacilitysolutions.com/",
+    githubUrl:
+      "github.com/moorparkdesigns/ManarFacilitySolutions.com/tree/main/ManarFacilitySolutions",
+  },
+  {
+    name: "Scout Underground Locating",
+    img: "/Images/project-images/Scout-Underground-Locating.png",
+    tools: ["HTML", "CSS", "JavaScript", "BootStrap"],
+    about:
+      "A professional website for Scout Underground Locating that showcases their utility and septic tank services, provides key company information, and collects inquiries via a contact form. Designed to highlight services, ensure easy client communication, and build trust with visitors.",
+    liveUrl: "scoutundergroundlocating.com/",
+    githubUrl: "github.com/moorparkdesigns/ScoutUndergroundLocating.com",
   },
 ];
 
@@ -70,9 +107,6 @@ const Projects: React.FC = () => {
               </div>
 
               <div className={styles.projectContent}>
-                <h2 className={styles.e}>{project.name}</h2>
-
-                <p>{project.about}</p>
                 <ul className={styles.tools}>
                   {project.tools.map((tool, i) => (
                     <li key={i}>
@@ -80,6 +114,10 @@ const Projects: React.FC = () => {
                     </li>
                   ))}
                 </ul>
+                <h2 className={styles.e}>{project.name}</h2>
+
+                <p>{project.about}</p>
+
                 <div className={styles.links}></div>
                 <div className={styles.buttonGroup}>
                   <a

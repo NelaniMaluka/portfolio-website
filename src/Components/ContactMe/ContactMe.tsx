@@ -1,6 +1,5 @@
 // ContactMe.tsx
 import React, { useState } from "react";
-import { useForm } from "@formspree/react";
 import Snackbar from "@mui/material/Snackbar";
 import MuiAlert, { AlertColor } from "@mui/material/Alert";
 import styles from "./ContactMe.module.css";
@@ -13,13 +12,15 @@ interface SnackbarState {
 }
 
 const ContactMe: React.FC = () => {
-  const [state, handleSubmit] = useForm("xkggwrpe");
   const [email, setEmail] = useState<string>("");
   const [emailError, setEmailError] = useState<string>("");
+
   const [fullName, setFullName] = useState<string>("");
   const [fullNameError, setFullNameError] = useState<string>("");
+
   const [message, setMessage] = useState<string>("");
   const [messageError, setMessageError] = useState<string>("");
+
   const [submitted, setSubmitted] = useState<boolean>(false);
 
   const [snackbar, setSnackbar] = useState<SnackbarState>({
@@ -37,10 +38,7 @@ const ContactMe: React.FC = () => {
     return validateRequiredField(value) && pattern.test(value);
   };
 
-  const showSnackbar = (
-    message: string,
-    severity: "error" | "success" | "warning" | "info"
-  ) => {
+  const showSnackbar = (message: string, severity: AlertColor) => {
     setSnackbar({
       open: true,
       message,
@@ -52,8 +50,9 @@ const ContactMe: React.FC = () => {
     e.preventDefault();
     setSubmitted(true);
 
+    // Validation
     if (!validateRequiredField(fullName)) {
-      setMessageError("Full name is required.");
+      setFullNameError("Full name is required.");
       showSnackbar("Full name is required.", "error");
       return;
     }
@@ -70,14 +69,16 @@ const ContactMe: React.FC = () => {
       return;
     }
 
+    // Clear errors
     setFullNameError("");
     setEmailError("");
     setMessageError("");
-    handleSubmit(e);
 
-    if (!state.submitting) {
-      showSnackbar("Message sent successfully!", "success");
-    }
+    // Submit form normally to Formspree
+    const form = e.currentTarget;
+    form.submit();
+
+    showSnackbar("Message sent successfully!", "success");
   };
 
   const handleSnackbarClose = (
@@ -111,38 +112,59 @@ const ContactMe: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                {iconMap[link.name.toLowerCase()] || <span>{link.name}</span>}
-                {link.value}
+                <div className={styles.skill}>
+                  <span className={styles.imgWrapper}>
+                    {iconMap[link.name.toLowerCase()]}
+                  </span>
+
+                  <div className={styles.skillText}>
+                    <span className={styles.text2}>{link.name}</span>
+                    <span className={styles.text}>{link.value}</span>
+                  </div>
+                </div>
               </a>
             ))}
           </div>
-          <div className={styles.form}>
-            <form onSubmit={onFormSubmit}>
-              <label htmlFor="name">Full Name</label>
-              <input
-                id="fullName"
-                type="text"
-                name="name"
-                placeholder="Full Name"
-                value={fullName}
-                onChange={(e) => setFullName(e.target.value)}
-                required
-              />
-              <p className={styles.errorMessage}>
-                {submitted && fullNameError}
-              </p>
 
-              <label htmlFor="email">Email</label>
-              <input
-                id="email"
-                type="email"
-                name="email"
-                placeholder="Email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-              />
-              <p className={styles.errorMessage}>{submitted && emailError}</p>
+          <div className={styles.form}>
+            <form
+              action="https://formspree.io/f/xkggwrpe"
+              method="POST"
+              onSubmit={onFormSubmit}
+            >
+              <div className={styles.inputCont}>
+                <div>
+                  <label htmlFor="fullName">Full Name</label>
+                  <input
+                    id="fullName"
+                    type="text"
+                    name="fullName"
+                    placeholder="Full Name"
+                    value={fullName}
+                    onChange={(e) => setFullName(e.target.value)}
+                    required
+                  />
+                  <p className={styles.errorMessage}>
+                    {submitted && fullNameError}
+                  </p>
+                </div>
+
+                <div>
+                  <label htmlFor="email">Email</label>
+                  <input
+                    id="email"
+                    type="email"
+                    name="email"
+                    placeholder="Email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                  />
+                  <p className={styles.errorMessage}>
+                    {submitted && emailError}
+                  </p>
+                </div>
+              </div>
 
               <label htmlFor="message">Message</label>
               <textarea
@@ -155,12 +177,8 @@ const ContactMe: React.FC = () => {
               ></textarea>
               <p className={styles.errorMessage}>{submitted && messageError}</p>
 
-              <button
-                type="submit"
-                disabled={state.submitting}
-                className={styles.shake}
-              >
-                {state.submitting ? "Submitting..." : "Submit"}
+              <button type="submit" className={styles.shake}>
+                Submit
                 <img src="./Images/Icons/mail.png" alt="mail-icon" />
               </button>
             </form>
