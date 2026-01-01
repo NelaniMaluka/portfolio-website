@@ -1,15 +1,14 @@
 import Navbar from "./Components/Navbar/Navbar";
 import Home from "./Components/Home/Home";
 import { Skills } from "./Components/Skills/Skills";
-import { About } from "./Components/About/About";
+import { MyJourney } from "./Components/Journey/MyJourney";
 import Projects from "./Components/Projects/Projects";
-import { Services } from "./Components/Sevices/Services";
+import ServicesBanner from "./Components/Sevices/ServicesBanner";
 import ContactMe from "./Components/ContactMe/ContactMe";
 import Footer from "./Components/Footer/Footer";
 
 import { Helmet } from "react-helmet-async";
 
-import ScrollButtons from "./Components/Features/ScrollButtons";
 import "./App.css";
 
 function App() {
@@ -150,16 +149,14 @@ function App() {
           `}
         </script>
       </Helmet>
-
       <Navbar />
       <Home />
-      <About />
+
+      <MyJourney />
       <Skills />
       <Projects />
-      <Services />
       <ContactMe />
       <Footer />
-      <ScrollButtons sectionIds={sections} />
     </div>
   );
 }

@@ -2,14 +2,19 @@ import * as React from "react";
 import styles from "./Home.module.css";
 import { socialLinks, iconMap } from "../Common/links";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
 import { useState, useEffect } from "react";
+import GitHubActivity from "./GitHubActivity";
 
 export default function About() {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedLink, setSelectedLink] = useState("");
   const [showScrollBtn, setShowScrollBtn] = useState(true);
 
-  const handleSmoothScroll = (event, href) => {
+  const handleSmoothScroll = (
+    event: React.MouseEvent<HTMLAnchorElement>,
+    href: string
+  ) => {
     event.preventDefault();
     const targetSection = document.querySelector(href);
     if (targetSection) {
@@ -19,12 +24,14 @@ export default function About() {
     }
   };
 
-  // Scroll to section
-  const scrollToSection = () => {
-    const element = document.getElementById("About");
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = "/Nelani_Maluka_CV.pdf";
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   // Show button only at the very top
@@ -49,28 +56,21 @@ export default function About() {
       <div className="container">
         <div className={styles.HomeContainer}>
           <div className={styles.column1}>
-            <div className={styles.text}>
-              <p className={styles.hook}>
-                Turning ideas into functional applications
-              </p>
-              <h1>Hello, I&rsquo;m Nelani,</h1>
-              <h1 className={styles.e}>Software Developer</h1>
-              <p className={styles.intro}>
-                I build backend applications using Java and Spring Boot, working
-                with SQL databases to manage and organize data efficiently. I
-                enjoy learning new technologies, improving my coding skills, and
-                creating clean and maintainable backend solutions.
-              </p>
-              <a
-                href="#Projects"
-                className={styles.button}
-                onClick={(e) => handleSmoothScroll(e, "#Projects")}
-              >
-                View Projects{" "}
-                <ArrowForwardIcon fontSize="small" className={styles.icon} />
-              </a>
+            <div className={styles.openToWork}>
+              <span className={styles.dot}></span>
+              Open to work
             </div>
 
+            <div className={styles.text}>
+              <h1>Hello, I’m Nelani,</h1>
+              <h1 className={styles.e}>Software Developer</h1>
+              <p className={styles.intro}>
+                I build backend applications with Java and Spring Boot, using
+                SQL to keep data structured and reliable. I love learning,
+                improving my craft, and turning ideas into clean, functional
+                systems.
+              </p>
+            </div>
             <div className={styles.socialsContainer}>
               {socialLinks.map((link, index) => (
                 <a
@@ -90,17 +90,41 @@ export default function About() {
           </div>
 
           <div className={styles.column2}>
-            <img src="/Images/coder.png" alt="Coder-Image" />
+            <div className={styles.location}>
+              <LocationOnIcon className={styles.icon} />
+              <p className={styles.hook}>Johannesburg, South Africa</p>
+            </div>
+
+            <GitHubActivity />
+            <div className={styles.info}>
+              <div>
+                {new Date().getFullYear() - 2025}+<span>Years Exp</span>
+              </div>
+              <div>
+                7+
+                <span>Projects</span>
+              </div>
+              <div>
+                4+<span>Certifications</span>
+              </div>
+            </div>
+            <div className={styles.butnHolder}>
+              <a
+                href="#Projects"
+                className={styles.button}
+                onClick={(e) => handleSmoothScroll(e, "#Projects")}
+              >
+                View Projects{" "}
+                <ArrowForwardIcon fontSize="small" className={styles.icon} />
+              </a>
+              <a className={styles.button} onClick={handleDownload}>
+                Resume{" "}
+                <ArrowForwardIcon fontSize="small" className={styles.icon} />
+              </a>
+            </div>
           </div>
         </div>
       </div>
-
-      {showScrollBtn && (
-        <div className={styles.scrollBtn} onClick={scrollToSection}>
-          Learn more!
-          <img src="/Images/Icons/arrow-down-blue.png" alt="Coder-Image" />
-        </div>
-      )}
     </section>
   );
 }

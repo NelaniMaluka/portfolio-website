@@ -1,6 +1,7 @@
 /* Contact Me */
 .contactMeCont {
   height: max-content;
+  margin: 1rem 0;
 }
 
 /* Headig Section */
@@ -10,79 +11,59 @@
 
 .heading2 h1 {
   margin-top: 40px;
-  font-size: 1rem;
+  font-size: 0.9rem;
   margin-bottom: 15px;
 }
 
 .heading2 p {
   margin: auto;
   color: rgb(211, 211, 211);
-  font-size: 0.6rem;
+  font-size: 0.55rem;
   max-width: 800px;
 }
 
 /* Form Section */
 .formContainer {
   display: flex;
-  justify-content: center;
   margin-top: 1.5rem !important;
-  width: 100%;
+  width: 80%;
   display: flex;
-  justify-items: center;
-  align-items: center;
   flex-wrap: wrap;
   overflow: hidden;
+  margin: auto;
+  gap: 0.5rem;
+  justify-content: space-between;
+  min-width: 800px;
 }
 
-.contactInfo,
 .form {
-  width: 50%;
-}
-
-.contactInfo {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-
-.contactInfo a {
-  font-size: 0.5rem;
-  display: flex;
-  align-items: center;
-  margin: 0.5rem 0rem;
-  background-color: rgb(61, 61, 61);
-  padding: 0.3rem 0.9rem;
-  width: 60%;
-  text-decoration: none;
-  border-radius: 5px;
-}
-
-.contactInfo a:hover {
-  background-color: rgb(85, 85, 85);
-}
-
-.contactInfo svg {
-  height: 0.8rem;
-  margin: 0;
-  padding: 0;
-}
-
-.contactInfo a,
-.contactInfo input,
-.contactInfo textarea {
-  max-width: 100%;
-  word-break: break-word;
+  width: 63%;
 }
 
 .form form {
-  max-width: 500px;
   margin: auto;
   width: 100%;
+}
+
+.form form .inputCont {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.form form .inputCont div {
+  width: 100%;
+  height: max-content !important;
+  width: 100%;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .form label {
   color: aliceblue;
   font-size: 0.45rem;
+  margin-bottom: 0.3rem;
 }
 
 /* Form Inputs */
@@ -90,7 +71,7 @@
   width: 100%;
   padding: 0.3rem 0.5rem;
   font-size: 0.45rem !important;
-
+  border-radius: 10px;
   border: 1px solid #a6bbcc;
   outline: none;
   background: transparent;
@@ -108,7 +89,7 @@
   font-size: 0.45rem;
   width: 100%;
   height: 4rem;
-
+  border-radius: 10px;
   border: 1px solid #a6bbcc;
   outline: none;
   background: transparent;
@@ -142,10 +123,71 @@
   margin-left: 0.2rem;
 }
 
+/* --- Card Styles --- */
+.contactInfo {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 33%;
+  gap: 0.7rem;
+  min-width: 270px;
+}
+
+.contactInfo a {
+  text-decoration: none;
+  width: 100%;
+}
+
+.skill {
+  border-radius: 10px;
+  background-color: rgb(61, 61, 61);
+  text-align: left;
+  transition: background-color 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  padding: 4px 10px;
+}
+
+.skill:hover {
+  background-color: rgb(85, 85, 85);
+}
+
+.skillText {
+  display: flex;
+  flex-direction: column;
+  color: black;
+  font-size: 0.43rem;
+}
+
+.imgWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.imgWrapper svg {
+  width: 1.1rem;
+  transition: transform 0.5s ease-in-out;
+  opacity: 0.8;
+}
+
+.text {
+  display: block;
+  padding: 3px 0 0 3px;
+  color: rgb(255, 255, 255);
+}
+.text2 {
+  display: block;
+  padding: 0px 3px;
+  font-size: 0.4rem;
+  color: rgb(219, 219, 219);
+}
+
 /**********************
 ******* Tablet ********
 **********************/
-@media only screen and (min-width: 576px) and (max-width: 960px) {
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
   /* Form Section */
   .formContainer {
     flex-direction: column;
@@ -155,12 +197,18 @@
   .form {
     width: 100%;
   }
+
+  /* Form Section */
+  .formContainer {
+    gap: 1rem;
+    min-width: 0;
+  }
 }
 
 /**********************
 ******* Mobile ********
 **********************/
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 768px) {
   /* Contact Me */
   .formContainer {
     flex-direction: column;
@@ -172,10 +220,21 @@
   }
 
   .contactInfo {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
   }
 
   .contactInfo a {
     width: 100%;
+  }
+
+  .formContainer {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .form form .inputCont {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
   }
 }

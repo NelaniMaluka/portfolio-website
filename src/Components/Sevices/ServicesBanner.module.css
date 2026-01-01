@@ -1,0 +1,47 @@
+/* ServicesBanner.module.css */
+
+.banner {
+  width: 100%;
+  background-color: rgba(37, 62, 84, 0.648) !important;
+  color: white;
+  padding: 0.3rem 0;
+  overflow: hidden;
+  text-align: center;
+}
+
+.title {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  -webkit-text-stroke: 1px rgb(128, 128, 128);
+  font-weight: bold;
+}
+
+.slider {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.sliderTrack {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scroll 65s linear infinite;
+}
+
+.service {
+  display: inline-block;
+  padding: 0 2rem;
+  font-size: 0.6rem;
+  -webkit-text-stroke: 1px rgb(80, 80, 80);
+  font-weight: bold;
+}
+
+/* Keyframes for continuous sliding */
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

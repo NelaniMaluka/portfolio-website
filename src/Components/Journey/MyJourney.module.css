@@ -1,0 +1,161 @@
+/* Headig Section */
+.heading2 {
+  text-align: center;
+}
+
+.heading2 h1 {
+  margin-top: 40px;
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+}
+
+.heading2 p {
+  margin: auto;
+  color: rgb(211, 211, 211);
+  font-size: 0.55rem;
+  max-width: 800px;
+  font-size: 0.55rem;
+}
+
+.content {
+  display: flex;
+  line-height: 0.6rem;
+  justify-content: space-between;
+  margin: 1rem 0;
+  color: rgb(211, 211, 211);
+  min-height: 400px;
+}
+
+.column1 {
+  width: 30%;
+  max-width: 400px;
+  min-width: 370px;
+  margin: auto;
+  margin-top: 0;
+}
+
+.column2 {
+  width: 67%;
+}
+
+.timelineItem:before {
+  flex: 0 !important;
+  padding: 0 !important;
+}
+
+.timelineDot {
+  background-color: rgb(146, 203, 253) !important;
+  margin-top: 17px !important;
+}
+
+.heading {
+  font-weight: bold !important;
+  color: rgb(146, 203, 253) !important;
+  font-size: 0.64rem !important;
+}
+
+.subHeading {
+  color: rgba(255, 255, 255, 0.808) !important;
+  font-size: 0.55rem !important;
+}
+
+.body {
+  font-size: 0.47rem !important;
+  color: rgb(241, 241, 241) !important;
+  margin-bottom: 0.9rem !important;
+  line-height: 0.7rem !important;
+}
+
+.dotWrapper ul {
+  padding-left: 16px !important;
+}
+
+.dotText {
+  margin-top: 10px;
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 0.8rem;
+  background-color: #666;
+  padding: 2px;
+  border-radius: 15px;
+}
+
+.tab {
+  flex: 1;
+  text-align: center;
+  padding: 0.2rem 0;
+  font-size: 0.7rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: white;
+  font-weight: 500;
+  border-radius: 15px;
+}
+
+.active {
+  font-weight: 600;
+  background-color: #111111;
+}
+
+.tabContent {
+  margin-top: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.slideIn {
+  animation: slideIn 0.3s ease forwards;
+}
+
+.slideOut {
+  animation: slideOut 0.3s ease forwards;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+}
+
+/**********************
+* Tablet layout *
+**********************/
+@media only screen and (max-width: 960px) {
+  .content {
+    display: block;
+  }
+
+  .column1,
+  .column2 {
+    width: 100%;
+    min-width: none;
+  }
+
+  .column2 {
+    margin-top: 2rem;
+  }
+
+  .column1 p {
+    max-width: 700px;
+  }
+}

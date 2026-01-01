@@ -1,13 +1,27 @@
-.project {
-  display: flex;
-  align-items: center;
-  margin: 2rem 0;
+.projectsContainer {
+  display: grid;
   gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 1rem;
+}
+
+.project {
+  padding: 0.5rem;
+  border: 1px solid rgb(54, 54, 54);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 .imgWrapper,
 .projectContent {
-  width: 50%;
+  width: 100%;
+}
+
+.projectContent {
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* ensures it fills the card */
 }
 
 .heading2 {
@@ -16,79 +30,83 @@
 
 .heading2 h1 {
   margin-top: 40px;
-  font-size: 1rem;
+  font-size: 0.9rem;
   margin-bottom: 15px;
 }
 
 .heading2 p {
   margin: auto;
   color: rgb(211, 211, 211);
-  font-size: 0.6rem;
+  font-size: 0.55rem;
   max-width: 800px;
 }
 
 .imgWrapper img {
   width: 100%;
   max-width: 600px;
+  border-radius: 10px 10px 0 0;
 }
 
 .imgWrapper {
   height: max-content !;
 }
 
-.projectContent {
-  max-width: 600px;
-}
-
 .projectContent h2 {
-  font-size: 1rem;
-  text-decoration: underline;
-  text-decoration-color: rgb(146, 203, 253);
-  text-decoration-style: wavy;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 10px;
+  font-size: 0.7rem;
+  margin-bottom: 0.5rem;
 }
 
 .projectContent p {
-  font-size: 0.57rem;
+  font-size: 0.45rem;
   width: 100%;
-  margin-top: 0.5rem;
+  color: rgb(199, 199, 199);
+  margin-bottom: 0.7rem;
 }
 
 .tools {
-  max-width: 600px;
+  display: flex;
+  gap: 0.2rem;
+  flex-wrap: wrap;
+  margin-top: 0.2rem;
+  margin-bottom: 0.5rem;
+  min-height: 50px;
 }
 
 .tools li {
-  text-decoration: none;
   list-style: none;
-  font-size: 0.4rem;
-  display: inline;
-  margin-right: 0.5rem;
-  padding: 0.1rem 0.5rem;
-  border-radius: 25px;
-  color: rgb(230, 230, 230);
-  background-color: rgb(61, 61, 61);
-  display: inline-block;
+  font-size: 0.36rem;
+  width: max-content;
+  padding: 0.15rem 0.45rem;
+  border-radius: 20px;
+  background-color: rgba(69, 135, 192, 0.12);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  height: max-content;
+}
+
+.tools li span {
+  color: rgb(78, 147, 207);
+  font-weight: 500;
+  letter-spacing: 0.3px;
 }
 
 .buttonGroup {
   display: flex;
   align-items: center;
+  margin-top: auto;
+  gap: 0.5rem;
 }
 
 .button {
   color: black;
   background-color: rgb(146, 203, 253);
   text-decoration: none;
-  font-size: 0.5rem;
-  padding: 0.2rem 0.9rem;
+  font-size: 0.43rem;
+  padding: 0.2rem 0.5rem;
   border-radius: 5px;
-  margin-top: 1rem !important;
   display: flex;
   align-items: center;
   width: max-content;
-  margin-right: 1rem;
 }
 
 .button:hover {
@@ -96,7 +114,7 @@
 }
 
 .button img {
-  height: 0.55rem;
+  height: 0.4rem;
   margin-left: 0.2rem;
 }
 
@@ -104,10 +122,9 @@
   color: rgb(230, 230, 230);
   background-color: rgb(61, 61, 61);
   text-decoration: none;
-  font-size: 0.5rem;
-  padding: 0.2rem 0.9rem;
+  font-size: 0.43rem;
+  padding: 0.2rem 0.5rem;
   border-radius: 5px;
-  margin-top: 1rem !important;
   display: flex;
   align-items: center;
   width: max-content;
@@ -118,27 +135,19 @@
 }
 
 .button2 img {
-  height: 0.5rem;
+  height: 0.4rem;
   margin-left: 0.2rem;
 }
 
 /* --- Responsive --- */
-@media (max-width: 1024px) {
-  .project {
-    flex-direction: column;
-    align-items: center;
-    margin: 2rem 0;
-  }
-
-  .imgWrapper,
-  .projectContent {
-    width: 70%;
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .projectsContainer {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 576px) {
-  .imgWrapper,
-  .projectContent {
-    width: 100%;
+@media only screen and (max-width: 768px) {
+  .projectsContainer {
+    grid-template-columns: repeat(1, 1fr);
   }
 }

@@ -1,0 +1,11 @@
+.calendarWrapper {
+  width: 100%;
+  overflow-x: hidden; /* ensure no scroll */
+  color: white;
+  margin: auto;
+}
+
+.react-activity-calendar {
+  width: 100%;
+  margin: 0 auto;
+}
