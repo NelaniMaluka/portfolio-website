@@ -151,9 +151,9 @@ function App() {
       </Helmet>
       <Navbar />
       <Home />
+
       <MyJourney />
       <Skills />
-      <ServicesBanner />
       <Projects />
       <ContactMe />
       <Footer />

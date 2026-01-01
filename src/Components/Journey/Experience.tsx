@@ -26,16 +26,19 @@ export default function Experience() {
               <div className={styles.dotWrapper}>
                 <ul>
                   <li className={styles.dotText}>
-                    Improved the LearnHall platform’s usability and performance
-                    by optimizing page structure and UI layouts with HTML, CSS,
-                    and JavaScript, implementing timers and interactive elements
-                    to handle dynamic data effectively.
+                    Built and refined responsive web interfaces using HTML, CSS,
+                    and JavaScript, focusing on clean layouts, usability, and
+                    performance across devices.
                   </li>
                   <li className={styles.dotText}>
-                    Built responsive client websites with dynamic forms and Q&A
-                    sections using HTML, CSS, and JavaScript, incorporating
-                    interactive features and logic that simulate backend data
-                    handling.
+                    Developed interactive features such as dynamic forms, Q&A
+                    sections, and countdown timers, applying frontend logic to
+                    simulate real-world application behaviour.
+                  </li>
+                  <li className={styles.dotText}>
+                    Collaborated closely with teammates to discuss
+                    implementation choices, incorporate feedback, and improve
+                    overall code quality throughout development.
                   </li>
                 </ul>
               </div>

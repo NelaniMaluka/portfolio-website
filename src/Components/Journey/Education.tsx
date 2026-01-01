@@ -26,16 +26,15 @@ export default function Education() {
               <div className={styles.dotWrapper}>
                 <ul>
                   <li className={styles.dotText}>
-                    Specialized in database development and cloud services,
-                    gaining hands-on experience designing, querying, and
-                    managing data, while collaborating in teams to solve
-                    technical challenges.
+                    Focused on software development, databases, and cloud
+                    fundamentals, working with structured data, backend logic,
+                    and team-based problem solving.
                   </li>
 
                   <li className={styles.dotText}>
-                    Built multiple web applications using full-stack approaches,
+                    Built several web applications using full-stack approaches,
                     implementing dynamic features and structured data handling
-                    to simulate real-world development scenarios.
+                    to mirror real-world systems.
                   </li>
                 </ul>
               </div>

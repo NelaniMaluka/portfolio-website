@@ -101,11 +101,11 @@ export default function About() {
                 {new Date().getFullYear() - 2025}+<span>Years Exp</span>
               </div>
               <div>
-                5+
+                7+
                 <span>Projects</span>
               </div>
               <div>
-                {new Date().getFullYear() - 2025}+<span>something</span>
+                4+<span>Certifications</span>
               </div>
             </div>
             <div className={styles.butnHolder}>

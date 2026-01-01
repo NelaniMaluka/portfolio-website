@@ -25,8 +25,9 @@ const projects: Project[] = [
     ],
     about:
       "An AI-powered API that generates detailed recipes based on user-provided ingredients or meal preferences, providing instructions and ingredient lists dynamically.",
-    liveUrl: "ai-recipe-generator-5rbk.onrender.com/swagger-ui/index.html",
-    githubUrl: "github.com/NelaniMaluka/AI-Recipe-Generator",
+    liveUrl:
+      "https://ai-recipe-generator-5rbk.onrender.com/swagger-ui/index.html",
+    githubUrl: "https://github.com/NelaniMaluka/AI-Recipe-Generator",
   },
   {
     name: "Blog-Land",
@@ -41,8 +42,17 @@ const projects: Project[] = [
     ],
     about:
       "A full-featured blogging platform where users can register, create posts, comment, and interact with content. Includes authentication, CRUD functionality, and AI-powered content moderation to ensure safe posts.",
-    liveUrl: "blog-land.web.app/",
-    githubUrl: "github.com/NelaniMaluka/blog-land",
+    liveUrl: "https://blog-land.web.app/",
+    githubUrl: "https://github.com/NelaniMaluka/blog-land",
+  },
+  {
+    name: "Url-Shortener",
+    img: "/Images/project-images/Url-Shortener.png",
+    tools: ["Java", "Spring Boot", "Hiernate/JPA", "REST API", "JUnit"],
+    about:
+      "A URL shortening service that allows users to create shortened links, track access statistics, and view analytics such as most accessed URLs. Features include IP-based geo-location, request logging, and a Swagger UI for API exploration.",
+    liveUrl: "https://url-shortener-4yxt.onrender.com/swagger-ui/index.html",
+    githubUrl: "https://github.com/NelaniMaluka/url-shortener",
   },
   {
     name: "Kick-Land",
@@ -50,8 +60,8 @@ const projects: Project[] = [
     tools: ["Java", "Spring Boot", "ReactJS", "Redux", "MySQL"],
     about:
       "A full-featured e-commerce platform for buying and selling sneakers. Includes user authentication, shopping cart and order management, secure payments, and email notifications.",
-    liveUrl: "kick-land.web.app/",
-    githubUrl: "github.com/NelaniMaluka/kick-land",
+    liveUrl: "https://kick-land.web.app/",
+    githubUrl: "https://github.com/NelaniMaluka/kick-land",
   },
   {
     name: "Learnhall",
@@ -59,8 +69,8 @@ const projects: Project[] = [
     tools: ["HTML", "CSS", "JavaScript"],
     about:
       "A tutoring services website that showcases Learnhall's programs, connects students with qualified tutors, and collects session inquiries via a contact form. Designed to highlight services, share tutor information, display reviews, and make it easy for parents and students to get started with tutoring.",
-    liveUrl: "learnhall.com/",
-    githubUrl: "github.com/NelaniMaluka/learnhall-1",
+    liveUrl: "https://learnhall.com/",
+    githubUrl: "https://github.com/NelaniMaluka/learnhall-1",
   },
   {
     name: "Manar Facility Solutions",
@@ -68,9 +78,9 @@ const projects: Project[] = [
     tools: ["ReactJS", "TypeScript", "HTML", "CSS", "JavaScript"],
     about:
       "A professional cleaning services website that showcases Manar Facility Solutions' commercial, residential, and specialized cleaning offerings. Features service descriptions, customer testimonials, and a contact form to schedule appointments, designed to highlight trust, professionalism, and ease of client engagement.",
-    liveUrl: "manarfacilitysolutions.com/",
+    liveUrl: "https://manarfacilitysolutions.com/",
     githubUrl:
-      "github.com/moorparkdesigns/ManarFacilitySolutions.com/tree/main/ManarFacilitySolutions",
+      "https://github.com/moorparkdesigns/ManarFacilitySolutions.com/tree/main/ManarFacilitySolutions",
   },
   {
     name: "Scout Underground Locating",
@@ -78,8 +88,9 @@ const projects: Project[] = [
     tools: ["HTML", "CSS", "JavaScript", "BootStrap"],
     about:
       "A professional website for Scout Underground Locating that showcases their utility and septic tank services, provides key company information, and collects inquiries via a contact form. Designed to highlight services, ensure easy client communication, and build trust with visitors.",
-    liveUrl: "scoutundergroundlocating.com/",
-    githubUrl: "github.com/moorparkdesigns/ScoutUndergroundLocating.com",
+    liveUrl: "https://scoutundergroundlocating.com/",
+    githubUrl:
+      "https://github.com/moorparkdesigns/ScoutUndergroundLocating.com",
   },
 ];
 
