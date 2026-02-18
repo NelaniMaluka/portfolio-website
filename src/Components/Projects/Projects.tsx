@@ -82,16 +82,16 @@ const projects: Project[] = [
     githubUrl:
       "https://github.com/moorparkdesigns/ManarFacilitySolutions.com/tree/main/ManarFacilitySolutions",
   },
-  {
-    name: "Scout Underground Locating",
-    img: "/Images/project-images/Scout-Underground-Locating.png",
-    tools: ["HTML", "CSS", "JavaScript", "BootStrap"],
-    about:
-      "A professional website for Scout Underground Locating that showcases their utility and septic tank services, provides key company information, and collects inquiries via a contact form. Designed to highlight services, ensure easy client communication, and build trust with visitors.",
-    liveUrl: "https://scoutundergroundlocating.com/",
-    githubUrl:
-      "https://github.com/moorparkdesigns/ScoutUndergroundLocating.com",
-  },
+  // {
+  //   name: "Scout Underground Locating",
+  //   img: "/Images/project-images/Scout-Underground-Locating.png",
+  //   tools: ["HTML", "CSS", "JavaScript", "BootStrap"],
+  //   about:
+  //     "A professional website for Scout Underground Locating that showcases their utility and septic tank services, provides key company information, and collects inquiries via a contact form. Designed to highlight services, ensure easy client communication, and build trust with visitors.",
+  //   liveUrl: "https://scoutundergroundlocating.com/",
+  //   githubUrl:
+  //     "https://github.com/moorparkdesigns/ScoutUndergroundLocating.com",
+  // },
 ];
 
 const Projects: React.FC = () => {
