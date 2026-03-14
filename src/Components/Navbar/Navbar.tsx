@@ -45,7 +45,7 @@ export default function Navbar() {
   };
 
   const navLinks = [
-    { label: "About", href: "#Home" },
+    { label: "About", href: "#About" },
     { label: "Experience", href: "#my-journey" },
     { label: "Projects", href: "#Projects" },
     { label: "Contact", href: "#Contact" },

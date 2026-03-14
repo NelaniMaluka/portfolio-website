@@ -219,6 +219,15 @@
   .socials:last-child {
     padding-right: 0rem;
   }
+ 
+  .column2 {
+    display: flex;
+    justify-content: center;
+  }
+
+  .column2 .profileImage{
+    max-width: 500px;
+  }
 }
 
 /**********************

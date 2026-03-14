@@ -1,5 +1,6 @@
 import Navbar from "./Components/Navbar/Navbar";
 import Home from "./Components/Home/Home";
+import About from "./Components/About/About";
 import { Skills } from "./Components/Skills/Skills";
 import { MyJourney } from "./Components/Journey/MyJourney";
 import Projects from "./Components/Projects/Projects";
@@ -151,7 +152,7 @@ function App() {
       </Helmet>
       <Navbar />
       <Home />
-
+      <About />
       <MyJourney />
       <Skills />
       <Projects />
