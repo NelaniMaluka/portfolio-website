@@ -1,27 +1,9 @@
 import * as React from "react";
 import styles from "./Home.module.css";
 import { socialLinks, iconMap } from "../Common/links";
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import LocationOnIcon from "@mui/icons-material/LocationOn";
 import { useState, useEffect } from "react";
 
 export default function About() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [selectedLink, setSelectedLink] = useState("");
-  const [showScrollBtn, setShowScrollBtn] = useState(true);
-
-  const handleSmoothScroll = (
-    event: React.MouseEvent<HTMLAnchorElement>,
-    href: string,
-  ) => {
-    event.preventDefault();
-    const targetSection = document.querySelector(href);
-    if (targetSection) {
-      targetSection.scrollIntoView({ behavior: "smooth" });
-      setIsOpen(false);
-      setSelectedLink(href.substring(1));
-    }
-  };
 
   const handleDownload = () => {
     const link = document.createElement("a");
@@ -32,23 +14,6 @@ export default function About() {
     link.click();
     document.body.removeChild(link);
   };
-
-  // Show button only at the very top
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY === 0) {
-        setShowScrollBtn(true);
-      } else {
-        setShowScrollBtn(false);
-      }
-    };
-
-    // Run on load in case user refreshes mid-scroll
-    handleScroll();
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   return (
     <section id="Home" className={styles.Home}>
