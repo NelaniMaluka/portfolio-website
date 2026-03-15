@@ -1,7 +1,27 @@
+/* Heading Section */
+.heading {
+  text-align: center;
+}
+
+.heading h4 {
+  margin-top: 40px;
+}
+
+.heading p {
+  margin: auto;
+  color: rgb(211, 211, 211);
+  max-width: 800px;
+  margin-top: 0.3rem;
+}
+
+/* Projects Section */
 .projectsContainer {
-  display: grid;
+  display: flex;
   gap: 1rem;
-  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  flex-direction: column;
+  max-width: 1100px;
+  margin: auto;
   margin-top: 1rem;
 }
 
@@ -10,7 +30,12 @@
   border: 1px solid rgb(54, 54, 54);
   border-radius: 20px;
   display: flex;
-  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.project:hover {
+  border: 1px solid rgba(78, 147, 207, 0.466);
+  background-color: rgb(15, 15, 15);
 }
 
 .imgWrapper,
@@ -24,27 +49,10 @@
   height: 100%; /* ensures it fills the card */
 }
 
-.heading2 {
-  text-align: center;
-}
-
-.heading2 h1 {
-  margin-top: 40px;
-  font-size: 0.9rem;
-  margin-bottom: 15px;
-}
-
-.heading2 p {
-  margin: auto;
-  color: rgb(211, 211, 211);
-  font-size: 0.55rem;
-  max-width: 800px;
-}
-
 .imgWrapper img {
   width: 100%;
   max-width: 600px;
-  border-radius: 10px 10px 0 0;
+  border-radius: 10px;
 }
 
 .imgWrapper {
@@ -69,7 +77,6 @@
   flex-wrap: wrap;
   margin-top: 0.2rem;
   margin-bottom: 0.5rem;
-  min-height: 50px;
 }
 
 .tools li {
@@ -141,13 +148,23 @@
 
 /* --- Responsive --- */
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
+  /* Projects Section */
   .projectsContainer {
-    grid-template-columns: repeat(2, 1fr);
+    max-width: 600px;
+  }
+
+  .project {
+    flex-direction: column;
   }
 }
 
 @media only screen and (max-width: 768px) {
+  /* Projects Section */
   .projectsContainer {
-    grid-template-columns: repeat(1, 1fr);
+    max-width: 600px;
+  }
+
+  .project {
+    flex-direction: column;
   }
 }
