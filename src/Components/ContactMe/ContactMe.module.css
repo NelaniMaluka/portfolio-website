@@ -5,27 +5,27 @@
 }
 
 /* Headig Section */
-.heading2 {
+.heading {
   text-align: center;
+  margin-bottom: 1rem;
 }
 
-.heading2 h1 {
+.heading h4 {
   margin-top: 40px;
-  font-size: 0.9rem;
   margin-bottom: 15px;
 }
 
-.heading2 p {
+.heading p {
   margin: auto;
-  color: rgb(211, 211, 211);
-  font-size: 0.55rem;
+ color: rgb(221, 221, 221);
   max-width: 800px;
+  margin-top: 0.3rem;
 }
 
 /* Form Section */
 .formContainer {
   display: flex;
-  margin-top: 1.5rem !important;
+  margin-top: 2rem !important;
   width: 80%;
   display: flex;
   flex-wrap: wrap;
@@ -38,6 +38,9 @@
 
 .form {
   width: 63%;
+  border: 1px solid rgb(61, 61, 61);
+  padding: 0.5rem;
+  border-radius: 10px;
 }
 
 .form form {

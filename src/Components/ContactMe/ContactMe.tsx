@@ -13,7 +13,7 @@ interface SnackbarState {
 
 const ContactMe: React.FC = () => {
   const [email, setEmail] = useState<string>("");
-  const [emailError, setEmailError] = useState<string>("");
+  const [emailError, setEmailError] = useState<string>(""); 
 
   const [fullName, setFullName] = useState<string>("");
   const [fullNameError, setFullNameError] = useState<string>("");
@@ -93,13 +93,12 @@ const ContactMe: React.FC = () => {
     <section id="Contact" className={styles.contactMeCont}>
       <div className="container">
         {/* Heading */}
-        <div className={styles.heading2}>
-          <h1 className={styles.e}>Contact Me</h1>
+        <div className={styles.heading}>
+          <h4>Contact Me</h4>
           <p>
-            Let’s collaborate and bring{" "}
-            <span className={styles.e}>ideas to life</span> — reach out and
-            let’s{" "}
-            <span className={styles.e}>create something great together!</span>
+            Let’s collaborate and bring
+            ideas to life — reach out and
+            let’screate something great together!
           </p>
         </div>
 
