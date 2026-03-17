@@ -74,12 +74,13 @@
 /* --- Card Styles --- */
 .skill {
   border-radius: 10px;
-  background-color: rgb(61, 61, 61);
   text-align: left;
   transition: background-color 0.3s ease-in-out;
   display: flex;
   align-items: center;
   padding: 10px 20px 10px 10px;
+  border: 1px solid rgba(119, 119, 119, 0.459);
+  background-color: rgb(61, 61, 61);
 }
 
 .skill:hover {
