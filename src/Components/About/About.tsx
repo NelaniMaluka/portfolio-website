@@ -4,14 +4,74 @@ import CloudIcon from "@mui/icons-material/Cloud";
 import CodeIcon from "@mui/icons-material/Code";
 import ApiIcon from "@mui/icons-material/Api";
 import SettingsEthernetIcon from "@mui/icons-material/SettingsEthernet";
+import { useEffect, useRef, useState } from "react";
 
 import styles from "./About.module.css";
 
 export default function About() {   
+    const statsRef = useRef(null);
+    const [startAnimation, setStartAnimation] = useState(false);
+
+    const [counts, setCounts] = useState({
+    exp: 0,
+    projects: 0,
+    certs: 0,
+    });
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+            if (entry.isIntersecting) {
+                setStartAnimation(true);
+            }
+            },
+            { threshold: 0.5 }
+        );
+
+        if (statsRef.current) {
+            observer.observe(statsRef.current);
+        }
+
+        return () => observer.disconnect();
+    }, []);
+
+    useEffect(() => {
+        if (!startAnimation) return;
+
+        const duration = 1500; // animation time (ms)
+
+        const animate = (start:number, end: number, key: keyof typeof counts) => {
+            let startTime: number | null = null;
+
+            const step = (timestamp: number) => {
+            if (!startTime) startTime = timestamp;
+            const progress = timestamp - startTime;
+
+            const value = Math.min(
+                Math.floor((progress / duration) * end),
+                end
+            );
+
+            setCounts((prev) => ({ ...prev, [key]: value }));
+
+            if (progress < duration) {
+                requestAnimationFrame(step);
+            }
+            };
+
+            requestAnimationFrame(step);
+        };
+
+        animate(0, 1, "exp");
+        animate(0, 7, "projects");
+        animate(0, 4, "certs");
+
+    }, [startAnimation]);
+
     const educationData = [
         {
         year: "2023 - 2025",
-        name: "Diploma in Information Technology: Systems Development",
+        name: "National Certificate in Information Technology: Database Development",
         institution: "CTU Training Solutions",
         description: "A comprehensive program focused on designing and implementing robust software solutions, specializing in cloud architecture, Azure services, and integrated security practices.",
         }
@@ -74,19 +134,19 @@ const ServicesData = [
                     ))}
                 </div>
 
-                <div className={styles.statsBox}>
+                <div className={styles.statsBox} ref={statsRef}>
                     <div className={styles.stat}>
-                        <h5>1+</h5>
+                        <h5>{counts.exp}+</h5>
                         <p>Years Exp</p>
-                    </div>
-                    <div className={styles.stat}>
-                        <h5>7+</h5>
+                        </div>
+                        <div className={styles.stat}>
+                        <h5>{counts.projects}+</h5>
                         <p>Projects</p>
-                    </div>
-                    <div className={styles.stat}>
-                        <h5>4+</h5>
+                        </div>
+                        <div className={styles.stat}>
+                        <h5>{counts.certs}+</h5>
                         <p>Certifications</p>
-                    </div>
+                        </div>
                 </div>
             </div>
             <div className={styles.column2}> 

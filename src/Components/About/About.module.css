@@ -8,7 +8,7 @@
     text-align: center;
     width: 100%;
     max-width: 800px;
-    margin: auto;
+    margin: auto; 
     margin-bottom: 1rem;
 }
 
@@ -55,7 +55,7 @@
 
 .column1 .education .educationItem p{
     color: rgb(112, 188, 255);
-    font-size: 0.44rem;
+    font-size: 0.45rem;
 }
 
 .column1 .education .educationItem p:first-child{
