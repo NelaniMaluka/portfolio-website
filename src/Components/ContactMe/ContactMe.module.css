@@ -5,27 +5,27 @@
 }
 
 /* Headig Section */
-.heading2 {
+.heading {
   text-align: center;
+  margin-bottom: 1rem;
 }
 
-.heading2 h1 {
+.heading h4 {
   margin-top: 40px;
-  font-size: 0.9rem;
   margin-bottom: 15px;
 }
 
-.heading2 p {
+.heading p {
   margin: auto;
-  color: rgb(211, 211, 211);
-  font-size: 0.55rem;
+ color: rgb(221, 221, 221);
   max-width: 800px;
+  margin-top: 0.3rem;
 }
 
 /* Form Section */
 .formContainer {
   display: flex;
-  margin-top: 1.5rem !important;
+  margin-top: 2rem !important;
   width: 80%;
   display: flex;
   flex-wrap: wrap;
@@ -38,6 +38,9 @@
 
 .form {
   width: 63%;
+  border: 1px solid rgb(61, 61, 61);
+  padding: 0.5rem;
+  border-radius: 10px;
 }
 
 .form form {
@@ -140,12 +143,13 @@
 
 .skill {
   border-radius: 10px;
-  background-color: rgb(61, 61, 61);
   text-align: left;
   transition: background-color 0.3s ease-in-out;
   display: flex;
   align-items: center;
   padding: 4px 10px;
+  border: 1px solid rgba(119, 119, 119, 0.459);
+  background-color: rgb(61, 61, 61);
 }
 
 .skill:hover {

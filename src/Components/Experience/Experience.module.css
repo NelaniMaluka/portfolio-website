@@ -1,0 +1,154 @@
+/* Headig Section */
+.heading {
+  text-align: center;
+}
+
+.heading h4 {
+  margin-top: 40px;
+  margin-bottom: 15px;
+}
+
+.heading p {
+  margin: auto;
+  color: rgb(221, 221, 221);
+  max-width: 800px;
+}
+
+.content {
+  display: flex;
+  line-height: 0.6rem;
+  justify-content: space-between;
+  margin: 1rem 0;
+  min-height: 400px;
+}
+
+/* Certificates Section */
+.column1 {
+  width: 30%;
+  max-width: 400px;
+  min-width: 370px;
+  margin: auto;
+  margin-top: 0;
+}
+
+/* Experience Section */
+.column2 {
+  width: 67%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.column2 .experienceItem {
+     border: 1px solid rgba(119, 119, 119, 0.459);
+    width: 100%;
+    color: rgb(56, 56, 56);
+    border-radius: 10px;
+    background-color: rgb(61, 61, 61);
+    padding: 0.7rem;
+}
+
+.column2 .experienceItem .heading {
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     margin-bottom: 0.5rem;
+}
+
+.column2 .experienceItem .heading p{
+     font-size: 0.48rem;
+}
+
+.column2 .experienceItem .heading .left { 
+  text-align: left;
+}
+
+.column2 .experienceItem .heading .left h6{ 
+  margin-bottom: 0.2rem;
+}
+
+.column2 .experienceItem .heading .right { 
+  text-align: right;
+}
+
+.column2 .experienceItem .heading .right p:first-child{ 
+  margin-bottom: 0.2rem;
+}
+
+.column2 .experienceItem .description{
+  background-color: #111111;
+  border-radius: 10px;
+  border: 1px solid rgba(119, 119, 119, 0.459);
+  padding: 0.5rem;
+}
+
+.column2 .experienceItem .description p{
+  color: rgb(221, 221, 221);
+  font-size: 0.49rem;
+}
+
+.column2 .experienceItem .technologies {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem;
+}
+
+.column2 .experienceItem .technologies .technology {
+  font-size: 0.4rem;
+  padding: 0.2rem 0.3rem;
+  border: 1px solid rgba(119, 119, 119, 0.459);
+  border-radius: 10px;
+}
+
+/**********************
+* Tablet layout *
+**********************/
+@media only screen and (max-width: 1024px) {
+  .content {
+    display: block;
+  }
+
+  .column1,
+  .column2 {
+    width: 100%;
+    min-width: none;
+  }
+
+  .column2 {
+    margin-top: 2rem;
+  }
+
+  .column1 p {
+    max-width: 700px;
+  }
+}
+
+/**********************
+* Mobile layout *
+**********************/
+@media only screen and (max-width: 768px) {
+  .content {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 1rem;
+  }
+
+  /* Certificates Section */
+  .column1 {
+    min-width: 0;
+    padding: 0;
+  }
+
+  .column2 .experienceItem .heading .left { 
+    width: 48%;
+  }
+
+  .column2 .experienceItem .heading .right { 
+    width: 48%;
+  }
+
+  .column2 {
+    margin-top: 0;
+  }
+}

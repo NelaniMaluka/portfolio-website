@@ -39,7 +39,7 @@
   font-size: 14px;
   font-weight: 500;
   color: #48a74b; /* green text */
-  margin: auto;
+  width: max-content;
   margin-bottom: 0.7rem;
 }
 
@@ -51,27 +51,20 @@
 }
 
 /* Intro Section */
-.text {
-  text-align: center;
-}
-
 .text h1 {
   font-size: 1rem;
 }
 
 .column1 .e {
   color: rgb(146, 203, 253);
-  font-size: 1.3rem;
 }
 
 .intro {
-  margin: auto;
-  font-size: 0.54rem;
   line-height: 0.75rem;
   max-width: 550px;
-  margin-top: 0.7rem;
+  margin-top: 0.5rem;
   font-weight: 200;
-  color: rgb(218, 218, 218);
+  color: rgb(221, 221, 221);
 }
 
 .butnHolder {
@@ -79,44 +72,55 @@
   gap: 1rem;
 }
 
-.button {
-  color: black;
-  background-color: rgb(146, 203, 253);
-  text-decoration: none;
-  font-size: 0.47rem;
-  padding: 0.25rem 0.5rem;
-  border-radius: 5px;
-  margin-top: 1rem !important;
+/* Buttons Section */
+.buttons {
   display: flex;
-  align-items: center;
-  width: max-content;
-  border: 1px solid transparent;
+  gap: 1rem;
+  margin-top: 1rem;
 }
 
-.button:last-child {
-  background-color: transparent;
-  color: white;
-}
-
-.button:hover {
-  background-color: rgb(112, 188, 255);
-}
-
-.button:last-child:hover {
+.buttons button {
+  padding: 0.3rem 0.6rem;
+  border-radius: 5px;
   border: 1px solid white;
   background-color: transparent;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  min-width: 140px;
 }
 
-.button .icon {
-  height: 0.6rem !important;
+.buttons a{
+  padding: 0.3rem 0.6rem;
+  border-radius: 5px;
+  border: 1px solid white;
+  background-color: transparent;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  min-width: 140px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.buttons button:hover {
+  background-color: rgb(146, 203, 253);
+  color: black;
+  border: none;
+}
+.buttons a:hover {
+  background-color: rgb(146, 203, 253);
+  color: black;
+  border: none;
 }
 
 /* Socials Section */
 .socialsContainer {
   display: flex;
-  margin: auto;
   gap: 1.1rem;
-  margin-top: 1.4rem;
+  margin-top: 1rem;
   width: max-content;
 }
 
@@ -126,8 +130,8 @@
 }
 
 .socials svg {
-  width: 1.2rem;
-  height: 1.2rem;
+  width: 1.1rem;
+  height: 1.1rem;
   transition: transform 0.3s ease;
 }
 
@@ -136,56 +140,15 @@
   color: rgb(112, 188, 255);
 }
 
-.location {
-  display: flex;
-  align-items: center !important;
-  gap: 5px;
-  margin-bottom: 1rem;
-}
-
-.location .icon {
-  color: rgb(228, 228, 228);
-  align-items: center;
-  justify-content: center;
-  height: 27px;
-  font-size: 27px !important;
-}
-
-.location .hook {
-  font-size: 0.5rem;
-  font-style: italic;
-  color: rgb(228, 228, 228);
-}
-
-.column2 .info {
-  color: white;
-  display: flex;
-  gap: 0.5rem;
-  text-align: center;
-  width: 70%;
-  margin-top: 20px;
-}
-
-.column2 .info div {
-  width: 30%;
-  border: 1px solid rgb(78, 78, 78);
-  border-radius: 20px;
-  padding: 0.4rem;
-  font-size: 0.7rem;
-  min-width: 120px;
-}
-
-.column2 .info span {
-  display: block;
-  color: rgb(220, 222, 224);
-  font-size: 0.45rem;
-  margin-top: 5px;
+.column2 .profileImage{
+ width: 100%;
+ height: auto;
 }
 
 /**********************
 * Large desktop layout *
 **********************/
-@media only screen and (min-width: 1540px) {
+@media only screen and (min-width: 1440px) {
   .Home {
     padding-bottom: 110px;
   }
@@ -256,29 +219,14 @@
   .socials:last-child {
     padding-right: 0rem;
   }
-
+ 
   .column2 {
-    width: 100%;
-    max-width: 580px;
-    margin: auto;
+    display: flex;
+    justify-content: center;
   }
 
-  .column2 .info {
-    width: 100%;
-    justify-content: space-between;
-    gap: 0;
-  }
-
-  .column2 .info div {
-    width: 32%;
-    min-width: 0;
-  }
-
-  .butnHolder {
-    gap: 1rem !important;
-    align-items: flex-start;
-    margin: auto;
-    width: max-content;
+  .column2 .profileImage{
+    max-width: 500px;
   }
 }
 
@@ -326,27 +274,5 @@
     padding-right: 0rem;
   }
 
-  .column2 {
-    width: 150% !important;
-    margin: auto;
-    max-width: 100%;
-  }
 
-  .column2 .info {
-    width: 100%;
-    justify-content: space-between;
-    gap: 0;
-  }
-
-  .column2 .info div {
-    width: 32%;
-    min-width: 0;
-  }
-
-  .butnHolder {
-    gap: 1rem !important;
-    align-items: flex-start;
-    margin: auto;
-    width: max-content;
-  }
 }

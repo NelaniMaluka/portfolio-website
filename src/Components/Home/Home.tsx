@@ -1,28 +1,9 @@
 import * as React from "react";
 import styles from "./Home.module.css";
 import { socialLinks, iconMap } from "../Common/links";
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import LocationOnIcon from "@mui/icons-material/LocationOn";
 import { useState, useEffect } from "react";
-import GitHubActivity from "./GitHubActivity";
 
 export default function About() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [selectedLink, setSelectedLink] = useState("");
-  const [showScrollBtn, setShowScrollBtn] = useState(true);
-
-  const handleSmoothScroll = (
-    event: React.MouseEvent<HTMLAnchorElement>,
-    href: string
-  ) => {
-    event.preventDefault();
-    const targetSection = document.querySelector(href);
-    if (targetSection) {
-      targetSection.scrollIntoView({ behavior: "smooth" });
-      setIsOpen(false);
-      setSelectedLink(href.substring(1));
-    }
-  };
 
   const handleDownload = () => {
     const link = document.createElement("a");
@@ -33,23 +14,6 @@ export default function About() {
     link.click();
     document.body.removeChild(link);
   };
-
-  // Show button only at the very top
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY === 0) {
-        setShowScrollBtn(true);
-      } else {
-        setShowScrollBtn(false);
-      }
-    };
-
-    // Run on load in case user refreshes mid-scroll
-    handleScroll();
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   return (
     <section id="Home" className={styles.Home}>
@@ -62,14 +26,21 @@ export default function About() {
             </div>
 
             <div className={styles.text}>
-              <h1>Hello, I’m Nelani,</h1>
-              <h1 className={styles.e}>Software Developer</h1>
+              <h4>Hello, I’m Nelani,</h4>
+              <h3 className={styles.e}>Software Developer</h3>
               <p className={styles.intro}>
-                I build backend applications with Java and Spring Boot, using
-                SQL to keep data structured and reliable. I love learning,
-                improving my craft, and turning ideas into clean, functional
-                systems.
+                I develop backend applications with Java and Spring Boot and work with SQL
+                to design reliable data-driven systems. I focus on writing clean code and
+                continuously improving my skills as a developer.
               </p>
+            </div>
+            <div className={styles.buttons}>
+              <a href="#Projects">
+                Projects
+              </a>
+              <button className={styles.downloadBtn} onClick={handleDownload}>
+                Download CV
+              </button>
             </div>
             <div className={styles.socialsContainer}>
               {socialLinks.map((link, index) => (
@@ -90,38 +61,11 @@ export default function About() {
           </div>
 
           <div className={styles.column2}>
-            <div className={styles.location}>
-              <LocationOnIcon className={styles.icon} />
-              <p className={styles.hook}>Johannesburg, South Africa</p>
-            </div>
-
-            <GitHubActivity />
-            <div className={styles.info}>
-              <div>
-                {new Date().getFullYear() - 2025}+<span>Years Exp</span>
-              </div>
-              <div>
-                7+
-                <span>Projects</span>
-              </div>
-              <div>
-                4+<span>Certifications</span>
-              </div>
-            </div>
-            <div className={styles.butnHolder}>
-              <a
-                href="#Projects"
-                className={styles.button}
-                onClick={(e) => handleSmoothScroll(e, "#Projects")}
-              >
-                View Projects{" "}
-                <ArrowForwardIcon fontSize="small" className={styles.icon} />
-              </a>
-              <a className={styles.button} onClick={handleDownload}>
-                Resume{" "}
-                <ArrowForwardIcon fontSize="small" className={styles.icon} />
-              </a>
-            </div>
+            <img
+              src="./Images/coder.png"
+              alt="Nelani Maluka"
+              className={styles.profileImage}
+            />
           </div>
         </div>
       </div>

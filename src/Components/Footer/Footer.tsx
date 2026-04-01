@@ -7,8 +7,8 @@ export default function Footer() {
   const [selectedLink, setSelectedLink] = useState(""); // Track clicked link
 
   const navLinks = [
-    { label: "About", href: "#Home" },
-    { label: "Experience", href: "#my-journey" },
+    { label: "About", href: "#About" },
+    { label: "Experience", href: "#Experience" },
     { label: "Projects", href: "#Projects" },
     { label: "Contact", href: "#Contact" },
   ];
@@ -26,7 +26,7 @@ export default function Footer() {
       setSelectedLink(href.substring(1)); // Set clicked link as selected
     }
   };
-
+ 
   const handleDownload = () => {
     const link = document.createElement("a");
     link.href = "/Nelani_Maluka_CV.pdf";

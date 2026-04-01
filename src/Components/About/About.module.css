@@ -1,0 +1,184 @@
+.about {
+    margin: auto;
+    padding-top: 3rem;
+}
+
+/* Heading Section */
+.heading {
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+    margin: auto; 
+    margin-bottom: 1rem;
+}
+
+.heading p{
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    color: rgb(221, 221, 221);
+    margin-top: 0.3rem;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    padding: 20px;
+    gap: 2%;
+}
+
+/* Container Section */
+.column1,
+.column2 {
+    width: 48%;
+}
+
+.column1 {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Education Section */
+.column1 .education {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.column1 .education .educationItem h6{
+    margin-bottom: 0.2rem;
+    font-size: 0.64rem;
+}
+
+.column1 .education .educationItem p{
+    color: rgb(112, 188, 255);
+    font-size: 0.45rem;
+}
+
+.column1 .education .educationItem p:first-child{
+    margin-bottom: 0.2rem;
+}
+
+.column1 .education .educationItem p:last-child{
+    color: rgb(221, 221, 221);
+    margin-top: 0.4rem;
+}
+
+/* Stats Section */
+.column1 .statsBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.column1 .stat {
+    border: 1px solid rgba(119, 119, 119, 0.459);
+    width: 100%;
+    color: rgb(56, 56, 56);
+    border-radius: 10px;
+    background-color: rgb(61, 61, 61);
+    text-align: center;
+    padding: 0.5rem 0rem;
+}
+
+/* Service Section */
+.column2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.column2 .serviceItem {
+    border: 1px solid rgba(112, 188, 255, 0.397);
+    padding: 0.5rem;
+    border-radius: 10px;
+    transition: color 0.3s ease;
+}
+
+.column2 .serviceItem .img{
+    padding: 0.05rem 0.3rem 0 0.3rem;
+    background-color: rgba(112, 188, 255, 0.226);
+    width: max-content; 
+    border-radius: 10px;
+    margin-bottom: 0.4rem;
+    transition: color 0.3s ease;
+}
+
+.column2 .serviceItem .icon {
+  color: rgb(112, 188, 255);
+  transition: color 0.3s ease;
+}
+
+.column2 .serviceItem:hover .icon {
+  color: white;
+}
+
+.column2 .serviceItem h6{
+    font-size: 0.6rem;
+}
+
+.column2 .serviceItem p{
+    font-size: 0.4rem;
+    color: rgb(221, 221, 221);
+    margin-top: 0.3rem;
+}
+
+.column2 .serviceItem:hover {
+    border: 1px solid rgb(112, 188, 255);
+}
+
+.column2 .serviceItem:hover .img{
+    background-color: rgb(112, 188, 255);
+}
+
+/**********************
+* Tablet layout *
+**********************/
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content:space-around;
+        padding: 20px;
+        gap: 1rem;
+    }
+
+    .column1,
+    .column2 {
+        width: 100%;
+    }
+}
+
+/**********************
+* Mobile layout *
+**********************/
+@media only screen and (max-width: 768px) {
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content:space-around;
+        padding: 0;
+        gap: 1rem;
+    }
+
+    .column1,
+    .column2 {
+        width: 100%;
+    }
+
+    /* Stats Section */
+    .column1 .statsBox {
+        gap: 10px;
+    }
+
+
+    /* Service Section */
+    .column2 {
+        gap: 15px;
+    }
+}

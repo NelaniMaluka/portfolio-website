@@ -1,9 +1,9 @@
 import Navbar from "./Components/Navbar/Navbar";
 import Home from "./Components/Home/Home";
+import About from "./Components/About/About";
 import { Skills } from "./Components/Skills/Skills";
-import { MyJourney } from "./Components/Journey/MyJourney";
+import { Experience } from "./Components/Experience/Experience";
 import Projects from "./Components/Projects/Projects";
-import ServicesBanner from "./Components/Sevices/ServicesBanner";
 import ContactMe from "./Components/ContactMe/ContactMe";
 import Footer from "./Components/Footer/Footer";
 
@@ -151,8 +151,8 @@ function App() {
       </Helmet>
       <Navbar />
       <Home />
-
-      <MyJourney />
+      <About />
+      <Experience />
       <Skills />
       <Projects />
       <ContactMe />
