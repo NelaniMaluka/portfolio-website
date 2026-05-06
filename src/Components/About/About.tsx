@@ -67,7 +67,7 @@ export default function About() {
   const educationData = [
     {
       year: "2023 - 2025",
-      name: "Diploma in Information Technology: Systems Development",
+      name: "IT Systems Development (NQF 4–6) – Cyber Security Focus",
       institution: "CTU Training Solutions",
       description:
         "A comprehensive program focused on designing and implementing robust software solutions, specializing in cloud architecture, Azure services, and integrated security practices.",
